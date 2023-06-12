@@ -19,6 +19,7 @@ namespace ContactManager_ZBW
             Application.Run(new Form1());
 
             // GitHub Test Cyril
+            // GitHub Test Miloš
         }
     }
 }
