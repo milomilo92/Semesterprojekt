@@ -20,7 +20,7 @@ namespace ContactManager_ZBW
 
             // GitHub Test Cyril
             // GitHub Test Miloš
-            // GitHub Test Renato
+            // GitHub Test Renato+//lfi
         }
     }
 }
