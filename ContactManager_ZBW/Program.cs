@@ -17,6 +17,8 @@ namespace ContactManager_ZBW
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());
+
+            // GitHub Test Cyril
         }
     }
 }
