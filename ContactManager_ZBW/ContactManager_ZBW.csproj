@@ -54,6 +54,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Ramon\Class1.cs" />
     <Compile Include="View_Cyril\Form1.cs">
       <SubType>Form</SubType>
     </Compile>
