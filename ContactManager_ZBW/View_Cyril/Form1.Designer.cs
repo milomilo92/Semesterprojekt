@@ -35,7 +35,36 @@
             this.LblLogNew = new System.Windows.Forms.Label();
             this.TxtLogNew = new System.Windows.Forms.TextBox();
             this.CmdLogAdd = new System.Windows.Forms.Button();
+            this.TxtCustomerType = new System.Windows.Forms.TextBox();
+            this.LblCustomerType = new System.Windows.Forms.Label();
+            this.TxtCustomerContact = new System.Windows.Forms.TextBox();
+            this.LblCompanyContact = new System.Windows.Forms.Label();
+            this.TxtCompanyName = new System.Windows.Forms.TextBox();
+            this.LblCompanyName = new System.Windows.Forms.Label();
             this.TbEmploye = new System.Windows.Forms.TabPage();
+            this.PnlTraineeData = new System.Windows.Forms.Panel();
+            this.TxtTraineeYears = new System.Windows.Forms.TextBox();
+            this.LblActualTraineeYear = new System.Windows.Forms.Label();
+            this.TxtActualTraineeYear = new System.Windows.Forms.TextBox();
+            this.LblTraineeYears = new System.Windows.Forms.Label();
+            this.PnlTraineeYesNo = new System.Windows.Forms.Panel();
+            this.RdTraineeNo = new System.Windows.Forms.RadioButton();
+            this.RdTraineeYes = new System.Windows.Forms.RadioButton();
+            this.LblTrainee = new System.Windows.Forms.Label();
+            this.TxtEndDate = new System.Windows.Forms.TextBox();
+            this.LblEndDate = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.LblEmployment = new System.Windows.Forms.Label();
+            this.TxtCadreLevel = new System.Windows.Forms.TextBox();
+            this.LblCadreLevel = new System.Windows.Forms.Label();
+            this.TxtRole = new System.Windows.Forms.TextBox();
+            this.LblRole = new System.Windows.Forms.Label();
+            this.TxtStartDate = new System.Windows.Forms.TextBox();
+            this.LblStartDate = new System.Windows.Forms.Label();
+            this.TxtDepartment = new System.Windows.Forms.TextBox();
+            this.LblDepartment = new System.Windows.Forms.Label();
+            this.TxtEmployeeNumber = new System.Windows.Forms.TextBox();
+            this.LblEmployeeNumber = new System.Windows.Forms.Label();
             this.LslContactList = new System.Windows.Forms.ListBox();
             this.CmdNew = new System.Windows.Forms.Button();
             this.CmdUpdate = new System.Windows.Forms.Button();
@@ -43,6 +72,10 @@
             this.CmdDelete = new System.Windows.Forms.Button();
             this.GrpContactDetails = new System.Windows.Forms.GroupBox();
             this.GrpBasicData = new System.Windows.Forms.GroupBox();
+            this.PnlSalutation = new System.Windows.Forms.Panel();
+            this.RdSalutationMale = new System.Windows.Forms.RadioButton();
+            this.RdSalutationsFemale = new System.Windows.Forms.RadioButton();
+            this.LblSalutation = new System.Windows.Forms.Label();
             this.PnlStatus = new System.Windows.Forms.Panel();
             this.RdPassive = new System.Windows.Forms.RadioButton();
             this.RdActive = new System.Windows.Forms.RadioButton();
@@ -54,11 +87,11 @@
             this.LblZipCode = new System.Windows.Forms.Label();
             this.LblPlace = new System.Windows.Forms.Label();
             this.LblStreetNumber = new System.Windows.Forms.Label();
+            this.LblSocialSecurityNumber = new System.Windows.Forms.Label();
             this.LblStreet = new System.Windows.Forms.Label();
             this.LblEmail = new System.Windows.Forms.Label();
             this.LblPhoneNumberBusiness = new System.Windows.Forms.Label();
             this.LblDateOfBirth = new System.Windows.Forms.Label();
-            this.LblSalutation = new System.Windows.Forms.Label();
             this.LblFirstName = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.TxtDateOfBirth = new System.Windows.Forms.TextBox();
@@ -70,6 +103,7 @@
             this.TxtStreetNumber = new System.Windows.Forms.TextBox();
             this.TxtEmail = new System.Windows.Forms.TextBox();
             this.TxtPhoneNumberBusiness = new System.Windows.Forms.TextBox();
+            this.TxtSocialSecurityNumber = new System.Windows.Forms.TextBox();
             this.TxtStreet = new System.Windows.Forms.TextBox();
             this.TxtFirstName = new System.Windows.Forms.TextBox();
             this.GrpContactHistory = new System.Windows.Forms.GroupBox();
@@ -77,63 +111,30 @@
             this.GrpIO = new System.Windows.Forms.GroupBox();
             this.CmdLoad = new System.Windows.Forms.Button();
             this.CmdSave = new System.Windows.Forms.Button();
-            this.TxtCompanyName = new System.Windows.Forms.TextBox();
-            this.LblCompanyName = new System.Windows.Forms.Label();
-            this.LblCustomerType = new System.Windows.Forms.Label();
-            this.TxtCustomerType = new System.Windows.Forms.TextBox();
-            this.LblCompanyContact = new System.Windows.Forms.Label();
-            this.TxtCustomerContact = new System.Windows.Forms.TextBox();
-            this.TxtEmployeeNumber = new System.Windows.Forms.TextBox();
-            this.LblEmployeeNumber = new System.Windows.Forms.Label();
-            this.LblDepartment = new System.Windows.Forms.Label();
-            this.TxtDepartment = new System.Windows.Forms.TextBox();
-            this.LblStartDate = new System.Windows.Forms.Label();
-            this.TxtStartDate = new System.Windows.Forms.TextBox();
-            this.LblEndDate = new System.Windows.Forms.Label();
-            this.TxtEndDate = new System.Windows.Forms.TextBox();
-            this.LblEmployment = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.LblRole = new System.Windows.Forms.Label();
-            this.TxtRole = new System.Windows.Forms.TextBox();
-            this.LblCadreLevel = new System.Windows.Forms.Label();
-            this.TxtCadreLevel = new System.Windows.Forms.TextBox();
-            this.TxtSocialSecurityNumber = new System.Windows.Forms.TextBox();
-            this.LblSocialSecurityNumber = new System.Windows.Forms.Label();
-            this.LblActualTraineeYear = new System.Windows.Forms.Label();
-            this.TxtActualTraineeYear = new System.Windows.Forms.TextBox();
-            this.LblTraineeYears = new System.Windows.Forms.Label();
-            this.TxtTraineeYears = new System.Windows.Forms.TextBox();
-            this.PnlTraineeYesNo = new System.Windows.Forms.Panel();
-            this.RdTraineeNo = new System.Windows.Forms.RadioButton();
-            this.RdTraineeYes = new System.Windows.Forms.RadioButton();
-            this.LblTrainee = new System.Windows.Forms.Label();
-            this.PnlTraineeData = new System.Windows.Forms.Panel();
-            this.PnlSalutation = new System.Windows.Forms.Panel();
-            this.RdSalutationMale = new System.Windows.Forms.RadioButton();
-            this.RdSalutationsFemale = new System.Windows.Forms.RadioButton();
             this.TabControl.SuspendLayout();
             this.TbCustomer.SuspendLayout();
             this.GrpLogHistory.SuspendLayout();
             this.TbEmploye.SuspendLayout();
+            this.PnlTraineeData.SuspendLayout();
+            this.PnlTraineeYesNo.SuspendLayout();
             this.GrpContactDetails.SuspendLayout();
             this.GrpBasicData.SuspendLayout();
+            this.PnlSalutation.SuspendLayout();
             this.PnlStatus.SuspendLayout();
             this.GrpContactHistory.SuspendLayout();
             this.GrpMutations.SuspendLayout();
             this.GrpIO.SuspendLayout();
-            this.PnlTraineeYesNo.SuspendLayout();
-            this.PnlTraineeData.SuspendLayout();
-            this.PnlSalutation.SuspendLayout();
             this.SuspendLayout();
             // 
             // TabControl
             // 
             this.TabControl.Controls.Add(this.TbCustomer);
             this.TabControl.Controls.Add(this.TbEmploye);
-            this.TabControl.Location = new System.Drawing.Point(6, 383);
+            this.TabControl.Location = new System.Drawing.Point(9, 589);
+            this.TabControl.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TabControl.Name = "TabControl";
             this.TabControl.SelectedIndex = 0;
-            this.TabControl.Size = new System.Drawing.Size(550, 292);
+            this.TabControl.Size = new System.Drawing.Size(825, 449);
             this.TabControl.TabIndex = 0;
             // 
             // TbCustomer
@@ -146,10 +147,11 @@
             this.TbCustomer.Controls.Add(this.LblCompanyContact);
             this.TbCustomer.Controls.Add(this.TxtCompanyName);
             this.TbCustomer.Controls.Add(this.LblCompanyName);
-            this.TbCustomer.Location = new System.Drawing.Point(4, 22);
+            this.TbCustomer.Location = new System.Drawing.Point(4, 29);
+            this.TbCustomer.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TbCustomer.Name = "TbCustomer";
-            this.TbCustomer.Padding = new System.Windows.Forms.Padding(3);
-            this.TbCustomer.Size = new System.Drawing.Size(542, 266);
+            this.TbCustomer.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.TbCustomer.Size = new System.Drawing.Size(817, 416);
             this.TbCustomer.TabIndex = 0;
             this.TbCustomer.Text = "Kunde";
             // 
@@ -159,46 +161,106 @@
             this.GrpLogHistory.Controls.Add(this.LblLogNew);
             this.GrpLogHistory.Controls.Add(this.TxtLogNew);
             this.GrpLogHistory.Controls.Add(this.CmdLogAdd);
-            this.GrpLogHistory.Location = new System.Drawing.Point(18, 69);
+            this.GrpLogHistory.Location = new System.Drawing.Point(27, 106);
+            this.GrpLogHistory.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.GrpLogHistory.Name = "GrpLogHistory";
-            this.GrpLogHistory.Size = new System.Drawing.Size(500, 189);
+            this.GrpLogHistory.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.GrpLogHistory.Size = new System.Drawing.Size(750, 291);
             this.GrpLogHistory.TabIndex = 6;
             this.GrpLogHistory.TabStop = false;
             this.GrpLogHistory.Text = "Log Kontaktaufnahme";
             // 
             // TxtLogHistory
             // 
-            this.TxtLogHistory.Location = new System.Drawing.Point(10, 19);
+            this.TxtLogHistory.Location = new System.Drawing.Point(15, 29);
+            this.TxtLogHistory.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TxtLogHistory.Multiline = true;
             this.TxtLogHistory.Name = "TxtLogHistory";
             this.TxtLogHistory.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.TxtLogHistory.Size = new System.Drawing.Size(481, 85);
+            this.TxtLogHistory.Size = new System.Drawing.Size(720, 129);
             this.TxtLogHistory.TabIndex = 3;
             // 
             // LblLogNew
             // 
             this.LblLogNew.AutoSize = true;
-            this.LblLogNew.Location = new System.Drawing.Point(10, 110);
+            this.LblLogNew.Location = new System.Drawing.Point(15, 169);
+            this.LblLogNew.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LblLogNew.Name = "LblLogNew";
-            this.LblLogNew.Size = new System.Drawing.Size(92, 13);
+            this.LblLogNew.Size = new System.Drawing.Size(136, 20);
             this.LblLogNew.TabIndex = 2;
             this.LblLogNew.Text = "Neuer Logeintrag:";
             // 
             // TxtLogNew
             // 
-            this.TxtLogNew.Location = new System.Drawing.Point(10, 129);
+            this.TxtLogNew.Location = new System.Drawing.Point(15, 198);
+            this.TxtLogNew.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TxtLogNew.Name = "TxtLogNew";
-            this.TxtLogNew.Size = new System.Drawing.Size(481, 20);
+            this.TxtLogNew.Size = new System.Drawing.Size(720, 26);
             this.TxtLogNew.TabIndex = 1;
             // 
             // CmdLogAdd
             // 
-            this.CmdLogAdd.Location = new System.Drawing.Point(350, 154);
+            this.CmdLogAdd.Location = new System.Drawing.Point(525, 237);
+            this.CmdLogAdd.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.CmdLogAdd.Name = "CmdLogAdd";
-            this.CmdLogAdd.Size = new System.Drawing.Size(141, 23);
+            this.CmdLogAdd.Size = new System.Drawing.Size(212, 35);
             this.CmdLogAdd.TabIndex = 0;
             this.CmdLogAdd.Text = "Logeintrag hinzufügen";
             this.CmdLogAdd.UseVisualStyleBackColor = true;
+            // 
+            // TxtCustomerType
+            // 
+            this.TxtCustomerType.Location = new System.Drawing.Point(357, 66);
+            this.TxtCustomerType.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.TxtCustomerType.Name = "TxtCustomerType";
+            this.TxtCustomerType.Size = new System.Drawing.Size(55, 26);
+            this.TxtCustomerType.TabIndex = 0;
+            // 
+            // LblCustomerType
+            // 
+            this.LblCustomerType.AutoSize = true;
+            this.LblCustomerType.Location = new System.Drawing.Point(352, 37);
+            this.LblCustomerType.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.LblCustomerType.Name = "LblCustomerType";
+            this.LblCustomerType.Size = new System.Drawing.Size(130, 20);
+            this.LblCustomerType.TabIndex = 1;
+            this.LblCustomerType.Text = "Kundentyp (A-E):";
+            // 
+            // TxtCustomerContact
+            // 
+            this.TxtCustomerContact.Location = new System.Drawing.Point(513, 66);
+            this.TxtCustomerContact.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.TxtCustomerContact.Name = "TxtCustomerContact";
+            this.TxtCustomerContact.Size = new System.Drawing.Size(248, 26);
+            this.TxtCustomerContact.TabIndex = 0;
+            // 
+            // LblCompanyContact
+            // 
+            this.LblCompanyContact.AutoSize = true;
+            this.LblCompanyContact.Location = new System.Drawing.Point(508, 37);
+            this.LblCompanyContact.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.LblCompanyContact.Name = "LblCompanyContact";
+            this.LblCompanyContact.Size = new System.Drawing.Size(115, 20);
+            this.LblCompanyContact.TabIndex = 1;
+            this.LblCompanyContact.Text = "Firmenkontakt:";
+            // 
+            // TxtCompanyName
+            // 
+            this.TxtCompanyName.Location = new System.Drawing.Point(42, 66);
+            this.TxtCompanyName.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.TxtCompanyName.Name = "TxtCompanyName";
+            this.TxtCompanyName.Size = new System.Drawing.Size(280, 26);
+            this.TxtCompanyName.TabIndex = 0;
+            // 
+            // LblCompanyName
+            // 
+            this.LblCompanyName.AutoSize = true;
+            this.LblCompanyName.Location = new System.Drawing.Point(38, 37);
+            this.LblCompanyName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.LblCompanyName.Name = "LblCompanyName";
+            this.LblCompanyName.Size = new System.Drawing.Size(102, 20);
+            this.LblCompanyName.TabIndex = 1;
+            this.LblCompanyName.Text = "Firmenname:";
             // 
             // TbEmploye
             // 
@@ -219,54 +281,281 @@
             this.TbEmploye.Controls.Add(this.LblDepartment);
             this.TbEmploye.Controls.Add(this.TxtEmployeeNumber);
             this.TbEmploye.Controls.Add(this.LblEmployeeNumber);
-            this.TbEmploye.Location = new System.Drawing.Point(4, 22);
+            this.TbEmploye.Location = new System.Drawing.Point(4, 29);
+            this.TbEmploye.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TbEmploye.Name = "TbEmploye";
-            this.TbEmploye.Padding = new System.Windows.Forms.Padding(3);
-            this.TbEmploye.Size = new System.Drawing.Size(542, 254);
+            this.TbEmploye.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.TbEmploye.Size = new System.Drawing.Size(817, 416);
             this.TbEmploye.TabIndex = 1;
             this.TbEmploye.Text = "Mitarbeiter";
+            // 
+            // PnlTraineeData
+            // 
+            this.PnlTraineeData.Controls.Add(this.TxtTraineeYears);
+            this.PnlTraineeData.Controls.Add(this.LblActualTraineeYear);
+            this.PnlTraineeData.Controls.Add(this.TxtActualTraineeYear);
+            this.PnlTraineeData.Controls.Add(this.LblTraineeYears);
+            this.PnlTraineeData.Location = new System.Drawing.Point(572, 183);
+            this.PnlTraineeData.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.PnlTraineeData.Name = "PnlTraineeData";
+            this.PnlTraineeData.Size = new System.Drawing.Size(208, 178);
+            this.PnlTraineeData.TabIndex = 4;
+            // 
+            // TxtTraineeYears
+            // 
+            this.TxtTraineeYears.Location = new System.Drawing.Point(9, 49);
+            this.TxtTraineeYears.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.TxtTraineeYears.Name = "TxtTraineeYears";
+            this.TxtTraineeYears.Size = new System.Drawing.Size(175, 26);
+            this.TxtTraineeYears.TabIndex = 0;
+            // 
+            // LblActualTraineeYear
+            // 
+            this.LblActualTraineeYear.AutoSize = true;
+            this.LblActualTraineeYear.Location = new System.Drawing.Point(4, 103);
+            this.LblActualTraineeYear.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.LblActualTraineeYear.Name = "LblActualTraineeYear";
+            this.LblActualTraineeYear.Size = new System.Drawing.Size(140, 20);
+            this.LblActualTraineeYear.TabIndex = 1;
+            this.LblActualTraineeYear.Text = "Aktuelles Lehrjahr:";
+            // 
+            // TxtActualTraineeYear
+            // 
+            this.TxtActualTraineeYear.Location = new System.Drawing.Point(9, 128);
+            this.TxtActualTraineeYear.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.TxtActualTraineeYear.Name = "TxtActualTraineeYear";
+            this.TxtActualTraineeYear.Size = new System.Drawing.Size(175, 26);
+            this.TxtActualTraineeYear.TabIndex = 0;
+            // 
+            // LblTraineeYears
+            // 
+            this.LblTraineeYears.AutoSize = true;
+            this.LblTraineeYears.Location = new System.Drawing.Point(4, 25);
+            this.LblTraineeYears.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.LblTraineeYears.Name = "LblTraineeYears";
+            this.LblTraineeYears.Size = new System.Drawing.Size(80, 20);
+            this.LblTraineeYears.TabIndex = 1;
+            this.LblTraineeYears.Text = "Lehrjahre:";
+            // 
+            // PnlTraineeYesNo
+            // 
+            this.PnlTraineeYesNo.Controls.Add(this.RdTraineeNo);
+            this.PnlTraineeYesNo.Controls.Add(this.RdTraineeYes);
+            this.PnlTraineeYesNo.Controls.Add(this.LblTrainee);
+            this.PnlTraineeYesNo.Location = new System.Drawing.Point(572, 58);
+            this.PnlTraineeYesNo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.PnlTraineeYesNo.Name = "PnlTraineeYesNo";
+            this.PnlTraineeYesNo.Size = new System.Drawing.Size(183, 66);
+            this.PnlTraineeYesNo.TabIndex = 3;
+            // 
+            // RdTraineeNo
+            // 
+            this.RdTraineeNo.AutoSize = true;
+            this.RdTraineeNo.Location = new System.Drawing.Point(90, 32);
+            this.RdTraineeNo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.RdTraineeNo.Name = "RdTraineeNo";
+            this.RdTraineeNo.Size = new System.Drawing.Size(64, 24);
+            this.RdTraineeNo.TabIndex = 0;
+            this.RdTraineeNo.TabStop = true;
+            this.RdTraineeNo.Text = "nein";
+            this.RdTraineeNo.UseVisualStyleBackColor = true;
+            // 
+            // RdTraineeYes
+            // 
+            this.RdTraineeYes.AutoSize = true;
+            this.RdTraineeYes.Location = new System.Drawing.Point(9, 32);
+            this.RdTraineeYes.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.RdTraineeYes.Name = "RdTraineeYes";
+            this.RdTraineeYes.Size = new System.Drawing.Size(46, 24);
+            this.RdTraineeYes.TabIndex = 0;
+            this.RdTraineeYes.TabStop = true;
+            this.RdTraineeYes.Text = "ja";
+            this.RdTraineeYes.UseVisualStyleBackColor = true;
+            // 
+            // LblTrainee
+            // 
+            this.LblTrainee.AutoSize = true;
+            this.LblTrainee.Location = new System.Drawing.Point(4, 8);
+            this.LblTrainee.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.LblTrainee.Name = "LblTrainee";
+            this.LblTrainee.Size = new System.Drawing.Size(95, 20);
+            this.LblTrainee.TabIndex = 1;
+            this.LblTrainee.Text = "Lernender?:";
+            // 
+            // TxtEndDate
+            // 
+            this.TxtEndDate.Location = new System.Drawing.Point(288, 234);
+            this.TxtEndDate.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.TxtEndDate.Name = "TxtEndDate";
+            this.TxtEndDate.Size = new System.Drawing.Size(175, 26);
+            this.TxtEndDate.TabIndex = 0;
+            // 
+            // LblEndDate
+            // 
+            this.LblEndDate.AutoSize = true;
+            this.LblEndDate.Location = new System.Drawing.Point(284, 209);
+            this.LblEndDate.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.LblEndDate.Name = "LblEndDate";
+            this.LblEndDate.Size = new System.Drawing.Size(117, 20);
+            this.LblEndDate.TabIndex = 1;
+            this.LblEndDate.Text = "Austrittsdatum:";
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(288, 155);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(175, 26);
+            this.textBox2.TabIndex = 0;
+            // 
+            // LblEmployment
+            // 
+            this.LblEmployment.AutoSize = true;
+            this.LblEmployment.Location = new System.Drawing.Point(284, 131);
+            this.LblEmployment.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.LblEmployment.Name = "LblEmployment";
+            this.LblEmployment.Size = new System.Drawing.Size(184, 20);
+            this.LblEmployment.TabIndex = 1;
+            this.LblEmployment.Text = "Beschäftigungsgrad (%):";
+            // 
+            // TxtCadreLevel
+            // 
+            this.TxtCadreLevel.Location = new System.Drawing.Point(288, 314);
+            this.TxtCadreLevel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.TxtCadreLevel.Name = "TxtCadreLevel";
+            this.TxtCadreLevel.Size = new System.Drawing.Size(208, 26);
+            this.TxtCadreLevel.TabIndex = 0;
+            // 
+            // LblCadreLevel
+            // 
+            this.LblCadreLevel.AutoSize = true;
+            this.LblCadreLevel.Location = new System.Drawing.Point(284, 289);
+            this.LblCadreLevel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.LblCadreLevel.Name = "LblCadreLevel";
+            this.LblCadreLevel.Size = new System.Drawing.Size(128, 20);
+            this.LblCadreLevel.TabIndex = 1;
+            this.LblCadreLevel.Text = "Kaderstufe (0-5):";
+            // 
+            // TxtRole
+            // 
+            this.TxtRole.Location = new System.Drawing.Point(33, 314);
+            this.TxtRole.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.TxtRole.Name = "TxtRole";
+            this.TxtRole.Size = new System.Drawing.Size(208, 26);
+            this.TxtRole.TabIndex = 0;
+            // 
+            // LblRole
+            // 
+            this.LblRole.AutoSize = true;
+            this.LblRole.Location = new System.Drawing.Point(28, 289);
+            this.LblRole.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.LblRole.Name = "LblRole";
+            this.LblRole.Size = new System.Drawing.Size(49, 20);
+            this.LblRole.TabIndex = 1;
+            this.LblRole.Text = "Rolle:";
+            // 
+            // TxtStartDate
+            // 
+            this.TxtStartDate.Location = new System.Drawing.Point(33, 234);
+            this.TxtStartDate.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.TxtStartDate.Name = "TxtStartDate";
+            this.TxtStartDate.Size = new System.Drawing.Size(208, 26);
+            this.TxtStartDate.TabIndex = 0;
+            // 
+            // LblStartDate
+            // 
+            this.LblStartDate.AutoSize = true;
+            this.LblStartDate.Location = new System.Drawing.Point(28, 209);
+            this.LblStartDate.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.LblStartDate.Name = "LblStartDate";
+            this.LblStartDate.Size = new System.Drawing.Size(112, 20);
+            this.LblStartDate.TabIndex = 1;
+            this.LblStartDate.Text = "Eintrittsdatum:";
+            // 
+            // TxtDepartment
+            // 
+            this.TxtDepartment.Location = new System.Drawing.Point(33, 155);
+            this.TxtDepartment.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.TxtDepartment.Name = "TxtDepartment";
+            this.TxtDepartment.Size = new System.Drawing.Size(208, 26);
+            this.TxtDepartment.TabIndex = 0;
+            // 
+            // LblDepartment
+            // 
+            this.LblDepartment.AutoSize = true;
+            this.LblDepartment.Location = new System.Drawing.Point(28, 131);
+            this.LblDepartment.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.LblDepartment.Name = "LblDepartment";
+            this.LblDepartment.Size = new System.Drawing.Size(80, 20);
+            this.LblDepartment.TabIndex = 1;
+            this.LblDepartment.Text = "Abteilung:";
+            // 
+            // TxtEmployeeNumber
+            // 
+            this.TxtEmployeeNumber.Location = new System.Drawing.Point(33, 83);
+            this.TxtEmployeeNumber.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.TxtEmployeeNumber.Name = "TxtEmployeeNumber";
+            this.TxtEmployeeNumber.ReadOnly = true;
+            this.TxtEmployeeNumber.Size = new System.Drawing.Size(104, 26);
+            this.TxtEmployeeNumber.TabIndex = 0;
+            // 
+            // LblEmployeeNumber
+            // 
+            this.LblEmployeeNumber.AutoSize = true;
+            this.LblEmployeeNumber.Location = new System.Drawing.Point(28, 58);
+            this.LblEmployeeNumber.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.LblEmployeeNumber.Name = "LblEmployeeNumber";
+            this.LblEmployeeNumber.Size = new System.Drawing.Size(153, 20);
+            this.LblEmployeeNumber.TabIndex = 1;
+            this.LblEmployeeNumber.Text = "Mitarbeiter-Nummer:";
             // 
             // LslContactList
             // 
             this.LslContactList.FormattingEnabled = true;
-            this.LslContactList.Location = new System.Drawing.Point(6, 64);
+            this.LslContactList.ItemHeight = 20;
+            this.LslContactList.Location = new System.Drawing.Point(9, 98);
+            this.LslContactList.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.LslContactList.Name = "LslContactList";
             this.LslContactList.ScrollAlwaysVisible = true;
-            this.LslContactList.Size = new System.Drawing.Size(218, 524);
+            this.LslContactList.Size = new System.Drawing.Size(325, 804);
             this.LslContactList.TabIndex = 1;
             // 
             // CmdNew
             // 
-            this.CmdNew.Location = new System.Drawing.Point(9, 28);
+            this.CmdNew.Location = new System.Drawing.Point(14, 43);
+            this.CmdNew.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.CmdNew.Name = "CmdNew";
-            this.CmdNew.Size = new System.Drawing.Size(141, 29);
+            this.CmdNew.Size = new System.Drawing.Size(212, 45);
             this.CmdNew.TabIndex = 3;
             this.CmdNew.Text = "Neuer Kontakt";
             this.CmdNew.UseVisualStyleBackColor = true;
             // 
             // CmdUpdate
             // 
-            this.CmdUpdate.Location = new System.Drawing.Point(9, 63);
+            this.CmdUpdate.Location = new System.Drawing.Point(14, 97);
+            this.CmdUpdate.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.CmdUpdate.Name = "CmdUpdate";
-            this.CmdUpdate.Size = new System.Drawing.Size(141, 29);
+            this.CmdUpdate.Size = new System.Drawing.Size(212, 45);
             this.CmdUpdate.TabIndex = 3;
             this.CmdUpdate.Text = "Kontakt ändern";
             this.CmdUpdate.UseVisualStyleBackColor = true;
             // 
             // CmdSearch
             // 
-            this.CmdSearch.Location = new System.Drawing.Point(9, 98);
+            this.CmdSearch.Location = new System.Drawing.Point(14, 151);
+            this.CmdSearch.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.CmdSearch.Name = "CmdSearch";
-            this.CmdSearch.Size = new System.Drawing.Size(141, 29);
+            this.CmdSearch.Size = new System.Drawing.Size(212, 45);
             this.CmdSearch.TabIndex = 3;
             this.CmdSearch.Text = "Kontakt suchen";
             this.CmdSearch.UseVisualStyleBackColor = true;
             // 
             // CmdDelete
             // 
-            this.CmdDelete.Location = new System.Drawing.Point(9, 133);
+            this.CmdDelete.Location = new System.Drawing.Point(14, 205);
+            this.CmdDelete.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.CmdDelete.Name = "CmdDelete";
-            this.CmdDelete.Size = new System.Drawing.Size(141, 29);
+            this.CmdDelete.Size = new System.Drawing.Size(212, 45);
             this.CmdDelete.TabIndex = 3;
             this.CmdDelete.Text = "Kontakt löschen";
             this.CmdDelete.UseVisualStyleBackColor = true;
@@ -275,9 +564,11 @@
             // 
             this.GrpContactDetails.Controls.Add(this.GrpBasicData);
             this.GrpContactDetails.Controls.Add(this.TabControl);
-            this.GrpContactDetails.Location = new System.Drawing.Point(246, 25);
+            this.GrpContactDetails.Location = new System.Drawing.Point(369, 38);
+            this.GrpContactDetails.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.GrpContactDetails.Name = "GrpContactDetails";
-            this.GrpContactDetails.Size = new System.Drawing.Size(566, 681);
+            this.GrpContactDetails.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.GrpContactDetails.Size = new System.Drawing.Size(849, 1048);
             this.GrpContactDetails.TabIndex = 4;
             this.GrpContactDetails.TabStop = false;
             this.GrpContactDetails.Text = "Kontakt Daten";
@@ -312,29 +603,78 @@
             this.GrpBasicData.Controls.Add(this.TxtSocialSecurityNumber);
             this.GrpBasicData.Controls.Add(this.TxtStreet);
             this.GrpBasicData.Controls.Add(this.TxtFirstName);
-            this.GrpBasicData.Location = new System.Drawing.Point(6, 41);
+            this.GrpBasicData.Location = new System.Drawing.Point(9, 63);
+            this.GrpBasicData.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.GrpBasicData.Name = "GrpBasicData";
-            this.GrpBasicData.Size = new System.Drawing.Size(550, 336);
+            this.GrpBasicData.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.GrpBasicData.Size = new System.Drawing.Size(825, 517);
             this.GrpBasicData.TabIndex = 1;
             this.GrpBasicData.TabStop = false;
             this.GrpBasicData.Text = "Grunddaten";
+            // 
+            // PnlSalutation
+            // 
+            this.PnlSalutation.Controls.Add(this.RdSalutationMale);
+            this.PnlSalutation.Controls.Add(this.RdSalutationsFemale);
+            this.PnlSalutation.Controls.Add(this.LblSalutation);
+            this.PnlSalutation.Location = new System.Drawing.Point(39, 35);
+            this.PnlSalutation.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.PnlSalutation.Name = "PnlSalutation";
+            this.PnlSalutation.Size = new System.Drawing.Size(183, 74);
+            this.PnlSalutation.TabIndex = 3;
+            // 
+            // RdSalutationMale
+            // 
+            this.RdSalutationMale.AutoSize = true;
+            this.RdSalutationMale.Location = new System.Drawing.Point(90, 38);
+            this.RdSalutationMale.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.RdSalutationMale.Name = "RdSalutationMale";
+            this.RdSalutationMale.Size = new System.Drawing.Size(65, 24);
+            this.RdSalutationMale.TabIndex = 0;
+            this.RdSalutationMale.TabStop = true;
+            this.RdSalutationMale.Text = "Herr";
+            this.RdSalutationMale.UseVisualStyleBackColor = true;
+            // 
+            // RdSalutationsFemale
+            // 
+            this.RdSalutationsFemale.AutoSize = true;
+            this.RdSalutationsFemale.Location = new System.Drawing.Point(9, 38);
+            this.RdSalutationsFemale.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.RdSalutationsFemale.Name = "RdSalutationsFemale";
+            this.RdSalutationsFemale.Size = new System.Drawing.Size(67, 24);
+            this.RdSalutationsFemale.TabIndex = 0;
+            this.RdSalutationsFemale.TabStop = true;
+            this.RdSalutationsFemale.Text = "Frau";
+            this.RdSalutationsFemale.UseVisualStyleBackColor = true;
+            // 
+            // LblSalutation
+            // 
+            this.LblSalutation.AutoSize = true;
+            this.LblSalutation.Location = new System.Drawing.Point(6, 8);
+            this.LblSalutation.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.LblSalutation.Name = "LblSalutation";
+            this.LblSalutation.Size = new System.Drawing.Size(65, 20);
+            this.LblSalutation.TabIndex = 1;
+            this.LblSalutation.Text = "Anrede:";
             // 
             // PnlStatus
             // 
             this.PnlStatus.Controls.Add(this.RdPassive);
             this.PnlStatus.Controls.Add(this.RdActive);
             this.PnlStatus.Controls.Add(this.LblStatus);
-            this.PnlStatus.Location = new System.Drawing.Point(393, 268);
+            this.PnlStatus.Location = new System.Drawing.Point(590, 412);
+            this.PnlStatus.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.PnlStatus.Name = "PnlStatus";
-            this.PnlStatus.Size = new System.Drawing.Size(122, 43);
+            this.PnlStatus.Size = new System.Drawing.Size(183, 66);
             this.PnlStatus.TabIndex = 3;
             // 
             // RdPassive
             // 
             this.RdPassive.AutoSize = true;
-            this.RdPassive.Location = new System.Drawing.Point(60, 21);
+            this.RdPassive.Location = new System.Drawing.Point(90, 32);
+            this.RdPassive.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.RdPassive.Name = "RdPassive";
-            this.RdPassive.Size = new System.Drawing.Size(55, 17);
+            this.RdPassive.Size = new System.Drawing.Size(78, 24);
             this.RdPassive.TabIndex = 0;
             this.RdPassive.TabStop = true;
             this.RdPassive.Text = "passiv";
@@ -343,9 +683,10 @@
             // RdActive
             // 
             this.RdActive.AutoSize = true;
-            this.RdActive.Location = new System.Drawing.Point(6, 21);
+            this.RdActive.Location = new System.Drawing.Point(9, 32);
+            this.RdActive.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.RdActive.Name = "RdActive";
-            this.RdActive.Size = new System.Drawing.Size(48, 17);
+            this.RdActive.Size = new System.Drawing.Size(66, 24);
             this.RdActive.TabIndex = 0;
             this.RdActive.TabStop = true;
             this.RdActive.Text = "aktiv";
@@ -354,219 +695,255 @@
             // LblStatus
             // 
             this.LblStatus.AutoSize = true;
-            this.LblStatus.Location = new System.Drawing.Point(3, 5);
+            this.LblStatus.Location = new System.Drawing.Point(4, 8);
+            this.LblStatus.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LblStatus.Name = "LblStatus";
-            this.LblStatus.Size = new System.Drawing.Size(40, 13);
+            this.LblStatus.Size = new System.Drawing.Size(60, 20);
             this.LblStatus.TabIndex = 1;
             this.LblStatus.Text = "Status:";
             // 
             // LblTitle
             // 
             this.LblTitle.AutoSize = true;
-            this.LblTitle.Location = new System.Drawing.Point(390, 77);
+            this.LblTitle.Location = new System.Drawing.Point(585, 118);
+            this.LblTitle.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LblTitle.Name = "LblTitle";
-            this.LblTitle.Size = new System.Drawing.Size(30, 13);
+            this.LblTitle.Size = new System.Drawing.Size(42, 20);
             this.LblTitle.TabIndex = 1;
             this.LblTitle.Text = "Titel:";
             // 
             // LblPhoneNumberPrivate
             // 
             this.LblPhoneNumberPrivate.AutoSize = true;
-            this.LblPhoneNumberPrivate.Location = new System.Drawing.Point(390, 212);
+            this.LblPhoneNumberPrivate.Location = new System.Drawing.Point(585, 326);
+            this.LblPhoneNumberPrivate.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LblPhoneNumberPrivate.Name = "LblPhoneNumberPrivate";
-            this.LblPhoneNumberPrivate.Size = new System.Drawing.Size(58, 13);
+            this.LblPhoneNumberPrivate.Size = new System.Drawing.Size(81, 20);
             this.LblPhoneNumberPrivate.TabIndex = 1;
             this.LblPhoneNumberPrivate.Text = "Tel. Privat:";
             // 
             // LblPhoneNumberMobile
             // 
             this.LblPhoneNumberMobile.AutoSize = true;
-            this.LblPhoneNumberMobile.Location = new System.Drawing.Point(208, 212);
+            this.LblPhoneNumberMobile.Location = new System.Drawing.Point(312, 326);
+            this.LblPhoneNumberMobile.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LblPhoneNumberMobile.Name = "LblPhoneNumberMobile";
-            this.LblPhoneNumberMobile.Size = new System.Drawing.Size(41, 13);
+            this.LblPhoneNumberMobile.Size = new System.Drawing.Size(59, 20);
             this.LblPhoneNumberMobile.TabIndex = 1;
             this.LblPhoneNumberMobile.Text = "Mobile:";
             // 
             // LblLastName
             // 
             this.LblLastName.AutoSize = true;
-            this.LblLastName.Location = new System.Drawing.Point(208, 74);
+            this.LblLastName.Location = new System.Drawing.Point(312, 114);
+            this.LblLastName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LblLastName.Name = "LblLastName";
-            this.LblLastName.Size = new System.Drawing.Size(62, 13);
+            this.LblLastName.Size = new System.Drawing.Size(90, 20);
             this.LblLastName.TabIndex = 1;
             this.LblLastName.Text = "Nachname:";
             // 
             // LblZipCode
             // 
             this.LblZipCode.AutoSize = true;
-            this.LblZipCode.Location = new System.Drawing.Point(23, 165);
+            this.LblZipCode.Location = new System.Drawing.Point(34, 254);
+            this.LblZipCode.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LblZipCode.Name = "LblZipCode";
-            this.LblZipCode.Size = new System.Drawing.Size(30, 13);
+            this.LblZipCode.Size = new System.Drawing.Size(42, 20);
             this.LblZipCode.TabIndex = 1;
             this.LblZipCode.Text = "PLZ:";
             // 
             // LblPlace
             // 
             this.LblPlace.AutoSize = true;
-            this.LblPlace.Location = new System.Drawing.Point(113, 165);
+            this.LblPlace.Location = new System.Drawing.Point(170, 254);
+            this.LblPlace.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LblPlace.Name = "LblPlace";
-            this.LblPlace.Size = new System.Drawing.Size(24, 13);
+            this.LblPlace.Size = new System.Drawing.Size(35, 20);
             this.LblPlace.TabIndex = 1;
             this.LblPlace.Text = "Ort:";
             // 
             // LblStreetNumber
             // 
             this.LblStreetNumber.AutoSize = true;
-            this.LblStreetNumber.Location = new System.Drawing.Point(295, 121);
+            this.LblStreetNumber.Location = new System.Drawing.Point(442, 186);
+            this.LblStreetNumber.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LblStreetNumber.Name = "LblStreetNumber";
-            this.LblStreetNumber.Size = new System.Drawing.Size(24, 13);
+            this.LblStreetNumber.Size = new System.Drawing.Size(33, 20);
             this.LblStreetNumber.TabIndex = 1;
             this.LblStreetNumber.Text = "Nr.:";
+            // 
+            // LblSocialSecurityNumber
+            // 
+            this.LblSocialSecurityNumber.AutoSize = true;
+            this.LblSocialSecurityNumber.Location = new System.Drawing.Point(312, 43);
+            this.LblSocialSecurityNumber.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.LblSocialSecurityNumber.Name = "LblSocialSecurityNumber";
+            this.LblSocialSecurityNumber.Size = new System.Drawing.Size(112, 20);
+            this.LblSocialSecurityNumber.TabIndex = 1;
+            this.LblSocialSecurityNumber.Text = "AHV-Nummer:";
             // 
             // LblStreet
             // 
             this.LblStreet.AutoSize = true;
-            this.LblStreet.Location = new System.Drawing.Point(23, 121);
+            this.LblStreet.Location = new System.Drawing.Point(34, 186);
+            this.LblStreet.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LblStreet.Name = "LblStreet";
-            this.LblStreet.Size = new System.Drawing.Size(45, 13);
+            this.LblStreet.Size = new System.Drawing.Size(68, 20);
             this.LblStreet.TabIndex = 1;
             this.LblStreet.Text = "Strasse:";
             // 
             // LblEmail
             // 
             this.LblEmail.AutoSize = true;
-            this.LblEmail.Location = new System.Drawing.Point(23, 257);
+            this.LblEmail.Location = new System.Drawing.Point(34, 395);
+            this.LblEmail.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LblEmail.Name = "LblEmail";
-            this.LblEmail.Size = new System.Drawing.Size(39, 13);
+            this.LblEmail.Size = new System.Drawing.Size(57, 20);
             this.LblEmail.TabIndex = 1;
             this.LblEmail.Text = "E-Mail:";
             // 
             // LblPhoneNumberBusiness
             // 
             this.LblPhoneNumberBusiness.AutoSize = true;
-            this.LblPhoneNumberBusiness.Location = new System.Drawing.Point(23, 212);
+            this.LblPhoneNumberBusiness.Location = new System.Drawing.Point(34, 326);
+            this.LblPhoneNumberBusiness.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LblPhoneNumberBusiness.Name = "LblPhoneNumberBusiness";
-            this.LblPhoneNumberBusiness.Size = new System.Drawing.Size(74, 13);
+            this.LblPhoneNumberBusiness.Size = new System.Drawing.Size(108, 20);
             this.LblPhoneNumberBusiness.TabIndex = 1;
             this.LblPhoneNumberBusiness.Text = "Tel. Geschäft:";
             // 
             // LblDateOfBirth
             // 
             this.LblDateOfBirth.AutoSize = true;
-            this.LblDateOfBirth.Location = new System.Drawing.Point(390, 121);
+            this.LblDateOfBirth.Location = new System.Drawing.Point(585, 186);
+            this.LblDateOfBirth.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LblDateOfBirth.Name = "LblDateOfBirth";
-            this.LblDateOfBirth.Size = new System.Drawing.Size(76, 13);
+            this.LblDateOfBirth.Size = new System.Drawing.Size(116, 20);
             this.LblDateOfBirth.TabIndex = 1;
             this.LblDateOfBirth.Text = "Geburtsdatum:";
-            // 
-            // LblSalutation
-            // 
-            this.LblSalutation.AutoSize = true;
-            this.LblSalutation.Location = new System.Drawing.Point(4, 5);
-            this.LblSalutation.Name = "LblSalutation";
-            this.LblSalutation.Size = new System.Drawing.Size(44, 13);
-            this.LblSalutation.TabIndex = 1;
-            this.LblSalutation.Text = "Anrede:";
             // 
             // LblFirstName
             // 
             this.LblFirstName.AutoSize = true;
-            this.LblFirstName.Location = new System.Drawing.Point(23, 74);
+            this.LblFirstName.Location = new System.Drawing.Point(34, 114);
+            this.LblFirstName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LblFirstName.Name = "LblFirstName";
-            this.LblFirstName.Size = new System.Drawing.Size(52, 13);
+            this.LblFirstName.Size = new System.Drawing.Size(78, 20);
             this.LblFirstName.TabIndex = 1;
             this.LblFirstName.Text = "Vorname:";
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(393, 93);
+            this.textBox1.Location = new System.Drawing.Point(590, 143);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(122, 20);
+            this.textBox1.Size = new System.Drawing.Size(181, 26);
             this.textBox1.TabIndex = 0;
             // 
             // TxtDateOfBirth
             // 
-            this.TxtDateOfBirth.Location = new System.Drawing.Point(393, 140);
+            this.TxtDateOfBirth.Location = new System.Drawing.Point(590, 215);
+            this.TxtDateOfBirth.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TxtDateOfBirth.Name = "TxtDateOfBirth";
-            this.TxtDateOfBirth.Size = new System.Drawing.Size(122, 20);
+            this.TxtDateOfBirth.Size = new System.Drawing.Size(181, 26);
             this.TxtDateOfBirth.TabIndex = 0;
             // 
             // TxtPhoneNumberPrivate
             // 
-            this.TxtPhoneNumberPrivate.Location = new System.Drawing.Point(393, 231);
+            this.TxtPhoneNumberPrivate.Location = new System.Drawing.Point(590, 355);
+            this.TxtPhoneNumberPrivate.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TxtPhoneNumberPrivate.Name = "TxtPhoneNumberPrivate";
-            this.TxtPhoneNumberPrivate.Size = new System.Drawing.Size(122, 20);
+            this.TxtPhoneNumberPrivate.Size = new System.Drawing.Size(181, 26);
             this.TxtPhoneNumberPrivate.TabIndex = 0;
             // 
             // TxtPhoneNumberMobile
             // 
-            this.TxtPhoneNumberMobile.Location = new System.Drawing.Point(211, 231);
+            this.TxtPhoneNumberMobile.Location = new System.Drawing.Point(316, 355);
+            this.TxtPhoneNumberMobile.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TxtPhoneNumberMobile.Name = "TxtPhoneNumberMobile";
-            this.TxtPhoneNumberMobile.Size = new System.Drawing.Size(146, 20);
+            this.TxtPhoneNumberMobile.Size = new System.Drawing.Size(217, 26);
             this.TxtPhoneNumberMobile.TabIndex = 0;
             // 
             // TxtLastName
             // 
-            this.TxtLastName.Location = new System.Drawing.Point(211, 93);
+            this.TxtLastName.Location = new System.Drawing.Point(316, 143);
+            this.TxtLastName.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TxtLastName.Name = "TxtLastName";
-            this.TxtLastName.Size = new System.Drawing.Size(146, 20);
+            this.TxtLastName.Size = new System.Drawing.Size(217, 26);
             this.TxtLastName.TabIndex = 0;
             // 
             // TxtZipCode
             // 
-            this.TxtZipCode.Location = new System.Drawing.Point(26, 184);
+            this.TxtZipCode.Location = new System.Drawing.Point(39, 283);
+            this.TxtZipCode.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TxtZipCode.Name = "TxtZipCode";
-            this.TxtZipCode.Size = new System.Drawing.Size(71, 20);
+            this.TxtZipCode.Size = new System.Drawing.Size(104, 26);
             this.TxtZipCode.TabIndex = 0;
             // 
             // TxtPlace
             // 
-            this.TxtPlace.Location = new System.Drawing.Point(116, 184);
+            this.TxtPlace.Location = new System.Drawing.Point(174, 283);
+            this.TxtPlace.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TxtPlace.Name = "TxtPlace";
-            this.TxtPlace.Size = new System.Drawing.Size(241, 20);
+            this.TxtPlace.Size = new System.Drawing.Size(360, 26);
             this.TxtPlace.TabIndex = 0;
             // 
             // TxtStreetNumber
             // 
-            this.TxtStreetNumber.Location = new System.Drawing.Point(298, 140);
+            this.TxtStreetNumber.Location = new System.Drawing.Point(447, 215);
+            this.TxtStreetNumber.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TxtStreetNumber.Name = "TxtStreetNumber";
-            this.TxtStreetNumber.Size = new System.Drawing.Size(59, 20);
+            this.TxtStreetNumber.Size = new System.Drawing.Size(86, 26);
             this.TxtStreetNumber.TabIndex = 0;
             // 
             // TxtEmail
             // 
-            this.TxtEmail.Location = new System.Drawing.Point(26, 273);
+            this.TxtEmail.Location = new System.Drawing.Point(39, 420);
+            this.TxtEmail.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TxtEmail.Name = "TxtEmail";
-            this.TxtEmail.Size = new System.Drawing.Size(161, 20);
+            this.TxtEmail.Size = new System.Drawing.Size(240, 26);
             this.TxtEmail.TabIndex = 0;
             // 
             // TxtPhoneNumberBusiness
             // 
-            this.TxtPhoneNumberBusiness.Location = new System.Drawing.Point(26, 231);
+            this.TxtPhoneNumberBusiness.Location = new System.Drawing.Point(39, 355);
+            this.TxtPhoneNumberBusiness.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TxtPhoneNumberBusiness.Name = "TxtPhoneNumberBusiness";
-            this.TxtPhoneNumberBusiness.Size = new System.Drawing.Size(161, 20);
+            this.TxtPhoneNumberBusiness.Size = new System.Drawing.Size(240, 26);
             this.TxtPhoneNumberBusiness.TabIndex = 0;
+            // 
+            // TxtSocialSecurityNumber
+            // 
+            this.TxtSocialSecurityNumber.Location = new System.Drawing.Point(316, 72);
+            this.TxtSocialSecurityNumber.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.TxtSocialSecurityNumber.Name = "TxtSocialSecurityNumber";
+            this.TxtSocialSecurityNumber.Size = new System.Drawing.Size(217, 26);
+            this.TxtSocialSecurityNumber.TabIndex = 0;
             // 
             // TxtStreet
             // 
-            this.TxtStreet.Location = new System.Drawing.Point(26, 140);
+            this.TxtStreet.Location = new System.Drawing.Point(39, 215);
+            this.TxtStreet.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TxtStreet.Name = "TxtStreet";
-            this.TxtStreet.Size = new System.Drawing.Size(252, 20);
+            this.TxtStreet.Size = new System.Drawing.Size(376, 26);
             this.TxtStreet.TabIndex = 0;
             // 
             // TxtFirstName
             // 
-            this.TxtFirstName.Location = new System.Drawing.Point(26, 93);
+            this.TxtFirstName.Location = new System.Drawing.Point(39, 143);
+            this.TxtFirstName.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TxtFirstName.Name = "TxtFirstName";
-            this.TxtFirstName.Size = new System.Drawing.Size(161, 20);
+            this.TxtFirstName.Size = new System.Drawing.Size(240, 26);
             this.TxtFirstName.TabIndex = 0;
             // 
             // GrpContactHistory
             // 
             this.GrpContactHistory.Controls.Add(this.LslContactList);
-            this.GrpContactHistory.Location = new System.Drawing.Point(12, 25);
+            this.GrpContactHistory.Location = new System.Drawing.Point(18, 38);
+            this.GrpContactHistory.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.GrpContactHistory.Name = "GrpContactHistory";
-            this.GrpContactHistory.Size = new System.Drawing.Size(228, 681);
+            this.GrpContactHistory.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.GrpContactHistory.Size = new System.Drawing.Size(342, 1048);
             this.GrpContactHistory.TabIndex = 5;
             this.GrpContactHistory.TabStop = false;
             this.GrpContactHistory.Text = "Kontakt-Liste";
@@ -577,9 +954,11 @@
             this.GrpMutations.Controls.Add(this.CmdNew);
             this.GrpMutations.Controls.Add(this.CmdSearch);
             this.GrpMutations.Controls.Add(this.CmdDelete);
-            this.GrpMutations.Location = new System.Drawing.Point(827, 25);
+            this.GrpMutations.Location = new System.Drawing.Point(1240, 38);
+            this.GrpMutations.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.GrpMutations.Name = "GrpMutations";
-            this.GrpMutations.Size = new System.Drawing.Size(161, 184);
+            this.GrpMutations.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.GrpMutations.Size = new System.Drawing.Size(242, 283);
             this.GrpMutations.TabIndex = 7;
             this.GrpMutations.TabStop = false;
             this.GrpMutations.Text = "Mutationen";
@@ -588,335 +967,48 @@
             // 
             this.GrpIO.Controls.Add(this.CmdLoad);
             this.GrpIO.Controls.Add(this.CmdSave);
-            this.GrpIO.Location = new System.Drawing.Point(818, 594);
+            this.GrpIO.Location = new System.Drawing.Point(1227, 914);
+            this.GrpIO.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.GrpIO.Name = "GrpIO";
-            this.GrpIO.Size = new System.Drawing.Size(161, 112);
+            this.GrpIO.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.GrpIO.Size = new System.Drawing.Size(242, 172);
             this.GrpIO.TabIndex = 8;
             this.GrpIO.TabStop = false;
             this.GrpIO.Text = "File_I/O";
             // 
             // CmdLoad
             // 
-            this.CmdLoad.Location = new System.Drawing.Point(9, 67);
+            this.CmdLoad.Location = new System.Drawing.Point(14, 103);
+            this.CmdLoad.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.CmdLoad.Name = "CmdLoad";
-            this.CmdLoad.Size = new System.Drawing.Size(141, 27);
+            this.CmdLoad.Size = new System.Drawing.Size(212, 42);
             this.CmdLoad.TabIndex = 0;
             this.CmdLoad.Text = "Daten aus File laden";
             this.CmdLoad.UseVisualStyleBackColor = true;
             // 
             // CmdSave
             // 
-            this.CmdSave.Location = new System.Drawing.Point(9, 34);
+            this.CmdSave.Location = new System.Drawing.Point(14, 52);
+            this.CmdSave.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.CmdSave.Name = "CmdSave";
-            this.CmdSave.Size = new System.Drawing.Size(141, 27);
+            this.CmdSave.Size = new System.Drawing.Size(212, 42);
             this.CmdSave.TabIndex = 0;
             this.CmdSave.Text = "Daten in File speichern";
             this.CmdSave.UseVisualStyleBackColor = true;
             // 
-            // TxtCompanyName
-            // 
-            this.TxtCompanyName.Location = new System.Drawing.Point(28, 43);
-            this.TxtCompanyName.Name = "TxtCompanyName";
-            this.TxtCompanyName.Size = new System.Drawing.Size(188, 20);
-            this.TxtCompanyName.TabIndex = 0;
-            // 
-            // LblCompanyName
-            // 
-            this.LblCompanyName.AutoSize = true;
-            this.LblCompanyName.Location = new System.Drawing.Point(25, 24);
-            this.LblCompanyName.Name = "LblCompanyName";
-            this.LblCompanyName.Size = new System.Drawing.Size(67, 13);
-            this.LblCompanyName.TabIndex = 1;
-            this.LblCompanyName.Text = "Firmenname:";
-            // 
-            // LblCustomerType
-            // 
-            this.LblCustomerType.AutoSize = true;
-            this.LblCustomerType.Location = new System.Drawing.Point(235, 24);
-            this.LblCustomerType.Name = "LblCustomerType";
-            this.LblCustomerType.Size = new System.Drawing.Size(87, 13);
-            this.LblCustomerType.TabIndex = 1;
-            this.LblCustomerType.Text = "Kundentyp (A-E):";
-            // 
-            // TxtCustomerType
-            // 
-            this.TxtCustomerType.Location = new System.Drawing.Point(238, 43);
-            this.TxtCustomerType.Name = "TxtCustomerType";
-            this.TxtCustomerType.Size = new System.Drawing.Size(38, 20);
-            this.TxtCustomerType.TabIndex = 0;
-            // 
-            // LblCompanyContact
-            // 
-            this.LblCompanyContact.AutoSize = true;
-            this.LblCompanyContact.Location = new System.Drawing.Point(339, 24);
-            this.LblCompanyContact.Name = "LblCompanyContact";
-            this.LblCompanyContact.Size = new System.Drawing.Size(77, 13);
-            this.LblCompanyContact.TabIndex = 1;
-            this.LblCompanyContact.Text = "Firmenkontakt:";
-            // 
-            // TxtCustomerContact
-            // 
-            this.TxtCustomerContact.Location = new System.Drawing.Point(342, 43);
-            this.TxtCustomerContact.Name = "TxtCustomerContact";
-            this.TxtCustomerContact.Size = new System.Drawing.Size(167, 20);
-            this.TxtCustomerContact.TabIndex = 0;
-            // 
-            // TxtEmployeeNumber
-            // 
-            this.TxtEmployeeNumber.Location = new System.Drawing.Point(22, 54);
-            this.TxtEmployeeNumber.Name = "TxtEmployeeNumber";
-            this.TxtEmployeeNumber.ReadOnly = true;
-            this.TxtEmployeeNumber.Size = new System.Drawing.Size(71, 20);
-            this.TxtEmployeeNumber.TabIndex = 0;
-            // 
-            // LblEmployeeNumber
-            // 
-            this.LblEmployeeNumber.AutoSize = true;
-            this.LblEmployeeNumber.Location = new System.Drawing.Point(19, 38);
-            this.LblEmployeeNumber.Name = "LblEmployeeNumber";
-            this.LblEmployeeNumber.Size = new System.Drawing.Size(101, 13);
-            this.LblEmployeeNumber.TabIndex = 1;
-            this.LblEmployeeNumber.Text = "Mitarbeiter-Nummer:";
-            // 
-            // LblDepartment
-            // 
-            this.LblDepartment.AutoSize = true;
-            this.LblDepartment.Location = new System.Drawing.Point(19, 85);
-            this.LblDepartment.Name = "LblDepartment";
-            this.LblDepartment.Size = new System.Drawing.Size(54, 13);
-            this.LblDepartment.TabIndex = 1;
-            this.LblDepartment.Text = "Abteilung:";
-            // 
-            // TxtDepartment
-            // 
-            this.TxtDepartment.Location = new System.Drawing.Point(22, 101);
-            this.TxtDepartment.Name = "TxtDepartment";
-            this.TxtDepartment.Size = new System.Drawing.Size(140, 20);
-            this.TxtDepartment.TabIndex = 0;
-            // 
-            // LblStartDate
-            // 
-            this.LblStartDate.AutoSize = true;
-            this.LblStartDate.Location = new System.Drawing.Point(19, 136);
-            this.LblStartDate.Name = "LblStartDate";
-            this.LblStartDate.Size = new System.Drawing.Size(73, 13);
-            this.LblStartDate.TabIndex = 1;
-            this.LblStartDate.Text = "Eintrittsdatum:";
-            // 
-            // TxtStartDate
-            // 
-            this.TxtStartDate.Location = new System.Drawing.Point(22, 152);
-            this.TxtStartDate.Name = "TxtStartDate";
-            this.TxtStartDate.Size = new System.Drawing.Size(140, 20);
-            this.TxtStartDate.TabIndex = 0;
-            // 
-            // LblEndDate
-            // 
-            this.LblEndDate.AutoSize = true;
-            this.LblEndDate.Location = new System.Drawing.Point(189, 136);
-            this.LblEndDate.Name = "LblEndDate";
-            this.LblEndDate.Size = new System.Drawing.Size(76, 13);
-            this.LblEndDate.TabIndex = 1;
-            this.LblEndDate.Text = "Austrittsdatum:";
-            // 
-            // TxtEndDate
-            // 
-            this.TxtEndDate.Location = new System.Drawing.Point(192, 152);
-            this.TxtEndDate.Name = "TxtEndDate";
-            this.TxtEndDate.Size = new System.Drawing.Size(118, 20);
-            this.TxtEndDate.TabIndex = 0;
-            // 
-            // LblEmployment
-            // 
-            this.LblEmployment.AutoSize = true;
-            this.LblEmployment.Location = new System.Drawing.Point(189, 85);
-            this.LblEmployment.Name = "LblEmployment";
-            this.LblEmployment.Size = new System.Drawing.Size(121, 13);
-            this.LblEmployment.TabIndex = 1;
-            this.LblEmployment.Text = "Beschäftigungsgrad (%):";
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(192, 101);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(118, 20);
-            this.textBox2.TabIndex = 0;
-            // 
-            // LblRole
-            // 
-            this.LblRole.AutoSize = true;
-            this.LblRole.Location = new System.Drawing.Point(19, 188);
-            this.LblRole.Name = "LblRole";
-            this.LblRole.Size = new System.Drawing.Size(34, 13);
-            this.LblRole.TabIndex = 1;
-            this.LblRole.Text = "Rolle:";
-            // 
-            // TxtRole
-            // 
-            this.TxtRole.Location = new System.Drawing.Point(22, 204);
-            this.TxtRole.Name = "TxtRole";
-            this.TxtRole.Size = new System.Drawing.Size(140, 20);
-            this.TxtRole.TabIndex = 0;
-            // 
-            // LblCadreLevel
-            // 
-            this.LblCadreLevel.AutoSize = true;
-            this.LblCadreLevel.Location = new System.Drawing.Point(189, 188);
-            this.LblCadreLevel.Name = "LblCadreLevel";
-            this.LblCadreLevel.Size = new System.Drawing.Size(85, 13);
-            this.LblCadreLevel.TabIndex = 1;
-            this.LblCadreLevel.Text = "Kaderstufe (0-5):";
-            // 
-            // TxtCadreLevel
-            // 
-            this.TxtCadreLevel.Location = new System.Drawing.Point(192, 204);
-            this.TxtCadreLevel.Name = "TxtCadreLevel";
-            this.TxtCadreLevel.Size = new System.Drawing.Size(140, 20);
-            this.TxtCadreLevel.TabIndex = 0;
-            // 
-            // TxtSocialSecurityNumber
-            // 
-            this.TxtSocialSecurityNumber.Location = new System.Drawing.Point(211, 47);
-            this.TxtSocialSecurityNumber.Name = "TxtSocialSecurityNumber";
-            this.TxtSocialSecurityNumber.Size = new System.Drawing.Size(146, 20);
-            this.TxtSocialSecurityNumber.TabIndex = 0;
-            // 
-            // LblSocialSecurityNumber
-            // 
-            this.LblSocialSecurityNumber.AutoSize = true;
-            this.LblSocialSecurityNumber.Location = new System.Drawing.Point(208, 28);
-            this.LblSocialSecurityNumber.Name = "LblSocialSecurityNumber";
-            this.LblSocialSecurityNumber.Size = new System.Drawing.Size(74, 13);
-            this.LblSocialSecurityNumber.TabIndex = 1;
-            this.LblSocialSecurityNumber.Text = "AHV-Nummer:";
-            // 
-            // LblActualTraineeYear
-            // 
-            this.LblActualTraineeYear.AutoSize = true;
-            this.LblActualTraineeYear.Location = new System.Drawing.Point(3, 67);
-            this.LblActualTraineeYear.Name = "LblActualTraineeYear";
-            this.LblActualTraineeYear.Size = new System.Drawing.Size(94, 13);
-            this.LblActualTraineeYear.TabIndex = 1;
-            this.LblActualTraineeYear.Text = "Aktuelles Lehrjahr:";
-            // 
-            // TxtActualTraineeYear
-            // 
-            this.TxtActualTraineeYear.Location = new System.Drawing.Point(6, 83);
-            this.TxtActualTraineeYear.Name = "TxtActualTraineeYear";
-            this.TxtActualTraineeYear.Size = new System.Drawing.Size(118, 20);
-            this.TxtActualTraineeYear.TabIndex = 0;
-            // 
-            // LblTraineeYears
-            // 
-            this.LblTraineeYears.AutoSize = true;
-            this.LblTraineeYears.Location = new System.Drawing.Point(3, 16);
-            this.LblTraineeYears.Name = "LblTraineeYears";
-            this.LblTraineeYears.Size = new System.Drawing.Size(54, 13);
-            this.LblTraineeYears.TabIndex = 1;
-            this.LblTraineeYears.Text = "Lehrjahre:";
-            // 
-            // TxtTraineeYears
-            // 
-            this.TxtTraineeYears.Location = new System.Drawing.Point(6, 32);
-            this.TxtTraineeYears.Name = "TxtTraineeYears";
-            this.TxtTraineeYears.Size = new System.Drawing.Size(118, 20);
-            this.TxtTraineeYears.TabIndex = 0;
-            // 
-            // PnlTraineeYesNo
-            // 
-            this.PnlTraineeYesNo.Controls.Add(this.RdTraineeNo);
-            this.PnlTraineeYesNo.Controls.Add(this.RdTraineeYes);
-            this.PnlTraineeYesNo.Controls.Add(this.LblTrainee);
-            this.PnlTraineeYesNo.Location = new System.Drawing.Point(381, 38);
-            this.PnlTraineeYesNo.Name = "PnlTraineeYesNo";
-            this.PnlTraineeYesNo.Size = new System.Drawing.Size(122, 43);
-            this.PnlTraineeYesNo.TabIndex = 3;
-            // 
-            // RdTraineeNo
-            // 
-            this.RdTraineeNo.AutoSize = true;
-            this.RdTraineeNo.Location = new System.Drawing.Point(60, 21);
-            this.RdTraineeNo.Name = "RdTraineeNo";
-            this.RdTraineeNo.Size = new System.Drawing.Size(45, 17);
-            this.RdTraineeNo.TabIndex = 0;
-            this.RdTraineeNo.TabStop = true;
-            this.RdTraineeNo.Text = "nein";
-            this.RdTraineeNo.UseVisualStyleBackColor = true;
-            // 
-            // RdTraineeYes
-            // 
-            this.RdTraineeYes.AutoSize = true;
-            this.RdTraineeYes.Location = new System.Drawing.Point(6, 21);
-            this.RdTraineeYes.Name = "RdTraineeYes";
-            this.RdTraineeYes.Size = new System.Drawing.Size(33, 17);
-            this.RdTraineeYes.TabIndex = 0;
-            this.RdTraineeYes.TabStop = true;
-            this.RdTraineeYes.Text = "ja";
-            this.RdTraineeYes.UseVisualStyleBackColor = true;
-            // 
-            // LblTrainee
-            // 
-            this.LblTrainee.AutoSize = true;
-            this.LblTrainee.Location = new System.Drawing.Point(3, 5);
-            this.LblTrainee.Name = "LblTrainee";
-            this.LblTrainee.Size = new System.Drawing.Size(64, 13);
-            this.LblTrainee.TabIndex = 1;
-            this.LblTrainee.Text = "Lernender?:";
-            // 
-            // PnlTraineeData
-            // 
-            this.PnlTraineeData.Controls.Add(this.TxtTraineeYears);
-            this.PnlTraineeData.Controls.Add(this.LblActualTraineeYear);
-            this.PnlTraineeData.Controls.Add(this.TxtActualTraineeYear);
-            this.PnlTraineeData.Controls.Add(this.LblTraineeYears);
-            this.PnlTraineeData.Location = new System.Drawing.Point(381, 119);
-            this.PnlTraineeData.Name = "PnlTraineeData";
-            this.PnlTraineeData.Size = new System.Drawing.Size(139, 116);
-            this.PnlTraineeData.TabIndex = 4;
-            // 
-            // PnlSalutation
-            // 
-            this.PnlSalutation.Controls.Add(this.RdSalutationMale);
-            this.PnlSalutation.Controls.Add(this.RdSalutationsFemale);
-            this.PnlSalutation.Controls.Add(this.LblSalutation);
-            this.PnlSalutation.Location = new System.Drawing.Point(26, 23);
-            this.PnlSalutation.Name = "PnlSalutation";
-            this.PnlSalutation.Size = new System.Drawing.Size(122, 48);
-            this.PnlSalutation.TabIndex = 3;
-            // 
-            // RdSalutationMale
-            // 
-            this.RdSalutationMale.AutoSize = true;
-            this.RdSalutationMale.Location = new System.Drawing.Point(60, 25);
-            this.RdSalutationMale.Name = "RdSalutationMale";
-            this.RdSalutationMale.Size = new System.Drawing.Size(45, 17);
-            this.RdSalutationMale.TabIndex = 0;
-            this.RdSalutationMale.TabStop = true;
-            this.RdSalutationMale.Text = "Herr";
-            this.RdSalutationMale.UseVisualStyleBackColor = true;
-            // 
-            // RdSalutationsFemale
-            // 
-            this.RdSalutationsFemale.AutoSize = true;
-            this.RdSalutationsFemale.Location = new System.Drawing.Point(6, 25);
-            this.RdSalutationsFemale.Name = "RdSalutationsFemale";
-            this.RdSalutationsFemale.Size = new System.Drawing.Size(46, 17);
-            this.RdSalutationsFemale.TabIndex = 0;
-            this.RdSalutationsFemale.TabStop = true;
-            this.RdSalutationsFemale.Text = "Frau";
-            this.RdSalutationsFemale.UseVisualStyleBackColor = true;
-            // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1001, 712);
+            this.ClientSize = new System.Drawing.Size(1502, 1095);
             this.Controls.Add(this.GrpIO);
             this.Controls.Add(this.GrpMutations);
             this.Controls.Add(this.GrpContactHistory);
             this.Controls.Add(this.GrpContactDetails);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Form1";
             this.Text = "Contact Manager";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.TabControl.ResumeLayout(false);
             this.TbCustomer.ResumeLayout(false);
             this.TbCustomer.PerformLayout();
@@ -924,20 +1016,20 @@
             this.GrpLogHistory.PerformLayout();
             this.TbEmploye.ResumeLayout(false);
             this.TbEmploye.PerformLayout();
+            this.PnlTraineeData.ResumeLayout(false);
+            this.PnlTraineeData.PerformLayout();
+            this.PnlTraineeYesNo.ResumeLayout(false);
+            this.PnlTraineeYesNo.PerformLayout();
             this.GrpContactDetails.ResumeLayout(false);
             this.GrpBasicData.ResumeLayout(false);
             this.GrpBasicData.PerformLayout();
+            this.PnlSalutation.ResumeLayout(false);
+            this.PnlSalutation.PerformLayout();
             this.PnlStatus.ResumeLayout(false);
             this.PnlStatus.PerformLayout();
             this.GrpContactHistory.ResumeLayout(false);
             this.GrpMutations.ResumeLayout(false);
             this.GrpIO.ResumeLayout(false);
-            this.PnlTraineeYesNo.ResumeLayout(false);
-            this.PnlTraineeYesNo.PerformLayout();
-            this.PnlTraineeData.ResumeLayout(false);
-            this.PnlTraineeData.PerformLayout();
-            this.PnlSalutation.ResumeLayout(false);
-            this.PnlSalutation.PerformLayout();
             this.ResumeLayout(false);
 
         }
