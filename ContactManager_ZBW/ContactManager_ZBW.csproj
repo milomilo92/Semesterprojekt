@@ -46,6 +46,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Beispiel_MVC\Controller\ClassManager.cs" />
+    <Compile Include="Beispiel_MVC\Model\Exam.cs" />
+    <Compile Include="Beispiel_MVC\Model\Student.cs" />
+    <Compile Include="Beispiel_MVC\Model\Subject.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
