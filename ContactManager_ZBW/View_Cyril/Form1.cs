@@ -27,11 +27,13 @@ namespace ContactManager
         // Function CmdNew_Click
         // description: creates a new Person and adds it to the list
         private void CmdNew_Click(object sender, EventArgs e)
-        {            
+        {
             if (CheckNecessaryFields()) // only when necessary Fields are entered
             {
-                Person temporaryPerson = new Person(); 
-            }
+                Person temporaryPerson = new Person();
+                FillAllFields(temporaryPerson);
+                CreateNewPerson(temporaryPerson);
+            }             
         }
 
         // Function CmdUpdate_Click
@@ -85,6 +87,29 @@ namespace ContactManager
             }
 
             // Further check if all necessary customer fields are entered:
+        }
+
+        // Function FillAllFields
+        // description: fills all the fields of the view into the Person object
+        private void FillAllFields (Person person)
+        {
+            person.Salutation = RdSalutationsFemale.Checked;
+            person.FirstName = TxtFirstName.Text;
+            person.LastName = TxtLastName.Text;
+            person.DateOfBirth = DtpDateOfBirth.Value;
+            person.Gender = // to be defined in View!
+            person.Title = // to be defined in View!
+            person.SocialSecurityNumber = TxtSocialSecurityNumber.Text;
+            person.PhoneNumberPrivat = TxtPhoneNumberPrivate.Text;
+            person.PhoneNumberMobile = TxtPhoneNumberMobile.Text;
+            person.PhoneNumberBusiness = TxtPhoneNumberBusiness.Text;
+            person.Email = TxtEmail.Text;
+            person.Status = RdActive.Checked;
+            person.Nationality = // to be defined in View!
+            person.Street = TxtStreet.Text;
+            person.StreetNumber = TxtStreetNumber.Text;
+            person.ZipCode = TxtZipCode.Text;
+            person.Place = TxtPlace.Text;
         }
     }
 }

@@ -75,18 +75,7 @@ namespace ContactManager_ZBW.Ramon
                 Console.WriteLine("Executing finally block.");
             }
 
-
-
         }
-
-            
-
-
-            
-        }
-
-
-
 
     }
 }
