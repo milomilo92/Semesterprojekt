@@ -42,6 +42,8 @@
             this.TxtCompanyName = new System.Windows.Forms.TextBox();
             this.LblCompanyName = new System.Windows.Forms.Label();
             this.TbEmploye = new System.Windows.Forms.TabPage();
+            this.DtpEndDate = new System.Windows.Forms.DateTimePicker();
+            this.DtpStartDate = new System.Windows.Forms.DateTimePicker();
             this.PnlTraineeData = new System.Windows.Forms.Panel();
             this.TxtTraineeYears = new System.Windows.Forms.TextBox();
             this.LblActualTraineeYear = new System.Windows.Forms.Label();
@@ -70,6 +72,7 @@
             this.CmdDelete = new System.Windows.Forms.Button();
             this.GrpContactDetails = new System.Windows.Forms.GroupBox();
             this.GrpBasicData = new System.Windows.Forms.GroupBox();
+            this.DtpDateOfBirth = new System.Windows.Forms.DateTimePicker();
             this.PnlSalutation = new System.Windows.Forms.Panel();
             this.RdSalutationMale = new System.Windows.Forms.RadioButton();
             this.RdSalutationsFemale = new System.Windows.Forms.RadioButton();
@@ -108,9 +111,6 @@
             this.GrpIO = new System.Windows.Forms.GroupBox();
             this.CmdLoad = new System.Windows.Forms.Button();
             this.CmdSave = new System.Windows.Forms.Button();
-            this.DtpDateOfBirth = new System.Windows.Forms.DateTimePicker();
-            this.DtpStartDate = new System.Windows.Forms.DateTimePicker();
-            this.DtpEndDate = new System.Windows.Forms.DateTimePicker();
             this.TabControl.SuspendLayout();
             this.TbCustomer.SuspendLayout();
             this.GrpLogHistory.SuspendLayout();
@@ -148,7 +148,7 @@
             this.TbCustomer.Controls.Add(this.LblCompanyName);
             this.TbCustomer.Location = new System.Drawing.Point(4, 22);
             this.TbCustomer.Name = "TbCustomer";
-            this.TbCustomer.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.TbCustomer.Padding = new System.Windows.Forms.Padding(3);
             this.TbCustomer.Size = new System.Drawing.Size(542, 266);
             this.TbCustomer.TabIndex = 0;
             this.TbCustomer.Text = "Kunde";
@@ -269,10 +269,26 @@
             this.TbEmploye.Controls.Add(this.LblEmployeeNumber);
             this.TbEmploye.Location = new System.Drawing.Point(4, 22);
             this.TbEmploye.Name = "TbEmploye";
-            this.TbEmploye.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.TbEmploye.Padding = new System.Windows.Forms.Padding(3);
             this.TbEmploye.Size = new System.Drawing.Size(542, 266);
             this.TbEmploye.TabIndex = 1;
             this.TbEmploye.Text = "Mitarbeiter";
+            // 
+            // DtpEndDate
+            // 
+            this.DtpEndDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.DtpEndDate.Location = new System.Drawing.Point(192, 150);
+            this.DtpEndDate.Name = "DtpEndDate";
+            this.DtpEndDate.Size = new System.Drawing.Size(118, 20);
+            this.DtpEndDate.TabIndex = 6;
+            // 
+            // DtpStartDate
+            // 
+            this.DtpStartDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.DtpStartDate.Location = new System.Drawing.Point(22, 151);
+            this.DtpStartDate.Name = "DtpStartDate";
+            this.DtpStartDate.Size = new System.Drawing.Size(140, 20);
+            this.DtpStartDate.TabIndex = 5;
             // 
             // PnlTraineeData
             // 
@@ -465,6 +481,7 @@
             this.LslContactList.ScrollAlwaysVisible = true;
             this.LslContactList.Size = new System.Drawing.Size(218, 524);
             this.LslContactList.TabIndex = 1;
+            this.LslContactList.SelectedIndexChanged += new System.EventHandler(this.LslContactList_SelectedIndexChanged);
             // 
             // CmdNew
             // 
@@ -553,6 +570,14 @@
             this.GrpBasicData.TabIndex = 1;
             this.GrpBasicData.TabStop = false;
             this.GrpBasicData.Text = "Grunddaten";
+            // 
+            // DtpDateOfBirth
+            // 
+            this.DtpDateOfBirth.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.DtpDateOfBirth.Location = new System.Drawing.Point(393, 140);
+            this.DtpDateOfBirth.Name = "DtpDateOfBirth";
+            this.DtpDateOfBirth.Size = new System.Drawing.Size(122, 20);
+            this.DtpDateOfBirth.TabIndex = 4;
             // 
             // PnlSalutation
             // 
@@ -893,30 +918,6 @@
             this.CmdSave.Text = "Daten in File speichern";
             this.CmdSave.UseVisualStyleBackColor = true;
             this.CmdSave.Click += new System.EventHandler(this.CmdSave_Click);
-            // 
-            // DtpDateOfBirth
-            // 
-            this.DtpDateOfBirth.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.DtpDateOfBirth.Location = new System.Drawing.Point(393, 140);
-            this.DtpDateOfBirth.Name = "DtpDateOfBirth";
-            this.DtpDateOfBirth.Size = new System.Drawing.Size(122, 20);
-            this.DtpDateOfBirth.TabIndex = 4;
-            // 
-            // DtpStartDate
-            // 
-            this.DtpStartDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.DtpStartDate.Location = new System.Drawing.Point(22, 151);
-            this.DtpStartDate.Name = "DtpStartDate";
-            this.DtpStartDate.Size = new System.Drawing.Size(140, 20);
-            this.DtpStartDate.TabIndex = 5;
-            // 
-            // DtpEndDate
-            // 
-            this.DtpEndDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.DtpEndDate.Location = new System.Drawing.Point(192, 150);
-            this.DtpEndDate.Name = "DtpEndDate";
-            this.DtpEndDate.Size = new System.Drawing.Size(118, 20);
-            this.DtpEndDate.TabIndex = 6;
             // 
             // Form1
             // 
