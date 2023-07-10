@@ -56,7 +56,11 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Model_Renato\Customer.cs" />
+    <Compile Include="Model_Renato\Employee.cs" />
     <Compile Include="Model_Renato\Model.cs" />
+    <Compile Include="Model_Renato\Person.cs" />
+    <Compile Include="Model_Renato\Trainee.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Ramon\Class1.cs" />
