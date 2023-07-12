@@ -41,7 +41,7 @@
             this.LblCompanyContact = new System.Windows.Forms.Label();
             this.TxtCompanyName = new System.Windows.Forms.TextBox();
             this.LblCompanyName = new System.Windows.Forms.Label();
-            this.TbEmploye = new System.Windows.Forms.TabPage();
+            this.TbEmployee = new System.Windows.Forms.TabPage();
             this.DtpEndDate = new System.Windows.Forms.DateTimePicker();
             this.DtpStartDate = new System.Windows.Forms.DateTimePicker();
             this.PnlTraineeData = new System.Windows.Forms.Panel();
@@ -111,10 +111,11 @@
             this.GrpIO = new System.Windows.Forms.GroupBox();
             this.CmdLoad = new System.Windows.Forms.Button();
             this.CmdSave = new System.Windows.Forms.Button();
+            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.TabControl.SuspendLayout();
             this.TbCustomer.SuspendLayout();
             this.GrpLogHistory.SuspendLayout();
-            this.TbEmploye.SuspendLayout();
+            this.TbEmployee.SuspendLayout();
             this.PnlTraineeData.SuspendLayout();
             this.PnlTraineeYesNo.SuspendLayout();
             this.GrpContactDetails.SuspendLayout();
@@ -124,12 +125,13 @@
             this.GrpContactHistory.SuspendLayout();
             this.GrpMutations.SuspendLayout();
             this.GrpIO.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.SuspendLayout();
             // 
             // TabControl
             // 
             this.TabControl.Controls.Add(this.TbCustomer);
-            this.TabControl.Controls.Add(this.TbEmploye);
+            this.TabControl.Controls.Add(this.TbEmployee);
             this.TabControl.Location = new System.Drawing.Point(6, 383);
             this.TabControl.Name = "TabControl";
             this.TabControl.SelectedIndex = 0;
@@ -248,31 +250,31 @@
             this.LblCompanyName.TabIndex = 1;
             this.LblCompanyName.Text = "Firmenname:";
             // 
-            // TbEmploye
+            // TbEmployee
             // 
-            this.TbEmploye.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.TbEmploye.Controls.Add(this.DtpEndDate);
-            this.TbEmploye.Controls.Add(this.DtpStartDate);
-            this.TbEmploye.Controls.Add(this.PnlTraineeData);
-            this.TbEmploye.Controls.Add(this.PnlTraineeYesNo);
-            this.TbEmploye.Controls.Add(this.LblEndDate);
-            this.TbEmploye.Controls.Add(this.textBox2);
-            this.TbEmploye.Controls.Add(this.LblEmployment);
-            this.TbEmploye.Controls.Add(this.TxtCadreLevel);
-            this.TbEmploye.Controls.Add(this.LblCadreLevel);
-            this.TbEmploye.Controls.Add(this.TxtRole);
-            this.TbEmploye.Controls.Add(this.LblRole);
-            this.TbEmploye.Controls.Add(this.LblStartDate);
-            this.TbEmploye.Controls.Add(this.TxtDepartment);
-            this.TbEmploye.Controls.Add(this.LblDepartment);
-            this.TbEmploye.Controls.Add(this.TxtEmployeeNumber);
-            this.TbEmploye.Controls.Add(this.LblEmployeeNumber);
-            this.TbEmploye.Location = new System.Drawing.Point(4, 22);
-            this.TbEmploye.Name = "TbEmploye";
-            this.TbEmploye.Padding = new System.Windows.Forms.Padding(3);
-            this.TbEmploye.Size = new System.Drawing.Size(542, 266);
-            this.TbEmploye.TabIndex = 1;
-            this.TbEmploye.Text = "Mitarbeiter";
+            this.TbEmployee.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.TbEmployee.Controls.Add(this.DtpEndDate);
+            this.TbEmployee.Controls.Add(this.DtpStartDate);
+            this.TbEmployee.Controls.Add(this.PnlTraineeData);
+            this.TbEmployee.Controls.Add(this.PnlTraineeYesNo);
+            this.TbEmployee.Controls.Add(this.LblEndDate);
+            this.TbEmployee.Controls.Add(this.textBox2);
+            this.TbEmployee.Controls.Add(this.LblEmployment);
+            this.TbEmployee.Controls.Add(this.TxtCadreLevel);
+            this.TbEmployee.Controls.Add(this.LblCadreLevel);
+            this.TbEmployee.Controls.Add(this.TxtRole);
+            this.TbEmployee.Controls.Add(this.LblRole);
+            this.TbEmployee.Controls.Add(this.LblStartDate);
+            this.TbEmployee.Controls.Add(this.TxtDepartment);
+            this.TbEmployee.Controls.Add(this.LblDepartment);
+            this.TbEmployee.Controls.Add(this.TxtEmployeeNumber);
+            this.TbEmployee.Controls.Add(this.LblEmployeeNumber);
+            this.TbEmployee.Location = new System.Drawing.Point(4, 22);
+            this.TbEmployee.Name = "TbEmployee";
+            this.TbEmployee.Padding = new System.Windows.Forms.Padding(3);
+            this.TbEmployee.Size = new System.Drawing.Size(542, 266);
+            this.TbEmployee.TabIndex = 1;
+            this.TbEmployee.Text = "Mitarbeiter";
             // 
             // DtpEndDate
             // 
@@ -536,6 +538,7 @@
             // 
             // GrpBasicData
             // 
+            this.GrpBasicData.Controls.Add(this.numericUpDown1);
             this.GrpBasicData.Controls.Add(this.DtpDateOfBirth);
             this.GrpBasicData.Controls.Add(this.PnlSalutation);
             this.GrpBasicData.Controls.Add(this.PnlStatus);
@@ -919,6 +922,13 @@
             this.CmdSave.UseVisualStyleBackColor = true;
             this.CmdSave.Click += new System.EventHandler(this.CmdSave_Click);
             // 
+            // numericUpDown1
+            // 
+            this.numericUpDown1.Location = new System.Drawing.Point(211, 140);
+            this.numericUpDown1.Name = "numericUpDown1";
+            this.numericUpDown1.Size = new System.Drawing.Size(120, 20);
+            this.numericUpDown1.TabIndex = 5;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -936,8 +946,8 @@
             this.TbCustomer.PerformLayout();
             this.GrpLogHistory.ResumeLayout(false);
             this.GrpLogHistory.PerformLayout();
-            this.TbEmploye.ResumeLayout(false);
-            this.TbEmploye.PerformLayout();
+            this.TbEmployee.ResumeLayout(false);
+            this.TbEmployee.PerformLayout();
             this.PnlTraineeData.ResumeLayout(false);
             this.PnlTraineeData.PerformLayout();
             this.PnlTraineeYesNo.ResumeLayout(false);
@@ -952,6 +962,7 @@
             this.GrpContactHistory.ResumeLayout(false);
             this.GrpMutations.ResumeLayout(false);
             this.GrpIO.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -960,7 +971,7 @@
 
         private System.Windows.Forms.TabControl TabControl;
         private System.Windows.Forms.TabPage TbCustomer;
-        private System.Windows.Forms.TabPage TbEmploye;
+        private System.Windows.Forms.TabPage TbEmployee;
         private System.Windows.Forms.ListBox LslContactList;
         private System.Windows.Forms.Button CmdNew;
         private System.Windows.Forms.Button CmdUpdate;
@@ -1041,6 +1052,7 @@
         private System.Windows.Forms.DateTimePicker DtpDateOfBirth;
         private System.Windows.Forms.DateTimePicker DtpEndDate;
         private System.Windows.Forms.DateTimePicker DtpStartDate;
+        private System.Windows.Forms.NumericUpDown numericUpDown1;
     }
 }
 

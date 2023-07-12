@@ -23,7 +23,8 @@ namespace ContactManager
         {
             // Fill in all the Persons of the PersonsList into the ListBox
             throw new NotImplementedException();
-            // wie heisst die PersonenListe von Milos?
+            // soll hier schon geladen werden?
+            LoadList();
         }
         
         // Function CmdNew_Click
@@ -32,9 +33,10 @@ namespace ContactManager
         {
             if (CheckNecessaryFields()) // only when necessary Fields are entered
             {
-                Person temporaryPerson = new Person();
-                FillAllFields(temporaryPerson);
-                CreateNewPerson(temporaryPerson);
+                    Person temporaryPerson = CreateCustomerOrEmployee();
+                    FillAllFields(temporaryPerson);
+                    int index = CreateNewPerson(temporaryPerson);
+                    LslContactList.SelectedIndex = index;  // select and show newly created person         
             }             
         }
 
@@ -42,11 +44,20 @@ namespace ContactManager
         // description: after a Person is selected, its specs can be altered with this function
         private void CmdUpdate_Click(object sender, EventArgs e)
         {
-            if (CheckNecessaryFields()) // only when necessary Fields are entered
-            {
-                Person temporaryPerson = new Person();
-                FillAllFields(temporaryPerson);
-                UpdatePerson(temporaryPerson);
+            if (LslContactList.SelectedIndices.Count > 0) {
+                if (CheckNecessaryFields()) // only when necessary Fields are entered
+                {
+                    {
+                        int index = LslContactList.SelectedIndex;
+                        Person temporaryPerson = CreateCustomerOrEmployee();
+                        FillAllFields(temporaryPerson);
+                        bool result = UpdatePerson(index, temporaryPerson);
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Bitte erst zu ändernde Person auswählen oder suchen");
+                }
             }
         }
 
@@ -56,9 +67,17 @@ namespace ContactManager
         {
             if (CheckNecessaryFields()) // only when necessary Fields are entered
             {
-                Person temporaryPerson = new Person();
+                Person temporaryPerson = CreateCustomerOrEmployee();
                 FillAllFields(temporaryPerson);
-                SearchPerson(temporaryPerson);
+                int index = SearchPerson(temporaryPerson);
+                if (index != -1)
+                {
+                    LslContactList.SelectedIndex = index;   // select and show found person
+                }
+                else
+                {
+                    MessageBox.Show("Keine entsprechende Person gefunden.");
+                }
             }
         }
 
@@ -66,12 +85,17 @@ namespace ContactManager
         // description: the selected person will be removed from the list
         private void CmdDelete_Click(object sender, EventArgs e)
         {
-            if (CheckNecessaryFields()) // only when necessary Fields are entered
-            {
-                Person temporaryPerson = new Person();
-                FillAllFields(temporaryPerson);
-                DeletePerson(temporaryPerson);
-            }
+
+                if (LslContactList.SelectedIndices.Count > 0)
+                {
+                    throw new NotImplementedException; // Noch Abfragefenster programmieren!
+                    int index = LslContactList.SelectedIndex;
+                    bool result = DeletePerson(index);
+                }
+                else
+                {
+                    MessageBox.Show("Keine Person zum Löschen ausgewählt.");
+                }            
         }
 
         // Function CmdSave_Click
@@ -97,16 +121,32 @@ namespace ContactManager
         {
             if (LslContactList.SelectedIndices.Count !=0 && LslContactList.SelectedIndices.Count < 2)
             {
-                Person selectedPerson;
-                selectedPerson = LslContactList.SelectedItem;
+                int selectedIndex = LslContactList.SelectedIndex;
+                Person selectedPerson = GetPerson(selectedIndex);
                 ShowAllFields(selectedPerson);
             }
         }
 
+        // Function CreateCustomerOrEmployee
+        // description: depending on selected Person type in view, returns the according correct type
+        private Person CreateCustomerOrEmployee()
+        {
+            Person temporaryPerson;
 
-        // Function CheckNecessarFields
-        // description: checks if all necessary fields are entered before actions
-        private bool CheckNecessaryFields()
+            if (TabControl.SelectedTab.Name == "TbCustomer")
+            {
+                temporaryPerson = new Customer;
+            }
+            else // if (TabControl.SelectedTab.Name == "TbEmployee")
+            {
+                temporaryPerson = new Employee;
+            }
+            return temporaryPerson;
+        }
+
+    // Function CheckNecessarFields
+    // description: checks if all necessary fields are entered before actions
+    private bool CheckNecessaryFields()
         {
             // Check if all necessary base fields are entered:
             if (TxtFirstName.Text != "" && TxtLastName.Text != "" && TxtEmail.Text != "")
@@ -125,7 +165,7 @@ namespace ContactManager
         private void FillAllFields (Person person)
         {
             // fill all base fields of the person:
-            person.Salutation = RdSalutationsFemale.Checked;
+            person.Salutation = RdSalutationsFemale.Checked ? "Frau" : "Herr";
             person.FirstName = TxtFirstName.Text;
             person.LastName = TxtLastName.Text;
             person.DateOfBirth = DtpDateOfBirth.Value;
@@ -140,8 +180,15 @@ namespace ContactManager
             //person.Nationality =  to be defined in View!
             person.Street = TxtStreet.Text;
             person.StreetNumber = TxtStreetNumber.Text;
-            person.ZipCode = TxtZipCode.Text;
             person.Place = TxtPlace.Text;
+            try
+            {
+                person.ZipCode = Convert.ToInt16(TxtZipCode.Text);
+            }
+            catch (FormatException)
+            {
+                MessageBox.Show("Nur Zahlen in PLZ erlaubt");
+            }
 
             // aditionally fill out all customer or employee fields into the Person object
             throw new NotImplementedException();
@@ -152,7 +199,7 @@ namespace ContactManager
         private void ShowAllFields(Person person)
         {
             // show all base fields of the person:
-            RdSalutationsFemale.Checked = person.Salutation;
+            RdSalutationsFemale.Checked = person.Salutation=="Frau"? true :false;
             TxtFirstName.Text = person.FirstName;
             TxtLastName.Text = person.LastName;
             DtpDateOfBirth.Value = person.DateOfBirth;
@@ -167,11 +214,21 @@ namespace ContactManager
             // tbd in View! = person.Nationality;
             TxtStreet.Text = person.Street;
             TxtStreetNumber.Text = person.StreetNumber;
-            TxtZipCode.Text = person.ZipCode;
+            TxtZipCode.Text = Convert.ToString(person.ZipCode);
             TxtPlace.Text = person.Place;
 
             // additionally show all customer or employee fields in View
             throw new NotImplementedException();
+        }
+
+        private void LoadList()
+        {
+            LslContactList.Items.Clear();
+            string[] allPersonData = GetAllPersonData();
+            foreach (string personData in allPersonData)
+            {
+                LslContactList.Items.Add(personData);
+            }
         }
 
     }
