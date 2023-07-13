@@ -37,7 +37,7 @@
             this.CmdLogAdd = new System.Windows.Forms.Button();
             this.TxtCustomerType = new System.Windows.Forms.TextBox();
             this.LblCustomerType = new System.Windows.Forms.Label();
-            this.TxtCustomerContact = new System.Windows.Forms.TextBox();
+            this.TxtCompanyContact = new System.Windows.Forms.TextBox();
             this.LblCompanyContact = new System.Windows.Forms.Label();
             this.TxtCompanyName = new System.Windows.Forms.TextBox();
             this.LblCompanyName = new System.Windows.Forms.Label();
@@ -54,7 +54,7 @@
             this.RdTraineeYes = new System.Windows.Forms.RadioButton();
             this.LblTrainee = new System.Windows.Forms.Label();
             this.LblEndDate = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.TxtEmployment = new System.Windows.Forms.TextBox();
             this.LblEmployment = new System.Windows.Forms.Label();
             this.TxtCadreLevel = new System.Windows.Forms.TextBox();
             this.LblCadreLevel = new System.Windows.Forms.Label();
@@ -72,6 +72,7 @@
             this.CmdDelete = new System.Windows.Forms.Button();
             this.GrpContactDetails = new System.Windows.Forms.GroupBox();
             this.GrpBasicData = new System.Windows.Forms.GroupBox();
+            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.DtpDateOfBirth = new System.Windows.Forms.DateTimePicker();
             this.PnlSalutation = new System.Windows.Forms.Panel();
             this.RdSalutationMale = new System.Windows.Forms.RadioButton();
@@ -111,7 +112,6 @@
             this.GrpIO = new System.Windows.Forms.GroupBox();
             this.CmdLoad = new System.Windows.Forms.Button();
             this.CmdSave = new System.Windows.Forms.Button();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.TabControl.SuspendLayout();
             this.TbCustomer.SuspendLayout();
             this.GrpLogHistory.SuspendLayout();
@@ -120,12 +120,12 @@
             this.PnlTraineeYesNo.SuspendLayout();
             this.GrpContactDetails.SuspendLayout();
             this.GrpBasicData.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.PnlSalutation.SuspendLayout();
             this.PnlStatus.SuspendLayout();
             this.GrpContactHistory.SuspendLayout();
             this.GrpMutations.SuspendLayout();
             this.GrpIO.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.SuspendLayout();
             // 
             // TabControl
@@ -144,7 +144,7 @@
             this.TbCustomer.Controls.Add(this.GrpLogHistory);
             this.TbCustomer.Controls.Add(this.TxtCustomerType);
             this.TbCustomer.Controls.Add(this.LblCustomerType);
-            this.TbCustomer.Controls.Add(this.TxtCustomerContact);
+            this.TbCustomer.Controls.Add(this.TxtCompanyContact);
             this.TbCustomer.Controls.Add(this.LblCompanyContact);
             this.TbCustomer.Controls.Add(this.TxtCompanyName);
             this.TbCustomer.Controls.Add(this.LblCompanyName);
@@ -201,6 +201,7 @@
             this.CmdLogAdd.TabIndex = 0;
             this.CmdLogAdd.Text = "Logeintrag hinzufügen";
             this.CmdLogAdd.UseVisualStyleBackColor = true;
+            this.CmdLogAdd.Click += new System.EventHandler(this.CmdLogAdd_Click);
             // 
             // TxtCustomerType
             // 
@@ -218,12 +219,12 @@
             this.LblCustomerType.TabIndex = 1;
             this.LblCustomerType.Text = "Kundentyp (A-E):";
             // 
-            // TxtCustomerContact
+            // TxtCompanyContact
             // 
-            this.TxtCustomerContact.Location = new System.Drawing.Point(342, 43);
-            this.TxtCustomerContact.Name = "TxtCustomerContact";
-            this.TxtCustomerContact.Size = new System.Drawing.Size(167, 20);
-            this.TxtCustomerContact.TabIndex = 0;
+            this.TxtCompanyContact.Location = new System.Drawing.Point(342, 43);
+            this.TxtCompanyContact.Name = "TxtCompanyContact";
+            this.TxtCompanyContact.Size = new System.Drawing.Size(167, 20);
+            this.TxtCompanyContact.TabIndex = 0;
             // 
             // LblCompanyContact
             // 
@@ -258,7 +259,7 @@
             this.TbEmployee.Controls.Add(this.PnlTraineeData);
             this.TbEmployee.Controls.Add(this.PnlTraineeYesNo);
             this.TbEmployee.Controls.Add(this.LblEndDate);
-            this.TbEmployee.Controls.Add(this.textBox2);
+            this.TbEmployee.Controls.Add(this.TxtEmployment);
             this.TbEmployee.Controls.Add(this.LblEmployment);
             this.TbEmployee.Controls.Add(this.TxtCadreLevel);
             this.TbEmployee.Controls.Add(this.LblCadreLevel);
@@ -348,6 +349,7 @@
             // RdTraineeNo
             // 
             this.RdTraineeNo.AutoSize = true;
+            this.RdTraineeNo.Checked = true;
             this.RdTraineeNo.Location = new System.Drawing.Point(60, 21);
             this.RdTraineeNo.Name = "RdTraineeNo";
             this.RdTraineeNo.Size = new System.Drawing.Size(45, 17);
@@ -385,12 +387,12 @@
             this.LblEndDate.TabIndex = 1;
             this.LblEndDate.Text = "Austrittsdatum:";
             // 
-            // textBox2
+            // TxtEmployment
             // 
-            this.textBox2.Location = new System.Drawing.Point(192, 101);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(118, 20);
-            this.textBox2.TabIndex = 0;
+            this.TxtEmployment.Location = new System.Drawing.Point(192, 101);
+            this.TxtEmployment.Name = "TxtEmployment";
+            this.TxtEmployment.Size = new System.Drawing.Size(118, 20);
+            this.TxtEmployment.TabIndex = 0;
             // 
             // LblEmployment
             // 
@@ -573,6 +575,13 @@
             this.GrpBasicData.TabIndex = 1;
             this.GrpBasicData.TabStop = false;
             this.GrpBasicData.Text = "Grunddaten";
+            // 
+            // numericUpDown1
+            // 
+            this.numericUpDown1.Location = new System.Drawing.Point(211, 140);
+            this.numericUpDown1.Name = "numericUpDown1";
+            this.numericUpDown1.Size = new System.Drawing.Size(120, 20);
+            this.numericUpDown1.TabIndex = 5;
             // 
             // DtpDateOfBirth
             // 
@@ -922,13 +931,6 @@
             this.CmdSave.UseVisualStyleBackColor = true;
             this.CmdSave.Click += new System.EventHandler(this.CmdSave_Click);
             // 
-            // numericUpDown1
-            // 
-            this.numericUpDown1.Location = new System.Drawing.Point(211, 140);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(120, 20);
-            this.numericUpDown1.TabIndex = 5;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -955,6 +957,7 @@
             this.GrpContactDetails.ResumeLayout(false);
             this.GrpBasicData.ResumeLayout(false);
             this.GrpBasicData.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.PnlSalutation.ResumeLayout(false);
             this.PnlSalutation.PerformLayout();
             this.PnlStatus.ResumeLayout(false);
@@ -962,7 +965,6 @@
             this.GrpContactHistory.ResumeLayout(false);
             this.GrpMutations.ResumeLayout(false);
             this.GrpIO.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1021,7 +1023,7 @@
         private System.Windows.Forms.Label LblCompanyName;
         private System.Windows.Forms.TextBox TxtCustomerType;
         private System.Windows.Forms.Label LblCustomerType;
-        private System.Windows.Forms.TextBox TxtCustomerContact;
+        private System.Windows.Forms.TextBox TxtCompanyContact;
         private System.Windows.Forms.Label LblCompanyContact;
         private System.Windows.Forms.Label LblEndDate;
         private System.Windows.Forms.Label LblStartDate;
@@ -1029,7 +1031,7 @@
         private System.Windows.Forms.Label LblDepartment;
         private System.Windows.Forms.TextBox TxtEmployeeNumber;
         private System.Windows.Forms.Label LblEmployeeNumber;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox TxtEmployment;
         private System.Windows.Forms.Label LblEmployment;
         private System.Windows.Forms.TextBox TxtCadreLevel;
         private System.Windows.Forms.Label LblCadreLevel;

@@ -52,6 +52,10 @@ namespace ContactManager
                         Person temporaryPerson = CreateCustomerOrEmployee();
                         FillAllFields(temporaryPerson);
                         bool result = UpdatePerson(index, temporaryPerson);
+                        if (!result)
+                        {
+                            MessageBox.Show("Fehler beim Ändern - bitte Person löschen und neu erstellen.");
+                        }
                     }
                 }
                 else
@@ -191,6 +195,32 @@ namespace ContactManager
             }
 
             // aditionally fill out all customer or employee fields into the Person object
+            switch (TabControl.SelectedTab.Name)
+            {
+                case "TbCustomer":
+                    ((Customer)person).CompanyName = TxtCompanyName.Text;
+                    ((Customer)person).CustomerType = TxtCustomerType.Text;
+                    ((Customer)person).CompanyContact = TxtCompanyContact.Text;
+                    break;
+                case "TbEmployee":
+                    ((Employee)person).Department = TxtDepartment.Text;
+                    ((Employee)person).Role = TxtRole.Text;
+                    ((Employee)person).StartDate = DtpStartDate.Value;
+                    ((Employee)person).EndDate = DtpEndDate.Value;
+                    try
+                    {
+                        ((Employee)person).Employment = Convert.ToInt16(TxtEmployment.Text);
+                        ((Employee)person).CadreLevel = Convert.ToInt16(TxtCadreLevel.Text);
+                    }
+                    catch (FormatException)
+                    {
+                        MessageBox.Show("Beschäftigungsgrad und Kaderstufe dürfen nur Nummern sein.");                        
+                    }                 
+                    break;
+                default:
+                    break;
+            }
+            // additionally fill out trainee data:
             throw new NotImplementedException();
         }
 
@@ -221,6 +251,8 @@ namespace ContactManager
             throw new NotImplementedException();
         }
 
+        // Function LoadList
+        // description: Fills all persons from the the controllers list to the ListBox
         private void LoadList()
         {
             LslContactList.Items.Clear();
@@ -231,5 +263,18 @@ namespace ContactManager
             }
         }
 
+        // Function ClearView()
+        // description: resets all the fields in the view and deselects the ListBox
+        private void ClearView()
+        {
+            Person emptyPerson = CreateCustomerOrEmployee();
+            ShowAllFields(emptyPerson);
+            LslContactList.ClearSelected();  // nothing shall be selected in the ListBox
+        }
+
+        private void CmdLogAdd_Click(object sender, EventArgs e)
+        {
+            throw new NotImplementedException;
+        }
     }
 }
