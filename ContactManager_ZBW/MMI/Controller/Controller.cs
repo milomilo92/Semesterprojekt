@@ -19,5 +19,10 @@ namespace ContactManager_ZBW.Milos.Controller
             model = new Model();
             updatePerson = null;
         }
+
+        public bool UpdatePerson()
+        {
+
+        }
     }
 }
