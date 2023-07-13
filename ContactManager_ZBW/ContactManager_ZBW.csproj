@@ -56,7 +56,7 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Milos2\Controller\Controller.cs" />
+    <Compile Include="Milos neu\Controller\Controller.cs" />
     <Compile Include="Model_Renato\Customer.cs" />
     <Compile Include="Model_Renato\Employee.cs" />
     <Compile Include="Model_Renato\Model.cs" />
