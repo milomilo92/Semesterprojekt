@@ -51,11 +51,7 @@ namespace ContactManager
                         int index = LslContactList.SelectedIndex;
                         Person temporaryPerson = CreateCustomerOrEmployee();
                         FillAllFields(temporaryPerson);
-                        bool result = UpdatePerson(index, temporaryPerson);
-                        if (!result)
-                        {
-                            MessageBox.Show("Fehler beim Ändern - bitte Person löschen und neu erstellen.");
-                        }
+                        UpdatePerson(index, temporaryPerson);
                     }
                 }
                 else
@@ -248,7 +244,36 @@ namespace ContactManager
             TxtPlace.Text = person.Place;
 
             // additionally show all customer or employee fields in View
+            if (person is Customer)
+            {
+                TxtCompanyName.Text = ((Customer)person).CompanyName;
+                TxtCustomerType.Text = ((Customer)person).CustomerType;
+                TxtCompanyContact.Text = ((Customer)person).CompanyContact;
+
+                // add all log entries to the log history in the view:
+                TxtLogHistory.Clear();      // first empty the history
+                string[] logEntries = ((Customer)person).GetAllLogEntries();
+                foreach (string entry in logEntries)
+                {
+                    TxtLogHistory.Text += entry + "\r\n";
+                }
+            }
+            else if (person is Employee)
+            {
+                TxtDepartment.Text = ((Employee)person).Department;
+                TxtRole.Text = ((Employee)person).Role;
+                DtpStartDate.Value = ((Employee)person).StartDate;
+                DtpEndDate.Value = ((Employee)person).EndDate;
+                TxtEmployment.Text = Convert.ToString( ((Employee)person).Employment );
+                TxtCadreLevel.Text = Convert.ToString( ((Employee)person).CadreLevel );
+                if (person is Trainee)
+                {
+
+                }
+            }
+
             throw new NotImplementedException();
+
         }
 
         // Function LoadList
@@ -272,9 +297,31 @@ namespace ContactManager
             LslContactList.ClearSelected();  // nothing shall be selected in the ListBox
         }
 
+        // Function CmdLogAdd_Click
+        // description: adds a log entry to the logEntry-array of the customer
         private void CmdLogAdd_Click(object sender, EventArgs e)
         {
-            throw new NotImplementedException;
+            if (LslContactList.SelectedIndices.Count > 0)
+            {
+                int index = LslContactList.SelectedIndex;
+                Customer customer = GetPerson(index);
+                string newLogEntry = TxtLogNew.Text;
+                if (newLogEntry != "")
+                {
+                    customer.AddLogEntry(newLogEntry);
+                }
+                UpdatePerson(customer);                 // Update new data to controllers customer-list
+                TxtLogNew.Clear();                      // and clear entry field
+                LslContactList.SelectedIndex = index;   // finally update view and show entry in list
+                else
+                {
+                    MessageBox.Show("Keine leeren Logeinträge erlaubt.");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Bitte erst einen Kunden auswählen.");
+            }
         }
     }
 }
