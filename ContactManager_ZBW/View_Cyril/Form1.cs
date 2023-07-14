@@ -91,6 +91,7 @@ namespace ContactManager
                     throw new NotImplementedException; // Noch Abfragefenster programmieren!
                     int index = LslContactList.SelectedIndex;
                     bool result = DeletePerson(index);
+                    ClearView();
                 }
                 else
                 {
@@ -123,6 +124,7 @@ namespace ContactManager
             {
                 int selectedIndex = LslContactList.SelectedIndex;
                 Person selectedPerson = GetPerson(selectedIndex);
+                ClearView();
                 ShowAllFields(selectedPerson);
             }
         }
@@ -139,7 +141,14 @@ namespace ContactManager
             }
             else // if (TabControl.SelectedTab.Name == "TbEmployee")
             {
-                temporaryPerson = new Employee;
+                if (RdTraineeYes.Checked)
+                {
+                    temporaryPerson = new Trainee;
+                }
+                else
+                {
+                    temporaryPerson = new Employee;
+                }
             }
             return temporaryPerson;
         }
@@ -211,7 +220,20 @@ namespace ContactManager
                     catch (FormatException)
                     {
                         MessageBox.Show("Beschäftigungsgrad und Kaderstufe dürfen nur Nummern sein.");                        
-                    }                 
+                    }
+                    // also get trainee data if neccessary:
+                    if (RdTraineeYes.Checked)
+                    {
+                        try
+                        {
+                            ((Trainee)person).ActualTraineeYear = Convert.ToInt16(TxtActualTraineeYear.Text);
+                            ((Trainee)person).TraineeYears = Convert.ToInt16(TxtTraineeYears.Text);
+                        }
+                        catch (FormatException)
+                        {
+                            MessageBox.Show("Lehrjahre und aktuelles Lehrjahr dürfen nur Zahlen sein.");                                                        
+                        }
+                    }                                     
                     break;
                 default:
                     break;
@@ -243,7 +265,7 @@ namespace ContactManager
             TxtZipCode.Text = Convert.ToString(person.ZipCode);
             TxtPlace.Text = person.Place;
 
-            // additionally show all customer or employee fields in View
+            // additionally show all customer or employee fields in view:
             if (person is Customer)
             {
                 TxtCompanyName.Text = ((Customer)person).CompanyName;
@@ -251,13 +273,14 @@ namespace ContactManager
                 TxtCompanyContact.Text = ((Customer)person).CompanyContact;
 
                 // add all log entries to the log history in the view:
-                TxtLogHistory.Clear();      // first empty the history
+                TxtLogHistory.Clear();           // first empty the history
                 string[] logEntries = ((Customer)person).GetAllLogEntries();
                 foreach (string entry in logEntries)
                 {
                     TxtLogHistory.Text += entry + "\r\n";
                 }
             }
+            // additionally show all employee fields in the view:
             else if (person is Employee)
             {
                 TxtDepartment.Text = ((Employee)person).Department;
@@ -266,13 +289,14 @@ namespace ContactManager
                 DtpEndDate.Value = ((Employee)person).EndDate;
                 TxtEmployment.Text = Convert.ToString( ((Employee)person).Employment );
                 TxtCadreLevel.Text = Convert.ToString( ((Employee)person).CadreLevel );
+
+                //additionally show all trainee fields in the view:
                 if (person is Trainee)
                 {
-
+                    TxtTraineeYears.Text = ((Trainee)person).TraineeYears;
+                    TxtActualTraineeYear.Text = ((Trainee)person).ActualTraineeYear;
                 }
             }
-
-            throw new NotImplementedException();
 
         }
 
