@@ -28,21 +28,25 @@ namespace ContactManager_ZBW.Model_Renato
         public string StreetNumber { get; set; }
         public int ZipCode { get; set; }
         public string Place { get; set; }
-    }
 
-    // Methode Equals(Person):bool
-    // 
-    public bool Equals(Person other)
-    {
-        if (other != null &&
-            other.Salutation == Salutation &&
-            other.FirstName == FirstName &&
-            other.LastName == LastName &&
-            other.DateOfBirth == DateOfBirth)
+
+
+        // Methode Equals(Person):bool
+        // 
+        public bool Equals(Person other)
         {
-            return true;
+            if (other != null &&
+                other.Salutation == Salutation &&
+                other.FirstName == FirstName &&
+                other.LastName == LastName &&
+                other.DateOfBirth == DateOfBirth)
+            {
+                return true;
+            }
+            return false;
         }
-        return false;
-    }
+
+            }
+
 
 }

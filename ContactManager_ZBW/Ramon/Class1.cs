@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.IO;
 using System.Runtime.CompilerServices;
 using System.Windows.Forms;
+using ContactManager_ZBW.Model_Renato;
 
 namespace ContactManager_ZBW.Ramon
 {
@@ -76,6 +77,37 @@ namespace ContactManager_ZBW.Ramon
             }
 
         }
+        
 
+
+        public int SearchPersonId(Person person, List<Person> personList)
+        {
+            for (int i = 0; i < personList.Count; i++)
+            {
+                if (personList[i].Equals(person))
+                {
+                    return i;
+
+                }
+                
+            }
+            return -1;
+
+        }
+
+        public Person SearchPersonObject(Person person, List<Person> personList)
+
+        {
+            for (int i = 0; i < personList.Count; i++)
+            {
+                if (personList[i].Equals(person))
+                {
+                    return personList[i];
+
+                }
+
+            }
+            return null;
+        }
     }
 }
