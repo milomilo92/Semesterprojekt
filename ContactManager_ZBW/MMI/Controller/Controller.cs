@@ -10,19 +10,32 @@ namespace ContactManager_ZBW.Milos.Controller
 {
     public class Controller
     {
-        // description: Creating parameter for controller.
-        private Model model;
-        private Model.Person updatePerson;
-
-        public Controller()
-        {
-            model = new Model();
-            updatePerson = null;
-        }
-
-        public bool UpdatePerson()
+        public Person GetPerson(int index)
         {
 
         }
+
+        public string GetPersonData(int index)
+        {
+
+        }
+
+        public string[] GettAllPersonData()
+        {
+
+        }
+
+        public int CreateNewPerson(Person person)
+        {
+
+        }
+
+        public void UpdatePerson(int index, Person person)
+        {
+
+        }
+
+
     }
+
 }
