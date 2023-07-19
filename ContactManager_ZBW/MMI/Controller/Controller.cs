@@ -10,6 +10,7 @@ namespace ContactManager_ZBW.Milos.Controller
 {
     public class Controller
     {
+        
         public Person GetPerson(int index)
         {
 
@@ -25,9 +26,10 @@ namespace ContactManager_ZBW.Milos.Controller
 
         }
 
-        public int CreateNewPerson(Person person)
+        public int CreateNewPerson()
         {
-
+            int counter = Add();
+            return counter;
         }
 
         public void UpdatePerson(int index, Person person)

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ContactManager_ZBW.Milos.Controller;
 using ContactManager_ZBW.Model_Renato;
 
 
@@ -14,6 +15,8 @@ namespace ContactManager
 {
     public partial class Form1 : Form
     {
+        private Controller controller;
+
         public Form1()
         {
             InitializeComponent();
@@ -35,7 +38,7 @@ namespace ContactManager
             {
                     Person temporaryPerson = CreateCustomerOrEmployee();
                     FillAllFields(temporaryPerson);
-                    int index = CreateNewPerson(temporaryPerson);
+                    int index = controller.CreateNewPerson();
                     LslContactList.SelectedIndex = index;  // select and show newly created person         
             }             
         }
