@@ -335,7 +335,9 @@ namespace ContactManager
                 string newLogEntry = TxtLogNew.Text;
                 if (newLogEntry != "")
                 {
-                    customer.AddLogEntry(newLogEntry);
+                    // Noch über Controller machen, nicht direkt im Model.
+                    throw new NotImplementedException() // Noch index und so machen;
+                    controller.AddLogEntry(index, newLogEntry);
                 }
                 UpdatePerson(customer);                 // Update new data to controllers customer-list
                 TxtLogNew.Clear();                      // and clear entry field
