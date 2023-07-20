@@ -26,7 +26,7 @@ namespace ContactManager_ZBW.Milos.Controller
 
         }
 
-        public int CreateNewPerson()
+        public int CreateNewPerson(Person temporaryPerson)
         {
             int counter = Add();
             return counter;

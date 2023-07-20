@@ -9,7 +9,7 @@ namespace ContactManager_ZBW.Model_Renato
 {
     // Class Person
     // description: This is the class person
-    class Person
+    public class Person
     {
         public string Salutation { get; set; }
         public string FirstName { get; set; }
