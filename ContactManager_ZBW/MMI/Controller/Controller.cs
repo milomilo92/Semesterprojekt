@@ -1,4 +1,5 @@
-﻿using ContactManager_ZBW.Model_Renato;
+﻿using ContactManager_ZBW.MMI.Function;
+using ContactManager_ZBW.Model_Renato;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,7 +11,9 @@ namespace ContactManager_ZBW.Milos.Controller
 {
     public class Controller
     {
-        
+        private Function Function;
+        private Person person;
+        private int currentHeadcount = 0;
         public Person GetPerson(int index)
         {
 
@@ -28,16 +31,14 @@ namespace ContactManager_ZBW.Milos.Controller
 
         public int CreateNewPerson(Person temporaryPerson)
         {
-            int counter = Add();
-            return counter;
+            int headcount = Function.ChangeHeadcount();
+            return (headcount - 1);
         }
 
         public void UpdatePerson(int index, Person person)
         {
 
         }
-
-
     }
 
 }

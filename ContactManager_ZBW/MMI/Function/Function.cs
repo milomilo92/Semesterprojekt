@@ -4,17 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ContactManager_ZBW.MMI.Controller
+namespace ContactManager_ZBW.MMI.Function
 {
-    public class Model_Milos
+    public class Function
     {
-
-        private int index = -1;
-
-        private bool Add()
+        public int ChangeHeadcount()
         {
-
+            return 1;
         }
-
     }
 }
