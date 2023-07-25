@@ -8,7 +8,7 @@ namespace ContactManager_ZBW.Model_Renato
 {
     // Class Employee
     // description: This is the class Employee
-    internal class Employee
+    internal class Employee : Person
     {
         public Guid EmployeeNumber { get; set; }
         public string Department { get; set; }

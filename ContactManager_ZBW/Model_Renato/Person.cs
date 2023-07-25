@@ -9,7 +9,7 @@ namespace ContactManager_ZBW.Model_Renato
 {
     // Class Person
     // description: This is the class person
-    public class Person
+    public class Person 
     {
         public string Salutation { get; set; }
         public string FirstName { get; set; }
@@ -39,7 +39,20 @@ namespace ContactManager_ZBW.Model_Renato
                 other.Salutation == Salutation &&
                 other.FirstName == FirstName &&
                 other.LastName == LastName &&
-                other.DateOfBirth == DateOfBirth)
+                other.DateOfBirth == DateOfBirth &&
+                other.Gender == Gender &&
+                other.Title == Title &&
+                other.SocialSecurityNumber == SocialSecurityNumber &&
+                other.PhoneNumberPrivat == PhoneNumberPrivat &&
+                other.PhoneNumberMobile == PhoneNumberMobile &&
+                other.PhoneNumberBusiness == PhoneNumberBusiness &&
+                other.Email == Email &&
+                other.Status == Status &&
+                other.Nationality == Nationality &&
+                other.Street == Street &&
+                other.StreetNumber == StreetNumber &&
+                other.ZipCode == ZipCode &&
+                other.Place == Place)
             {
                 return true;
             }

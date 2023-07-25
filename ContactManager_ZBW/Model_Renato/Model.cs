@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace ContactManager_ZBW.Model_Renato
 {
+    /*
     internal class Model
     {
 
@@ -56,4 +57,5 @@ namespace ContactManager_ZBW.Model_Renato
             public int ActualTraineeYear { get; set; }
         }
     }
+    */
 }
