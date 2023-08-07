@@ -31,8 +31,7 @@ namespace ContactManager_ZBW.Milos.Controller
 
         public int CreateNewPerson(Person temporaryPerson)
         {
-            int headcount = Function.ChangeHeadcount();
-            return (headcount - 1);
+            
         }
 
         public void UpdatePerson(int index, Person person)
