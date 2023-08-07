@@ -330,8 +330,12 @@ namespace ContactManager
         {
             if (LslContactList.SelectedIndices.Count > 0)
             {
+               
                 int index = LslContactList.SelectedIndex;
                 Customer customer = GetPerson(index);
+                
+
+
                 string newLogEntry = TxtLogNew.Text;
                 if (newLogEntry != "")
                 {
@@ -351,6 +355,16 @@ namespace ContactManager
             {
                 MessageBox.Show("Bitte erst einen Kunden auswählen.");
             }
+        }
+
+        private void TxtLogHistory_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TxtLogNew_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
