@@ -8,6 +8,9 @@ using System.Xml.Linq;
 
 namespace ContactManager_ZBW.Model_Renato
 {
+
+
+
     // Class Customer
     // description: This is the class Customer
     internal class Customer : Person

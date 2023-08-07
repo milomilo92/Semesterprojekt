@@ -343,6 +343,7 @@ namespace ContactManager
                     throw new NotImplementedException() // Noch index und so machen;
                     controller.AddLogEntry(index, newLogEntry);
                 }
+                customer.AddLogEntry(DateTime.Now, newLogEntry);
                 UpdatePerson(customer);                 // Update new data to controllers customer-list
                 TxtLogNew.Clear();                      // and clear entry field
                 LslContactList.SelectedIndex = index;   // finally update view and show entry in list
