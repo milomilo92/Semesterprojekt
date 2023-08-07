@@ -59,7 +59,7 @@ namespace ContactManager_ZBW.Model_Renato
             return false;
         }
 
-            }
+    }
 
 
 }

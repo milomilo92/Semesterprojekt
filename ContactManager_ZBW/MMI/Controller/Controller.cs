@@ -1,19 +1,20 @@
-﻿using ContactManager_ZBW.MMI.Function;
-using ContactManager_ZBW.Model_Renato;
+﻿using ContactManager_ZBW.Model_Renato;
+using ContactManager_ZBW.Ramon;
+using ContactManager;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using System.Collections;
 
 namespace ContactManager_ZBW.Milos.Controller
 {
     public class Controller
     {
-        private Function Function;
         private Person person;
-        private int currentHeadcount = 0;
+
+
         public Person GetPerson(int index)
         {
 
@@ -24,14 +25,19 @@ namespace ContactManager_ZBW.Milos.Controller
 
         }
 
-        public string[] GettAllPersonData()
+        public string[] GetAllPersonData()
         {
 
         }
 
-        public int CreateNewPerson(Person temporaryPerson)
+        public static int CreateNewPerson(Person temporaryPerson, ArrayList personList)
         {
-            
+            int PersonId = Class1.SearchPersonId(temporaryPerson, personList);
+
+            if (PersonId >= 0) { }
+
+
+            return 1;
         }
 
         public void UpdatePerson(int index, Person person)

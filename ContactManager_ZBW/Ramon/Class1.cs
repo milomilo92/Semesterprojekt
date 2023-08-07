@@ -7,10 +7,11 @@ using System.IO;
 using System.Runtime.CompilerServices;
 using System.Windows.Forms;
 using ContactManager_ZBW.Model_Renato;
+using System.Collections;
 
 namespace ContactManager_ZBW.Ramon
 {
-    internal class Class1
+    public class Class1
     {
          
         public string GetStringsFromFile(string filepath)
@@ -80,7 +81,7 @@ namespace ContactManager_ZBW.Ramon
         
 
 
-        public int SearchPersonId(Person person, List<Person> personList)
+        public static int SearchPersonId(Person person, ArrayList personList)
         {
             for (int i = 0; i < personList.Count; i++)
             {
@@ -95,7 +96,7 @@ namespace ContactManager_ZBW.Ramon
 
         }
 
-        public Person SearchPersonObject(Person person, List<Person> personList)
+        public Person SearchPersonObject(Person person, ArrayList personList)
 
         {
             for (int i = 0; i < personList.Count; i++)
