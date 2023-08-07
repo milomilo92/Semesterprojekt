@@ -60,7 +60,6 @@
     <Compile Include="MMI\Function\Function.cs" />
     <Compile Include="Model_Renato\Customer.cs" />
     <Compile Include="Model_Renato\Employee.cs" />
-    <Compile Include="Model_Renato\Model.cs" />
     <Compile Include="Model_Renato\Person.cs" />
     <Compile Include="Model_Renato\Trainee.cs" />
     <Compile Include="Program.cs" />
