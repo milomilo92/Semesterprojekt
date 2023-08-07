@@ -81,7 +81,7 @@ namespace ContactManager_ZBW.Ramon
         
 
 
-        public int SearchPersonId(Person person, ArrayList personList)
+        public static int SearchPersonId(Person person, ArrayList personList)
         {
             for (int i = 0; i < personList.Count; i++)
             {
