@@ -25,7 +25,7 @@ namespace ContactManager_ZBW.Ramon
                 //Read the first line of text
                 stringLine = sr.ReadLine();
                 //Continue to read until you reach end of file
-                while (stringLine != null) ;
+                while (stringLine != null);
                 {
                     //write the line to console window
                     Console.WriteLine(stringLine);
