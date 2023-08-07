@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,18 +17,21 @@ namespace ContactManager
     public partial class Form1 : Form
     {
         private Controller controller;
+        ArrayList people;
 
         public Form1()
         {
             InitializeComponent();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        public void Form1_Load(object sender, EventArgs e)
         {
+            ArrayList people = new ArrayList();
             // Fill in all the Persons of the PersonsList into the ListBox
             throw new NotImplementedException();
             // soll hier schon geladen werden?
             LoadList();
+            
         }
         
         // Function CmdNew_Click
@@ -38,7 +42,7 @@ namespace ContactManager
             {
                     Person temporaryPerson = CreateCustomerOrEmployee();
                     FillAllFields(temporaryPerson);
-                    int index = controller.CreateNewPerson(temporaryPerson);
+                    int index = controller.CreateNewPerson(temporaryPerson, people);
                     LslContactList.SelectedIndex = index;  // select and show newly created person         
             }             
         }
