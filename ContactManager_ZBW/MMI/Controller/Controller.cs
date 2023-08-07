@@ -32,12 +32,18 @@ namespace ContactManager_ZBW.Milos.Controller
 
         public static int CreateNewPerson(Person temporaryPerson, ArrayList personList)
         {
-            int PersonId = Class1.SearchPersonId(temporaryPerson, personList);
+            int personId = Class1.SearchPersonId(temporaryPerson, personList);
 
-            if (PersonId >= 0) { }
-
-
-            return 1;
+            if (personId >= 0) 
+            {
+                return -1;
+            }
+            else
+            {
+                Person.Add(temporaryPerson);
+                personId = Class1.SearchPersonId(temporaryPerson, personList);
+                return personId;
+            }
         }
 
         public void UpdatePerson(int index, Person person)

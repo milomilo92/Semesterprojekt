@@ -59,6 +59,11 @@ namespace ContactManager_ZBW.Model_Renato
             return false;
         }
 
+        public void Add(Person person)
+        {
+
+        }
+
     }
 
 
