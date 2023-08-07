@@ -15,8 +15,21 @@ namespace ContactManager_ZBW.Milos.Controller
         private Person person;
 
 
-        public Person GetPerson(int index)
+        public Person GetPerson(int index,List<Person> personList)
+
         {
+
+            for (int i = 0; i < personList.Count ; i++)
+            {
+                if (personList. == index)
+                {
+
+                   
+                }
+
+                return personList. ;
+            }
+
 
         }
 
