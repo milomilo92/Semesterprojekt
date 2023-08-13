@@ -49,11 +49,11 @@ namespace ContactManager_ZBW.Milos.Controller
 
             if (personId >= 0) 
             {
-                return -1;
+                return -1; // if person already exists
             }
             else
             {
-                Person.Add(temporaryPerson);
+                Person.Add(temporaryPerson); // int person add --> int wird zurückgegeben, das wird der Index nach dem Speichern
                 personId = Class1.SearchPersonId(temporaryPerson, personList);
                 return personId;
             }
