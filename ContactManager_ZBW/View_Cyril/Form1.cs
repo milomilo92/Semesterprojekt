@@ -58,7 +58,7 @@ namespace ContactManager
                         int index = LslContactList.SelectedIndex;
                         Person temporaryPerson = CreateCustomerOrEmployee();
                         FillAllFields(temporaryPerson);
-                        UpdatePerson(index, temporaryPerson);
+                        Controller.UpdatePerson(index, temporaryPerson, people);
                     }
                 }
                 else

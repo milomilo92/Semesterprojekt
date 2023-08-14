@@ -53,16 +53,23 @@ namespace ContactManager_ZBW.Milos.Controller
             }
             else
             {
-                Person.Add(temporaryPerson); // int person add --> int wird zurückgegeben, das wird der Index nach dem Speichern
-                personId = Class1.SearchPersonId(temporaryPerson, personList);
+                personId = Person.Add(temporaryPerson); // int person add --> int wird zurückgegeben, das wird der Index nach dem Speichern
+                // personId = Class1.SearchPersonId(temporaryPerson, personList);
                 return personId;
             }
         }
 
-        public void UpdatePerson(int index, Person person)
+        public void UpdatePerson(int index, Person temporaryPerson, ArrayList personList)
         {
+            int personId = Class1.SearchPersonId(temporaryPerson, personList);
 
+            if (index == personId)
+            {
+                Person.Update(temporaryPerson);
+            }
         }
+
+
     }
 
 }

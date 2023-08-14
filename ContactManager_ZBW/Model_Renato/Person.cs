@@ -64,6 +64,11 @@ namespace ContactManager_ZBW.Model_Renato
 
         }
 
+        public void Update(Person person)
+        {
+
+        }
+
     }
 
 
