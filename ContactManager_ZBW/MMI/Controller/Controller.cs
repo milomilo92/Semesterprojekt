@@ -15,9 +15,9 @@ namespace ContactManager_ZBW.Milos.Controller
         private Person person;
 
 
-        public Person GetPerson(int index,List<Person> personList)
+        public Person GetPerson(int index, ArrayList personList)
 
-        {
+        {   int index = 
 
             for (int i = 0; i < personList.Count ; i++)
             {
@@ -30,11 +30,6 @@ namespace ContactManager_ZBW.Milos.Controller
                 return personList. ;
             }
 
-
-        }
-
-        public string GetPersonData(int index)
-        {
 
         }
 

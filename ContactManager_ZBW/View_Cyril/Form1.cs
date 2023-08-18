@@ -125,12 +125,12 @@ namespace ContactManager
 
         // Function LslContactList_SelectedIndexChanged
         // description: when a person is selected in the list, its data will be shown in the view
-        private void LslContactList_SelectedIndexChanged(object sender, EventArgs e)
+        public void LslContactList_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (LslContactList.SelectedIndices.Count !=0 && LslContactList.SelectedIndices.Count < 2)
             {
                 int selectedIndex = LslContactList.SelectedIndex;
-                Person selectedPerson = GetPerson(selectedIndex);
+                Person selectedPerson = Controller.GetPerson(selectedIndex, people);
                 ClearView();
                 ShowAllFields(selectedPerson);
             }
@@ -312,7 +312,7 @@ namespace ContactManager
         private void LoadList()
         {
             LslContactList.Items.Clear();
-            string[] allPersonData = GetAllPersonData();
+            string[] allPersonData = Controller.GetAllPersonData();
             foreach (string personData in allPersonData)
             {
                 LslContactList.Items.Add(personData);
