@@ -14,30 +14,6 @@ namespace ContactManager_ZBW.Milos.Controller
     {
         private Person person;
 
-
-        public Person GetPerson(int index, ArrayList personList)
-
-        {   int index = 
-
-            for (int i = 0; i < personList.Count ; i++)
-            {
-                if (personList. == index)
-                {
-
-                   
-                }
-
-                return personList. ;
-            }
-
-
-        }
-
-        public string[] GetAllPersonData()
-        {
-
-        }
-
         public static int CreateNewPerson(Person temporaryPerson, ArrayList personList)
         {
             int personId = Class1.SearchPersonId(temporaryPerson, personList);
@@ -64,7 +40,37 @@ namespace ContactManager_ZBW.Milos.Controller
             }
         }
 
+        public int SearchPerson(Person temporaryPerson, ArrayList personList)
+        {
+            int personId = Class1.SearchPersonId(temporaryPerson, personList);
 
+            return personId;
+        }
+
+        public bool DeletePerson(int index, ArrayList personList)
+        {
+            if (index != -1)
+            {
+                Person.Delete(index);
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+        public Person GetPerson(int index, ArrayList personList)
+        {
+            if (index != -1)
+            {
+                Person foundPerson = Person.Find(index, personList);
+                return foundPerson;
+            }
+        }
+        public string[] GetAllPersonData()
+        {
+            // Was soll das können?
+        }
     }
 
 }

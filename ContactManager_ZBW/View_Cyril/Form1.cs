@@ -76,7 +76,7 @@ namespace ContactManager
             {
                 Person temporaryPerson = CreateCustomerOrEmployee();
                 FillAllFields(temporaryPerson);
-                int index = SearchPerson(temporaryPerson);
+                int index = Controller.SearchPerson(temporaryPerson, people);
                 if (index != -1)
                 {
                     LslContactList.SelectedIndex = index;   // select and show found person
@@ -97,7 +97,7 @@ namespace ContactManager
                 {
                     throw new NotImplementedException; // Noch Abfragefenster programmieren!
                     int index = LslContactList.SelectedIndex;
-                    bool result = DeletePerson(index);
+                    bool result = Controller.DeletePerson(index, people);
                     ClearView();
                 }
                 else

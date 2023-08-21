@@ -1,5 +1,6 @@
 ﻿using Aufgabe_A12_1_6.Model;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -69,6 +70,15 @@ namespace ContactManager_ZBW.Model_Renato
 
         }
 
+        public void Delete(int index)
+        {
+
+        }
+
+        public void Find(int index, ArrayList personList)
+        {
+
+        }
     }
 
 
