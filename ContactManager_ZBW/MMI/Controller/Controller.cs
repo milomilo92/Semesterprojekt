@@ -67,6 +67,19 @@ namespace ContactManager_ZBW.Milos.Controller
 
             return nameList;
         }
+
+        public bool CheckCustomerType(char customerType)
+        {
+            int numberOfChar = customerType;
+            if (numberOfChar >= 65 && numberOfChar <= 70)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
     }
 
 }

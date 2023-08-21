@@ -45,9 +45,7 @@
             this.DtpEndDate = new System.Windows.Forms.DateTimePicker();
             this.DtpStartDate = new System.Windows.Forms.DateTimePicker();
             this.PnlTraineeData = new System.Windows.Forms.Panel();
-            this.TxtTraineeYears = new System.Windows.Forms.TextBox();
             this.LblActualTraineeYear = new System.Windows.Forms.Label();
-            this.TxtActualTraineeYear = new System.Windows.Forms.TextBox();
             this.LblTraineeYears = new System.Windows.Forms.Label();
             this.PnlTraineeYesNo = new System.Windows.Forms.Panel();
             this.RdTraineeNo = new System.Windows.Forms.RadioButton();
@@ -112,6 +110,8 @@
             this.GrpIO = new System.Windows.Forms.GroupBox();
             this.CmdLoad = new System.Windows.Forms.Button();
             this.CmdSave = new System.Windows.Forms.Button();
+            this.NumTraineeYears = new System.Windows.Forms.NumericUpDown();
+            this.NumActualTraineeYear = new System.Windows.Forms.NumericUpDown();
             this.TabControl.SuspendLayout();
             this.TbCustomer.SuspendLayout();
             this.GrpLogHistory.SuspendLayout();
@@ -126,6 +126,8 @@
             this.GrpContactHistory.SuspendLayout();
             this.GrpMutations.SuspendLayout();
             this.GrpIO.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.NumTraineeYears)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NumActualTraineeYear)).BeginInit();
             this.SuspendLayout();
             // 
             // TabControl
@@ -150,7 +152,7 @@
             this.TbCustomer.Controls.Add(this.LblCompanyName);
             this.TbCustomer.Location = new System.Drawing.Point(4, 22);
             this.TbCustomer.Name = "TbCustomer";
-            this.TbCustomer.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.TbCustomer.Padding = new System.Windows.Forms.Padding(3);
             this.TbCustomer.Size = new System.Drawing.Size(542, 266);
             this.TbCustomer.TabIndex = 0;
             this.TbCustomer.Text = "Kunde";
@@ -183,7 +185,7 @@
             this.LblLogNew.AutoSize = true;
             this.LblLogNew.Location = new System.Drawing.Point(10, 110);
             this.LblLogNew.Name = "LblLogNew";
-            this.LblLogNew.Size = new System.Drawing.Size(92, 13);
+            this.LblLogNew.Size = new System.Drawing.Size(106, 15);
             this.LblLogNew.TabIndex = 2;
             this.LblLogNew.Text = "Neuer Logeintrag:";
             // 
@@ -207,7 +209,9 @@
             // 
             // TxtCustomerType
             // 
+            this.TxtCustomerType.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.TxtCustomerType.Location = new System.Drawing.Point(238, 43);
+            this.TxtCustomerType.MaxLength = 1;
             this.TxtCustomerType.Name = "TxtCustomerType";
             this.TxtCustomerType.Size = new System.Drawing.Size(38, 20);
             this.TxtCustomerType.TabIndex = 0;
@@ -217,7 +221,7 @@
             this.LblCustomerType.AutoSize = true;
             this.LblCustomerType.Location = new System.Drawing.Point(235, 24);
             this.LblCustomerType.Name = "LblCustomerType";
-            this.LblCustomerType.Size = new System.Drawing.Size(87, 13);
+            this.LblCustomerType.Size = new System.Drawing.Size(98, 15);
             this.LblCustomerType.TabIndex = 1;
             this.LblCustomerType.Text = "Kundentyp (A-E):";
             // 
@@ -233,7 +237,7 @@
             this.LblCompanyContact.AutoSize = true;
             this.LblCompanyContact.Location = new System.Drawing.Point(339, 24);
             this.LblCompanyContact.Name = "LblCompanyContact";
-            this.LblCompanyContact.Size = new System.Drawing.Size(77, 13);
+            this.LblCompanyContact.Size = new System.Drawing.Size(88, 15);
             this.LblCompanyContact.TabIndex = 1;
             this.LblCompanyContact.Text = "Firmenkontakt:";
             // 
@@ -249,7 +253,7 @@
             this.LblCompanyName.AutoSize = true;
             this.LblCompanyName.Location = new System.Drawing.Point(25, 24);
             this.LblCompanyName.Name = "LblCompanyName";
-            this.LblCompanyName.Size = new System.Drawing.Size(67, 13);
+            this.LblCompanyName.Size = new System.Drawing.Size(81, 15);
             this.LblCompanyName.TabIndex = 1;
             this.LblCompanyName.Text = "Firmenname:";
             // 
@@ -274,7 +278,7 @@
             this.TbEmployee.Controls.Add(this.LblEmployeeNumber);
             this.TbEmployee.Location = new System.Drawing.Point(4, 22);
             this.TbEmployee.Name = "TbEmployee";
-            this.TbEmployee.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.TbEmployee.Padding = new System.Windows.Forms.Padding(3);
             this.TbEmployee.Size = new System.Drawing.Size(542, 266);
             this.TbEmployee.TabIndex = 1;
             this.TbEmployee.Text = "Mitarbeiter";
@@ -297,44 +301,30 @@
             // 
             // PnlTraineeData
             // 
-            this.PnlTraineeData.Controls.Add(this.TxtTraineeYears);
+            this.PnlTraineeData.Controls.Add(this.NumActualTraineeYear);
+            this.PnlTraineeData.Controls.Add(this.NumTraineeYears);
             this.PnlTraineeData.Controls.Add(this.LblActualTraineeYear);
-            this.PnlTraineeData.Controls.Add(this.TxtActualTraineeYear);
             this.PnlTraineeData.Controls.Add(this.LblTraineeYears);
             this.PnlTraineeData.Location = new System.Drawing.Point(381, 119);
             this.PnlTraineeData.Name = "PnlTraineeData";
             this.PnlTraineeData.Size = new System.Drawing.Size(139, 116);
             this.PnlTraineeData.TabIndex = 4;
             // 
-            // TxtTraineeYears
-            // 
-            this.TxtTraineeYears.Location = new System.Drawing.Point(6, 32);
-            this.TxtTraineeYears.Name = "TxtTraineeYears";
-            this.TxtTraineeYears.Size = new System.Drawing.Size(118, 20);
-            this.TxtTraineeYears.TabIndex = 0;
-            // 
             // LblActualTraineeYear
             // 
             this.LblActualTraineeYear.AutoSize = true;
             this.LblActualTraineeYear.Location = new System.Drawing.Point(3, 67);
             this.LblActualTraineeYear.Name = "LblActualTraineeYear";
-            this.LblActualTraineeYear.Size = new System.Drawing.Size(94, 13);
+            this.LblActualTraineeYear.Size = new System.Drawing.Size(108, 15);
             this.LblActualTraineeYear.TabIndex = 1;
             this.LblActualTraineeYear.Text = "Aktuelles Lehrjahr:";
-            // 
-            // TxtActualTraineeYear
-            // 
-            this.TxtActualTraineeYear.Location = new System.Drawing.Point(6, 83);
-            this.TxtActualTraineeYear.Name = "TxtActualTraineeYear";
-            this.TxtActualTraineeYear.Size = new System.Drawing.Size(118, 20);
-            this.TxtActualTraineeYear.TabIndex = 0;
             // 
             // LblTraineeYears
             // 
             this.LblTraineeYears.AutoSize = true;
             this.LblTraineeYears.Location = new System.Drawing.Point(3, 16);
             this.LblTraineeYears.Name = "LblTraineeYears";
-            this.LblTraineeYears.Size = new System.Drawing.Size(54, 13);
+            this.LblTraineeYears.Size = new System.Drawing.Size(63, 15);
             this.LblTraineeYears.TabIndex = 1;
             this.LblTraineeYears.Text = "Lehrjahre:";
             // 
@@ -354,7 +344,7 @@
             this.RdTraineeNo.Checked = true;
             this.RdTraineeNo.Location = new System.Drawing.Point(60, 21);
             this.RdTraineeNo.Name = "RdTraineeNo";
-            this.RdTraineeNo.Size = new System.Drawing.Size(45, 17);
+            this.RdTraineeNo.Size = new System.Drawing.Size(52, 19);
             this.RdTraineeNo.TabIndex = 0;
             this.RdTraineeNo.TabStop = true;
             this.RdTraineeNo.Text = "nein";
@@ -365,7 +355,7 @@
             this.RdTraineeYes.AutoSize = true;
             this.RdTraineeYes.Location = new System.Drawing.Point(6, 21);
             this.RdTraineeYes.Name = "RdTraineeYes";
-            this.RdTraineeYes.Size = new System.Drawing.Size(33, 17);
+            this.RdTraineeYes.Size = new System.Drawing.Size(38, 19);
             this.RdTraineeYes.TabIndex = 0;
             this.RdTraineeYes.TabStop = true;
             this.RdTraineeYes.Text = "ja";
@@ -376,7 +366,7 @@
             this.LblTrainee.AutoSize = true;
             this.LblTrainee.Location = new System.Drawing.Point(3, 5);
             this.LblTrainee.Name = "LblTrainee";
-            this.LblTrainee.Size = new System.Drawing.Size(64, 13);
+            this.LblTrainee.Size = new System.Drawing.Size(74, 15);
             this.LblTrainee.TabIndex = 1;
             this.LblTrainee.Text = "Lernender?:";
             // 
@@ -385,7 +375,7 @@
             this.LblEndDate.AutoSize = true;
             this.LblEndDate.Location = new System.Drawing.Point(189, 136);
             this.LblEndDate.Name = "LblEndDate";
-            this.LblEndDate.Size = new System.Drawing.Size(76, 13);
+            this.LblEndDate.Size = new System.Drawing.Size(87, 15);
             this.LblEndDate.TabIndex = 1;
             this.LblEndDate.Text = "Austrittsdatum:";
             // 
@@ -401,7 +391,7 @@
             this.LblEmployment.AutoSize = true;
             this.LblEmployment.Location = new System.Drawing.Point(189, 85);
             this.LblEmployment.Name = "LblEmployment";
-            this.LblEmployment.Size = new System.Drawing.Size(121, 13);
+            this.LblEmployment.Size = new System.Drawing.Size(141, 15);
             this.LblEmployment.TabIndex = 1;
             this.LblEmployment.Text = "Beschäftigungsgrad (%):";
             // 
@@ -417,7 +407,7 @@
             this.LblCadreLevel.AutoSize = true;
             this.LblCadreLevel.Location = new System.Drawing.Point(189, 188);
             this.LblCadreLevel.Name = "LblCadreLevel";
-            this.LblCadreLevel.Size = new System.Drawing.Size(85, 13);
+            this.LblCadreLevel.Size = new System.Drawing.Size(98, 15);
             this.LblCadreLevel.TabIndex = 1;
             this.LblCadreLevel.Text = "Kaderstufe (0-5):";
             // 
@@ -433,7 +423,7 @@
             this.LblRole.AutoSize = true;
             this.LblRole.Location = new System.Drawing.Point(19, 188);
             this.LblRole.Name = "LblRole";
-            this.LblRole.Size = new System.Drawing.Size(34, 13);
+            this.LblRole.Size = new System.Drawing.Size(39, 15);
             this.LblRole.TabIndex = 1;
             this.LblRole.Text = "Rolle:";
             // 
@@ -442,7 +432,7 @@
             this.LblStartDate.AutoSize = true;
             this.LblStartDate.Location = new System.Drawing.Point(19, 136);
             this.LblStartDate.Name = "LblStartDate";
-            this.LblStartDate.Size = new System.Drawing.Size(73, 13);
+            this.LblStartDate.Size = new System.Drawing.Size(85, 15);
             this.LblStartDate.TabIndex = 1;
             this.LblStartDate.Text = "Eintrittsdatum:";
             // 
@@ -458,7 +448,7 @@
             this.LblDepartment.AutoSize = true;
             this.LblDepartment.Location = new System.Drawing.Point(19, 85);
             this.LblDepartment.Name = "LblDepartment";
-            this.LblDepartment.Size = new System.Drawing.Size(54, 13);
+            this.LblDepartment.Size = new System.Drawing.Size(61, 15);
             this.LblDepartment.TabIndex = 1;
             this.LblDepartment.Text = "Abteilung:";
             // 
@@ -475,7 +465,7 @@
             this.LblEmployeeNumber.AutoSize = true;
             this.LblEmployeeNumber.Location = new System.Drawing.Point(19, 38);
             this.LblEmployeeNumber.Name = "LblEmployeeNumber";
-            this.LblEmployeeNumber.Size = new System.Drawing.Size(101, 13);
+            this.LblEmployeeNumber.Size = new System.Drawing.Size(122, 15);
             this.LblEmployeeNumber.TabIndex = 1;
             this.LblEmployeeNumber.Text = "Mitarbeiter-Nummer:";
             // 
@@ -608,7 +598,7 @@
             this.RdSalutationMale.AutoSize = true;
             this.RdSalutationMale.Location = new System.Drawing.Point(60, 25);
             this.RdSalutationMale.Name = "RdSalutationMale";
-            this.RdSalutationMale.Size = new System.Drawing.Size(45, 17);
+            this.RdSalutationMale.Size = new System.Drawing.Size(52, 19);
             this.RdSalutationMale.TabIndex = 0;
             this.RdSalutationMale.TabStop = true;
             this.RdSalutationMale.Text = "Herr";
@@ -619,7 +609,7 @@
             this.RdSalutationsFemale.AutoSize = true;
             this.RdSalutationsFemale.Location = new System.Drawing.Point(6, 25);
             this.RdSalutationsFemale.Name = "RdSalutationsFemale";
-            this.RdSalutationsFemale.Size = new System.Drawing.Size(46, 17);
+            this.RdSalutationsFemale.Size = new System.Drawing.Size(53, 19);
             this.RdSalutationsFemale.TabIndex = 0;
             this.RdSalutationsFemale.TabStop = true;
             this.RdSalutationsFemale.Text = "Frau";
@@ -630,7 +620,7 @@
             this.LblSalutation.AutoSize = true;
             this.LblSalutation.Location = new System.Drawing.Point(4, 5);
             this.LblSalutation.Name = "LblSalutation";
-            this.LblSalutation.Size = new System.Drawing.Size(44, 13);
+            this.LblSalutation.Size = new System.Drawing.Size(49, 15);
             this.LblSalutation.TabIndex = 1;
             this.LblSalutation.Text = "Anrede:";
             // 
@@ -649,7 +639,7 @@
             this.RdPassive.AutoSize = true;
             this.RdPassive.Location = new System.Drawing.Point(60, 21);
             this.RdPassive.Name = "RdPassive";
-            this.RdPassive.Size = new System.Drawing.Size(55, 17);
+            this.RdPassive.Size = new System.Drawing.Size(62, 19);
             this.RdPassive.TabIndex = 0;
             this.RdPassive.TabStop = true;
             this.RdPassive.Text = "passiv";
@@ -660,7 +650,7 @@
             this.RdActive.AutoSize = true;
             this.RdActive.Location = new System.Drawing.Point(6, 21);
             this.RdActive.Name = "RdActive";
-            this.RdActive.Size = new System.Drawing.Size(48, 17);
+            this.RdActive.Size = new System.Drawing.Size(52, 19);
             this.RdActive.TabIndex = 0;
             this.RdActive.TabStop = true;
             this.RdActive.Text = "aktiv";
@@ -671,7 +661,7 @@
             this.LblStatus.AutoSize = true;
             this.LblStatus.Location = new System.Drawing.Point(3, 5);
             this.LblStatus.Name = "LblStatus";
-            this.LblStatus.Size = new System.Drawing.Size(40, 13);
+            this.LblStatus.Size = new System.Drawing.Size(44, 15);
             this.LblStatus.TabIndex = 1;
             this.LblStatus.Text = "Status:";
             // 
@@ -680,7 +670,7 @@
             this.LblTitle.AutoSize = true;
             this.LblTitle.Location = new System.Drawing.Point(390, 77);
             this.LblTitle.Name = "LblTitle";
-            this.LblTitle.Size = new System.Drawing.Size(30, 13);
+            this.LblTitle.Size = new System.Drawing.Size(33, 15);
             this.LblTitle.TabIndex = 1;
             this.LblTitle.Text = "Titel:";
             // 
@@ -689,7 +679,7 @@
             this.LblPhoneNumberPrivate.AutoSize = true;
             this.LblPhoneNumberPrivate.Location = new System.Drawing.Point(390, 212);
             this.LblPhoneNumberPrivate.Name = "LblPhoneNumberPrivate";
-            this.LblPhoneNumberPrivate.Size = new System.Drawing.Size(58, 13);
+            this.LblPhoneNumberPrivate.Size = new System.Drawing.Size(63, 15);
             this.LblPhoneNumberPrivate.TabIndex = 1;
             this.LblPhoneNumberPrivate.Text = "Tel. Privat:";
             // 
@@ -698,7 +688,7 @@
             this.LblPhoneNumberMobile.AutoSize = true;
             this.LblPhoneNumberMobile.Location = new System.Drawing.Point(208, 260);
             this.LblPhoneNumberMobile.Name = "LblPhoneNumberMobile";
-            this.LblPhoneNumberMobile.Size = new System.Drawing.Size(41, 13);
+            this.LblPhoneNumberMobile.Size = new System.Drawing.Size(48, 15);
             this.LblPhoneNumberMobile.TabIndex = 1;
             this.LblPhoneNumberMobile.Text = "Mobile:";
             // 
@@ -708,7 +698,7 @@
             this.LblLastName.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblLastName.Location = new System.Drawing.Point(208, 74);
             this.LblLastName.Name = "LblLastName";
-            this.LblLastName.Size = new System.Drawing.Size(71, 13);
+            this.LblLastName.Size = new System.Drawing.Size(89, 17);
             this.LblLastName.TabIndex = 1;
             this.LblLastName.Text = "Nachname:";
             // 
@@ -717,7 +707,7 @@
             this.LblZipCode.AutoSize = true;
             this.LblZipCode.Location = new System.Drawing.Point(23, 213);
             this.LblZipCode.Name = "LblZipCode";
-            this.LblZipCode.Size = new System.Drawing.Size(30, 13);
+            this.LblZipCode.Size = new System.Drawing.Size(32, 15);
             this.LblZipCode.TabIndex = 1;
             this.LblZipCode.Text = "PLZ:";
             // 
@@ -726,7 +716,7 @@
             this.LblPlace.AutoSize = true;
             this.LblPlace.Location = new System.Drawing.Point(113, 213);
             this.LblPlace.Name = "LblPlace";
-            this.LblPlace.Size = new System.Drawing.Size(24, 13);
+            this.LblPlace.Size = new System.Drawing.Size(26, 15);
             this.LblPlace.TabIndex = 1;
             this.LblPlace.Text = "Ort:";
             // 
@@ -735,7 +725,7 @@
             this.LblStreetNumber.AutoSize = true;
             this.LblStreetNumber.Location = new System.Drawing.Point(295, 169);
             this.LblStreetNumber.Name = "LblStreetNumber";
-            this.LblStreetNumber.Size = new System.Drawing.Size(24, 13);
+            this.LblStreetNumber.Size = new System.Drawing.Size(26, 15);
             this.LblStreetNumber.TabIndex = 1;
             this.LblStreetNumber.Text = "Nr.:";
             // 
@@ -744,7 +734,7 @@
             this.LblSocialSecurityNumber.AutoSize = true;
             this.LblSocialSecurityNumber.Location = new System.Drawing.Point(208, 28);
             this.LblSocialSecurityNumber.Name = "LblSocialSecurityNumber";
-            this.LblSocialSecurityNumber.Size = new System.Drawing.Size(74, 13);
+            this.LblSocialSecurityNumber.Size = new System.Drawing.Size(86, 15);
             this.LblSocialSecurityNumber.TabIndex = 1;
             this.LblSocialSecurityNumber.Text = "AHV-Nummer:";
             // 
@@ -753,7 +743,7 @@
             this.LblStreet.AutoSize = true;
             this.LblStreet.Location = new System.Drawing.Point(23, 169);
             this.LblStreet.Name = "LblStreet";
-            this.LblStreet.Size = new System.Drawing.Size(45, 13);
+            this.LblStreet.Size = new System.Drawing.Size(51, 15);
             this.LblStreet.TabIndex = 1;
             this.LblStreet.Text = "Strasse:";
             // 
@@ -763,7 +753,7 @@
             this.LblEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblEmail.Location = new System.Drawing.Point(23, 124);
             this.LblEmail.Name = "LblEmail";
-            this.LblEmail.Size = new System.Drawing.Size(46, 13);
+            this.LblEmail.Size = new System.Drawing.Size(58, 17);
             this.LblEmail.TabIndex = 1;
             this.LblEmail.Text = "E-Mail:";
             // 
@@ -772,7 +762,7 @@
             this.LblPhoneNumberBusiness.AutoSize = true;
             this.LblPhoneNumberBusiness.Location = new System.Drawing.Point(23, 260);
             this.LblPhoneNumberBusiness.Name = "LblPhoneNumberBusiness";
-            this.LblPhoneNumberBusiness.Size = new System.Drawing.Size(74, 13);
+            this.LblPhoneNumberBusiness.Size = new System.Drawing.Size(81, 15);
             this.LblPhoneNumberBusiness.TabIndex = 1;
             this.LblPhoneNumberBusiness.Text = "Tel. Geschäft:";
             // 
@@ -781,7 +771,7 @@
             this.LblDateOfBirth.AutoSize = true;
             this.LblDateOfBirth.Location = new System.Drawing.Point(390, 121);
             this.LblDateOfBirth.Name = "LblDateOfBirth";
-            this.LblDateOfBirth.Size = new System.Drawing.Size(76, 13);
+            this.LblDateOfBirth.Size = new System.Drawing.Size(88, 15);
             this.LblDateOfBirth.TabIndex = 1;
             this.LblDateOfBirth.Text = "Geburtsdatum:";
             // 
@@ -791,7 +781,7 @@
             this.LblFirstName.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblFirstName.Location = new System.Drawing.Point(23, 74);
             this.LblFirstName.Name = "LblFirstName";
-            this.LblFirstName.Size = new System.Drawing.Size(60, 13);
+            this.LblFirstName.Size = new System.Drawing.Size(77, 17);
             this.LblFirstName.TabIndex = 1;
             this.LblFirstName.Text = "Vorname:";
             // 
@@ -933,16 +923,60 @@
             this.CmdSave.UseVisualStyleBackColor = true;
             this.CmdSave.Click += new System.EventHandler(this.CmdSave_Click);
             // 
-            // Form1
+            // NumTraineeYears
+            // 
+            this.NumTraineeYears.Location = new System.Drawing.Point(6, 40);
+            this.NumTraineeYears.Maximum = new decimal(new int[] {
+            4,
+            0,
+            0,
+            0});
+            this.NumTraineeYears.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.NumTraineeYears.Name = "NumTraineeYears";
+            this.NumTraineeYears.Size = new System.Drawing.Size(114, 20);
+            this.NumTraineeYears.TabIndex = 2;
+            this.NumTraineeYears.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // NumActualTraineeYear
+            // 
+            this.NumActualTraineeYear.Location = new System.Drawing.Point(6, 85);
+            this.NumActualTraineeYear.Maximum = new decimal(new int[] {
+            4,
+            0,
+            0,
+            0});
+            this.NumActualTraineeYear.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.NumActualTraineeYear.Name = "NumActualTraineeYear";
+            this.NumActualTraineeYear.Size = new System.Drawing.Size(114, 20);
+            this.NumActualTraineeYear.TabIndex = 3;
+            this.NumActualTraineeYear.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // mainview
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(722, 445);
+            this.ClientSize = new System.Drawing.Size(1077, 802);
             this.Controls.Add(this.GrpIO);
             this.Controls.Add(this.GrpMutations);
             this.Controls.Add(this.GrpContactHistory);
             this.Controls.Add(this.GrpContactDetails);
-            this.Name = "Form1";
+            this.Name = "mainview";
             this.Text = "Contact Manager";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.TabControl.ResumeLayout(false);
@@ -967,6 +1001,8 @@
             this.GrpContactHistory.ResumeLayout(false);
             this.GrpMutations.ResumeLayout(false);
             this.GrpIO.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.NumTraineeYears)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NumActualTraineeYear)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1045,9 +1081,7 @@
         private System.Windows.Forms.RadioButton RdTraineeNo;
         private System.Windows.Forms.RadioButton RdTraineeYes;
         private System.Windows.Forms.Label LblTrainee;
-        private System.Windows.Forms.TextBox TxtTraineeYears;
         private System.Windows.Forms.Label LblTraineeYears;
-        private System.Windows.Forms.TextBox TxtActualTraineeYear;
         private System.Windows.Forms.Label LblActualTraineeYear;
         private System.Windows.Forms.Panel PnlTraineeData;
         private System.Windows.Forms.Panel PnlSalutation;
@@ -1057,6 +1091,8 @@
         private System.Windows.Forms.DateTimePicker DtpEndDate;
         private System.Windows.Forms.DateTimePicker DtpStartDate;
         private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.NumericUpDown NumTraineeYears;
+        private System.Windows.Forms.NumericUpDown NumActualTraineeYear;
     }
 }
 
