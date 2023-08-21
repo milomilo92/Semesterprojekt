@@ -12,10 +12,9 @@ namespace ContactManager_ZBW.Milos.Controller
 {
     public class Controller
     {
-        private Person person;
         private List<Person> people = new List<Person>();
 
-        public static int CreateNewPerson(Person temporaryPerson)
+        public int CreateNewPerson(Person temporaryPerson)
         {
             int personId = Class1.SearchPersonId(temporaryPerson);
 
@@ -25,9 +24,8 @@ namespace ContactManager_ZBW.Milos.Controller
             }
             else
             {
-                personId = Person.Add(temporaryPerson); // int person add --> int wird zurückgegeben, das wird der Index nach dem Speichern
-                // personId = Class1.SearchPersonId(temporaryPerson, personList);
-                return personId;
+                people.Add(temporaryPerson);
+                return people.Count() - 1;
             }
         }
 
@@ -58,7 +56,16 @@ namespace ContactManager_ZBW.Milos.Controller
         }
         public string[] GetAllPersonData()
         {
-            // Was soll das können?
+            string[] nameList = new string[people.Count()];
+            int count = 0;
+
+            foreach (Person pers in people)
+            {
+                nameList[count] = pers.LastName + " " + pers.FirstName;
+                count++;
+            }
+
+            return nameList;
         }
     }
 
