@@ -81,7 +81,8 @@ namespace ContactManager_ZBW.Ramon
         
 
 
-        public static int SearchPersonId(Person person, ArrayList personList)
+        public static int SearchPersonId(Person person//, ArrayList personList - nicht mehr nötig, wenn im Controller
+                                                      )
         {
             for (int i = 0; i < personList.Count; i++)
             {

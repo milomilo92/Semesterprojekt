@@ -14,19 +14,18 @@ using ContactManager_ZBW.Model_Renato;
 
 namespace ContactManager
 {
-    public partial class Form1 : Form
+    public partial class mainview : Form
     {
-        private Controller controller;
-        public ArrayList people;
+        private Controller Controller { get ; set; }
 
-        public Form1()
+        public mainview()
         {
             InitializeComponent();
+            Controller = new Controller();
         }
 
         public void Form1_Load(object sender, EventArgs e)
         {
-            ArrayList people = new ArrayList();
             // Fill in all the Persons of the PersonsList into the ListBox
             throw new NotImplementedException();
             // soll hier schon geladen werden?
@@ -40,10 +39,18 @@ namespace ContactManager
         {
             if (CheckNecessaryFields()) // only when necessary Fields are entered
             {
-                    Person temporaryPerson = CreateCustomerOrEmployee();
-                    FillAllFields(temporaryPerson);
-                    int index = Controller.CreateNewPerson(temporaryPerson, people);
-                    LslContactList.SelectedIndex = index;  // select and show newly created person         
+                Person temporaryPerson = CreateCustomerOrEmployee();
+                FillAllFields(temporaryPerson);
+                int index = Controller.CreateNewPerson(temporaryPerson);
+                LslContactList.SelectedIndex = index;  // select and show newly created person
+                if (index != -1)
+                {
+                    LslContactList.SelectedIndex = index;   // select and show found person
+                }
+                else
+                {
+                    MessageBox.Show("Person bereits vorhanden.");
+                }
             }             
         }
 
@@ -58,7 +65,7 @@ namespace ContactManager
                         int index = LslContactList.SelectedIndex;
                         Person temporaryPerson = CreateCustomerOrEmployee();
                         FillAllFields(temporaryPerson);
-                        Controller.UpdatePerson(index, temporaryPerson, people);
+                        Controller.UpdatePerson(index, temporaryPerson);
                     }
                 }
                 else
@@ -76,7 +83,7 @@ namespace ContactManager
             {
                 Person temporaryPerson = CreateCustomerOrEmployee();
                 FillAllFields(temporaryPerson);
-                int index = Controller.SearchPerson(temporaryPerson, people);
+                int index = Controller.SearchPerson(temporaryPerson);
                 if (index != -1)
                 {
                     LslContactList.SelectedIndex = index;   // select and show found person
@@ -97,7 +104,7 @@ namespace ContactManager
                 {
                     throw new NotImplementedException; // Noch Abfragefenster programmieren!
                     int index = LslContactList.SelectedIndex;
-                    bool result = Controller.DeletePerson(index, people);
+                    Controller.DeletePerson(index);
                     ClearView();
                 }
                 else
@@ -130,7 +137,7 @@ namespace ContactManager
             if (LslContactList.SelectedIndices.Count !=0 && LslContactList.SelectedIndices.Count < 2)
             {
                 int selectedIndex = LslContactList.SelectedIndex;
-                Person selectedPerson = Controller.GetPerson(selectedIndex, people);
+                Person selectedPerson = Controller.GetPerson(selectedIndex);
                 ClearView();
                 ShowAllFields(selectedPerson);
             }
@@ -336,7 +343,7 @@ namespace ContactManager
             {
                
                 int index = LslContactList.SelectedIndex;
-                Customer customer = Controller.GetPerson(index, people);
+                Customer customer = Controller.GetPerson(index);
                 
 
 

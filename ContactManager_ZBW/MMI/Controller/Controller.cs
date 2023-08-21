@@ -13,10 +13,11 @@ namespace ContactManager_ZBW.Milos.Controller
     public class Controller
     {
         private Person person;
+        private List<Person> people = new List<Person>();
 
-        public static int CreateNewPerson(Person temporaryPerson, ArrayList personList)
+        public static int CreateNewPerson(Person temporaryPerson)
         {
-            int personId = Class1.SearchPersonId(temporaryPerson, personList);
+            int personId = Class1.SearchPersonId(temporaryPerson);
 
             if (personId >= 0) 
             {
@@ -30,42 +31,30 @@ namespace ContactManager_ZBW.Milos.Controller
             }
         }
 
-        public void UpdatePerson(int index, Person temporaryPerson, ArrayList personList)
+        public void UpdatePerson(int index, Person temporaryPerson)
         {
-            int personId = Class1.SearchPersonId(temporaryPerson, personList);
+            // in der Liste bestehende Person überschreiben.
 
-            if (index == personId)
-            {
-                Person.Update(temporaryPerson);
-            }
         }
 
-        public int SearchPerson(Person temporaryPerson, ArrayList personList)
+        public int SearchPerson(Person temporaryPerson)
         {
-            int personId = Class1.SearchPersonId(temporaryPerson, personList);
-
+            int personId = Class1.SearchPersonId(temporaryPerson);
             return personId;
         }
 
-        public bool DeletePerson(int index, ArrayList personList)
+        public void DeletePerson(int index)
         {
             if (index != -1)
             {
-                Person.Delete(index);
-                return true;
-            }
-            else
-            {
-                return false;
+                // Person löschen
             }
         }
-        public Person GetPerson(int index, ArrayList personList)
+
+        public Person GetPerson(int index)
         {
-            if (index != -1)
-            {
-                Person foundPerson = Person.Find(index, personList);
-                return foundPerson;
-            }
+            
+            return people[index];
         }
         public string[] GetAllPersonData()
         {
