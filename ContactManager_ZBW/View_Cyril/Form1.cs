@@ -19,8 +19,7 @@ namespace ContactManager
         public void Form1_Load(object sender, EventArgs e)
         {
             // Fill in all the Persons of the PersonsList into the ListBox
-            throw new NotImplementedException();
-            // soll hier schon geladen werden?
+            Controller.LoadData();
             LoadList();
 
         }
@@ -128,8 +127,8 @@ namespace ContactManager
         // description: the list will be filled with data from file
         private void CmdLoad_Click(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
-            // wie heisst die Funktion von Ramon?
+            Controller.LoadData();
+            LoadList();
         }
 
 

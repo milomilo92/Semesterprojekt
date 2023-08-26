@@ -80,6 +80,15 @@ namespace ContactManager_ZBW.Milos.Controller
                 return false;
             }
         }
+
+        // Dummy Funktion für Dateinen
+        // bitte namen der Funktion so beibehalten
+
+        public void LoadData() 
+        { 
+        
+        }
     }
+
 
 }
