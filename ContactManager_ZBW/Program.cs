@@ -18,6 +18,7 @@ namespace ContactManager_ZBW
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+            Application.Run(new Login());
             Application.Run(new MainView());
 
 
@@ -28,7 +29,7 @@ namespace ContactManager_ZBW
 
             // GitHub Test Ramon - hat nicht funktioniert :-)
 
-            
+
         }
     }
 }

@@ -41,13 +41,14 @@ namespace ContactManager_ZBW.View_Cyril
             if (isAuthenticated)
             {
                 MessageBox.Show("Anmeldung erfolgreich! Das Programm wird geladen.");
-                // Wie bringen wir den Load weiter, damit die Hauptview geladen wird?
+                Login.ActiveForm.Close();
             }
             else
             {
                 MessageBox.Show("Falscher Benutzername oder Passwort. Bitte erneut versuchen.");
             }
         }
+
     }
 
 }
