@@ -16,7 +16,7 @@ namespace ContactManager_ZBW.Milos.Controller
 
         public int CreateNewPerson(Person temporaryPerson)
         {
-            int personId = Class1.SearchPersonId(temporaryPerson);
+            int personId = Class1.SearchPersonId(temporaryPerson, people);
 
             if (personId >= 0) 
             {
@@ -37,7 +37,7 @@ namespace ContactManager_ZBW.Milos.Controller
 
         public int SearchPerson(Person temporaryPerson)
         {
-            int personId = Class1.SearchPersonId(temporaryPerson);
+            int personId = Class1.SearchPersonId(temporaryPerson, people);
             return personId;
         }
 
