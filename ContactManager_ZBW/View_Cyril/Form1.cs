@@ -290,7 +290,7 @@ namespace ContactManager
             if (person is Customer)
             {
                 TxtCompanyName.Text = ((Customer)person).CompanyName;
-                TxtCustomerType.Text = ((Customer)person).CustomerType;
+                TxtCustomerType.Text = Convert.ToString ( ((Customer)person).CustomerType );
                 TxtCompanyContact.Text = ((Customer)person).CompanyContact;
 
                 // add all log entries to the log history in the view:
@@ -350,7 +350,7 @@ namespace ContactManager
             {
 
                 int index = LslContactList.SelectedIndex;
-                Person customer = (Customer)(Controller.GetPerson(index));
+                Customer customer = (Customer)(Controller.GetPerson(index));
 
 
 
@@ -358,10 +358,8 @@ namespace ContactManager
                 if (newLogEntry != "")
                 {
                     // Noch über Controller machen, nicht direkt im Model.
-                    throw new NotImplementedException(); // Noch index und so machen;
-                    Customer.AddLogEntry(index, newLogEntry);
+                    customer.AddLogEntry(newLogEntry);
 
-                    customer.AddLogEntry(DateTime.Now, newLogEntry);
                     Controller.UpdatePerson(index, customer);                 // Update new data to controllers customer-list
                     TxtLogNew.Clear();                      // and clear entry field
                     LslContactList.SelectedIndex = index;   // finally update view and show entry in list

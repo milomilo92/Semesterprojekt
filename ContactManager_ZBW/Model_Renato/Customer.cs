@@ -1,10 +1,5 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Xml.Linq;
 
 namespace ContactManager_ZBW.Model_Renato
 {
@@ -22,26 +17,25 @@ namespace ContactManager_ZBW.Model_Renato
         public string getAllLogEntries { get; set; }
         public string LogEntries { get; set; }
 
-        private ArrayList sLogEntries;
+        private List<string> SLogEntries { get; set; }
 
-     
+
         public Customer()
         {
-            sLogEntries = new ArrayList();
+            SLogEntries = new List<string>();
 
         }
 
 
-        public void AddLogEntry(DateTime LogDate, String LogText)
+        public void AddLogEntry(String LogText)
         {
+            DateTime actualDateTime = DateTime.Now;
+            SLogEntries.Add(LogText + ": " + actualDateTime.ToString());
+        }
 
-            ArrayList LogEntryList = new ArrayList();
-            LogEntryList.Add(LogText);
-            LogEntryList.Add(LogDate);
-
-            sLogEntries.Add(LogEntryList);
-
-     
+        public string[] GetAllLogEntries()
+        {
+            return SLogEntries.ToArray();
         }
     }
 }
