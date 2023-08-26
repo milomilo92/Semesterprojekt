@@ -1,4 +1,5 @@
 ﻿using ContactManager_ZBW.Ramon;
+using ContactManager_ZBW.View_Cyril;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,7 +18,8 @@ namespace ContactManager_ZBW
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new MainView());
+
 
             // GitHub Test Cyril
             // GitHub Test Miloš
