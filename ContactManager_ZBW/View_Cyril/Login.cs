@@ -38,7 +38,6 @@ namespace ContactManager_ZBW.View_Cyril
                 if (enteredUsername == userCredentials[i, 0] && enteredPassword == userCredentials[i, 1])
                 {
                     isAuthenticated = true;
-                    CheckUserCredentials(isAuthenticated);
                     break;
                 }
             }
