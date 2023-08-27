@@ -76,6 +76,10 @@ namespace ContactManager_ZBW.View_Cyril
             }
         }
 
+        private void Login_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 
 }

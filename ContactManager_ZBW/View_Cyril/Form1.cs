@@ -22,6 +22,8 @@ namespace ContactManager
             Controller.LoadData();
             LoadList();
 
+
+
         }
 
         // Function CmdNew_Click

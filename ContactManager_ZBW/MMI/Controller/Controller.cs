@@ -7,12 +7,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Collections;
+using System.IO;
+using System.Runtime.Serialization.Formatters.Binary;
+using System.Runtime.Serialization;
+
+
+
 
 namespace ContactManager_ZBW.Milos.Controller
 {
     public class Controller
     {
         private List<Person> people = new List<Person>();
+
+        
 
         public int CreateNewPerson(Person temporaryPerson)
         {
@@ -85,9 +93,31 @@ namespace ContactManager_ZBW.Milos.Controller
         // bitte namen der Funktion so beibehalten
 
         public void LoadData() 
-        { 
+        {
+          string filePath = "C:\\SemesterProjekt\\peopleList.dat";
+            
+           using (FileStream fs = new FileStream(filePath, FileMode.Open))
+           {
+               IFormatter formatter = new BinaryFormatter();
+                people = (List<Person>)formatter.Deserialize(fs);
+           }
+           
+
             // Ramon 
         }
+
+        public void SaveData()
+        {
+            string filePath = "C:\\SemesterProjekt\\peopleList.dat";
+
+            using (FileStream fs = new FileStream(filePath, FileMode.Create)) // FileMode.Create, um eine neue Datei zu erstellen oder eine vorhandene Datei zu überschreiben
+            {
+                IFormatter formatter = new BinaryFormatter();
+                formatter.Serialize(fs, people); // Die Liste in die Datei serialisieren
+            }
+        }
+
+
     }
 
 
