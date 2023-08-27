@@ -31,17 +31,22 @@ namespace ContactManager_ZBW.View_Cyril
             string enteredPassword = TxtPassword.Text;
             // Authentification check
             bool isAuthenticated = false;
-            
+
             // For-loop to check user credentials with infinite tries. If correct, loop breaks
             for (int i = 0; i < userCredentials.GetLength(0); i++)
             {
                 if (enteredUsername == userCredentials[i, 0] && enteredPassword == userCredentials[i, 1])
                 {
                     isAuthenticated = true;
+                    CheckUserCredentials(isAuthenticated);
                     break;
                 }
             }
+            CheckUserCredentials(isAuthenticated);
+        }
 
+        private void CheckUserCredentials(bool isAuthenticated)
+        {
             if (isAuthenticated)
             {
                 // If user credentials are correct, textbox appears. DialogResult changes to OK, login closes.
@@ -63,8 +68,6 @@ namespace ContactManager_ZBW.View_Cyril
             if (e.KeyCode == Keys.Enter)
             {
                 CmdLogin_Click(sender, e);
-                // Pressing enter creates an unnecessary sound. Surpressing it by following code
-                e.SuppressKeyPress = true;
             }
             // If user hits esc key, it will act like closing the window.
             else if (e.KeyCode == Keys.Escape)
