@@ -18,17 +18,13 @@ namespace ContactManager_ZBW
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Login());
-            Application.Run(new MainView());
 
+            Login loginForm = new Login();
 
-            // GitHub Test Cyril
-            // GitHub Test Miloš
-            // GitHub Test Renato+//lfi
-            // nächster Test Renato
-
-            // GitHub Test Ramon - hat nicht funktioniert :-)
-
+            if (loginForm.ShowDialog() == DialogResult.OK)
+            {
+                Application.Run(new MainView());
+            }
 
         }
     }
