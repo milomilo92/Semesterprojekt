@@ -37,8 +37,10 @@ namespace ContactManager_ZBW.Milos.Controller
 
         public void UpdatePerson(int index, Person temporaryPerson)
         {
-            // in der Liste bestehende Person überschreiben.
-
+            if (index != -1)
+            {
+                people[index] = temporaryPerson;
+            }
         }
 
         public int SearchPerson(Person temporaryPerson)
@@ -51,7 +53,7 @@ namespace ContactManager_ZBW.Milos.Controller
         {
             if (index != -1)
             {
-                // Person löschen
+                people.RemoveAt(index);
             }
         }
 
