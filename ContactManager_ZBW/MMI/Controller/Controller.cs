@@ -20,8 +20,6 @@ namespace ContactManager_ZBW.Milos.Controller
     {
         private List<Person> people = new List<Person>();
 
-        
-
         public int CreateNewPerson(Person temporaryPerson)
         {
             int personId = Class1.SearchPersonId(temporaryPerson, people);
