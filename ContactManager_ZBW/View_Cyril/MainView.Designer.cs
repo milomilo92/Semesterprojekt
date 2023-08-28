@@ -753,6 +753,7 @@
             this.CmdLogAdd.TabIndex = 0;
             this.CmdLogAdd.Text = "Logeintrag hinzufügen";
             this.CmdLogAdd.UseVisualStyleBackColor = true;
+            this.CmdLogAdd.Click += new System.EventHandler(this.CmdLogAdd_Click);
             // 
             // DtpEndDate
             // 
