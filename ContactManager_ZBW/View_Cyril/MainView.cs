@@ -214,7 +214,10 @@ namespace ContactManager_ZBW.View_Cyril
             person.Place = TxtPlace.Text;
             try
             {
-                person.ZipCode = Convert.ToInt16(TxtZipCode.Text);
+                if (TxtZipCode.Text != "")
+                {
+                    person.ZipCode = Convert.ToInt16(TxtZipCode.Text);
+                }
             }
             catch (FormatException)
             {
