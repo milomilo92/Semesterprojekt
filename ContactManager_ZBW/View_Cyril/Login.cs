@@ -33,8 +33,7 @@ namespace ContactManager_ZBW.View_Cyril
         {
             if (isAuthenticated)
             {
-                // If user credentials are correct, textbox appears. DialogResult changes to OK, login closes.
-                MessageBox.Show("Anmeldung erfolgreich! Das Programm wird geladen.");
+                // If user credentials are correct, DialogResult changes to OK, login closes.
                 DialogResult = DialogResult.OK;
                 this.Close();
             }
