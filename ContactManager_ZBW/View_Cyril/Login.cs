@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ContactManager_ZBW.Milos.Controller;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,12 +13,7 @@ namespace ContactManager_ZBW.View_Cyril
 {
     public partial class Login : Form
     {
-        // User credentials in clear text for demonstration
-        private string[,] userCredentials = {
-            {"user", "1234"},
-            {"larissa", "12345"},
-            {"admin", "123456"}
-        };
+        private Controller Controller = new Controller();
 
         public Login()
         {
@@ -29,22 +25,11 @@ namespace ContactManager_ZBW.View_Cyril
             // Get strings from view
             string enteredUsername = TxtUsername.Text;
             string enteredPassword = TxtPassword.Text;
-            // Authentification check
-            bool isAuthenticated = false;
-
-            // For-loop to check user credentials with infinite tries. If correct, loop breaks
-            for (int i = 0; i < userCredentials.GetLength(0); i++)
-            {
-                if (enteredUsername == userCredentials[i, 0] && enteredPassword == userCredentials[i, 1])
-                {
-                    isAuthenticated = true;
-                    break;
-                }
-            }
-            CheckUserCredentials(isAuthenticated);
+            bool isAuthenticated = Controller.CheckUserCredentials(enteredUsername, enteredPassword);
+            CheckUserAuthentication(isAuthenticated);
         }
 
-        private void CheckUserCredentials(bool isAuthenticated)
+        private void CheckUserAuthentication(bool isAuthenticated)
         {
             if (isAuthenticated)
             {
@@ -73,11 +58,6 @@ namespace ContactManager_ZBW.View_Cyril
             {
                 this.Close();
             }
-        }
-
-        private void Login_Load(object sender, EventArgs e)
-        {
-
         }
     }
 

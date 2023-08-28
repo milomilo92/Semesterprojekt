@@ -18,7 +18,15 @@ namespace ContactManager_ZBW.Milos.Controller
 {
     public class Controller
     {
+        // List with all people related entries
         private List<Person> people = new List<Person>();
+
+        // User credentials in clear text for demonstration
+        private string[,] userCredentials = {
+            {"user", "1234"},
+            {"larissa", "12345"},
+            {"admin", "123456"}
+        };
 
         public int CreateNewPerson(Person temporaryPerson)
         {
@@ -87,6 +95,22 @@ namespace ContactManager_ZBW.Milos.Controller
             {
                 return false;
             }
+        }
+
+        public bool CheckUserCredentials(string enteredUsername, string enteredPassword)
+        {
+            // Authentification check
+            bool isAuthenticated = false;
+            // For-loop to check user credentials with infinite tries. If correct, loop breaks
+            for (int i = 0; i < userCredentials.GetLength(0); i++)
+            {
+                if (enteredUsername == userCredentials[i, 0] && enteredPassword == userCredentials[i, 1])
+                {
+                    isAuthenticated = true;
+                    break;
+                }
+            }
+            return isAuthenticated;
         }
 
         // Dummy Funktion für Dateinen
