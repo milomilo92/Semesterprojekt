@@ -317,6 +317,7 @@
             this.CmdUpdate.TabIndex = 3;
             this.CmdUpdate.Text = "Kontakt ändern";
             this.CmdUpdate.UseVisualStyleBackColor = true;
+            this.CmdUpdate.Click += new System.EventHandler(this.CmdUpdate_Click);
             // 
             // CmdNew
             // 
@@ -327,6 +328,7 @@
             this.CmdNew.TabIndex = 3;
             this.CmdNew.Text = "Neuer Kontakt";
             this.CmdNew.UseVisualStyleBackColor = true;
+            this.CmdNew.Click += new System.EventHandler(this.CmdNew_Click);
             // 
             // CmdSearch
             // 
@@ -337,6 +339,7 @@
             this.CmdSearch.TabIndex = 3;
             this.CmdSearch.Text = "Kontakt suchen";
             this.CmdSearch.UseVisualStyleBackColor = true;
+            this.CmdSearch.Click += new System.EventHandler(this.CmdSearch_Click);
             // 
             // GrpBasicData
             // 
@@ -545,6 +548,7 @@
             this.CmdSave.TabIndex = 0;
             this.CmdSave.Text = "Daten in File speichern";
             this.CmdSave.UseVisualStyleBackColor = true;
+            this.CmdSave.Click += new System.EventHandler(this.CmdSave_Click);
             // 
             // GrpIO
             // 
@@ -561,13 +565,14 @@
             // 
             // CmdLoad
             // 
-            this.CmdLoad.Location = new System.Drawing.Point(14, 102);
+            this.CmdLoad.Location = new System.Drawing.Point(22, 103);
             this.CmdLoad.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.CmdLoad.Name = "CmdLoad";
             this.CmdLoad.Size = new System.Drawing.Size(212, 41);
             this.CmdLoad.TabIndex = 0;
             this.CmdLoad.Text = "Daten aus File laden";
             this.CmdLoad.UseVisualStyleBackColor = true;
+            this.CmdLoad.Click += new System.EventHandler(this.CmdLoad_Click);
             // 
             // GrpMutations
             // 
@@ -593,6 +598,7 @@
             this.CmdDelete.TabIndex = 3;
             this.CmdDelete.Text = "Kontakt löschen";
             this.CmdDelete.UseVisualStyleBackColor = true;
+            this.CmdDelete.Click += new System.EventHandler(this.CmdDelete_Click);
             // 
             // GrpContactHistory
             // 
