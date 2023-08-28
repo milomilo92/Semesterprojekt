@@ -22,7 +22,7 @@ namespace ContactManager_ZBW.View_Cyril
 
         private void CmdLogin_Click(object sender, EventArgs e)
         {
-            // Get strings from view
+            // Get strings from view and transfer to controller. Controller returns bool value
             string enteredUsername = TxtUsername.Text;
             string enteredPassword = TxtPassword.Text;
             bool isAuthenticated = Controller.CheckUserCredentials(enteredUsername, enteredPassword);
