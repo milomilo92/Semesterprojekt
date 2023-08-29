@@ -229,10 +229,13 @@ namespace ContactManager_ZBW.View_Cyril
             {
                 case "TbCustomer":
                     ((Customer)person).CompanyName = TxtCompanyName.Text;
-                    ((Customer)person).CustomerType = Convert.ToChar(TxtCustomerType.Text);
-                    if (!Controller.CheckCustomerType(((Customer)person).CustomerType))
+                    if (!(TxtCustomerType.Text == ""))
                     {
-                        MessageBox.Show("Bitte nur Werte von A-F in Kundentyp eingeben.");
+                        ((Customer)person).CustomerType = Convert.ToChar(TxtCustomerType.Text);
+                        if (!Controller.CheckCustomerType(((Customer)person).CustomerType))
+                        {
+                            MessageBox.Show("Bitte nur Werte von A-F in Kundentyp eingeben.");
+                        }
                     }
                     ((Customer)person).CompanyContact = TxtCompanyContact.Text;
                     break;
