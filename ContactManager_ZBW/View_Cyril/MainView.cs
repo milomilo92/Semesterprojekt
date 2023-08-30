@@ -144,6 +144,7 @@ namespace ContactManager_ZBW.View_Cyril
         {
             if (LslContactList.SelectedIndices.Count != 0 && LslContactList.SelectedIndices.Count < 2)
             {
+
                 int selectedIndex = LslContactList.SelectedIndex;
                 Person selectedPerson = Controller.GetPerson(selectedIndex);
                 ClearView();
@@ -351,7 +352,7 @@ namespace ContactManager_ZBW.View_Cyril
         {
             Person emptyPerson = CreateCustomerOrEmployee();
             ShowAllFields(emptyPerson);
-            LslContactList.ClearSelected();  // nothing shall be selected in the ListBox
+            //LslContactList.ClearSelected();  // nothing shall be selected in the ListBox
         }
 
         // Function CmdLogAdd_Click

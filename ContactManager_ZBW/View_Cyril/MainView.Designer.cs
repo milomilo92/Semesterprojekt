@@ -72,7 +72,6 @@
             this.CmdLoad = new System.Windows.Forms.Button();
             this.GrpMutations = new System.Windows.Forms.GroupBox();
             this.CmdDelete = new System.Windows.Forms.Button();
-            this.GrpContactHistory = new System.Windows.Forms.GroupBox();
             this.LslContactList = new System.Windows.Forms.ListBox();
             this.NumTraineeYears = new System.Windows.Forms.NumericUpDown();
             this.PnlTraineeData = new System.Windows.Forms.Panel();
@@ -112,13 +111,13 @@
             this.TbCustomer = new System.Windows.Forms.TabPage();
             this.TabControl = new System.Windows.Forms.TabControl();
             this.GrpContactDetails = new System.Windows.Forms.GroupBox();
+            this.GrpContactHistory = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.PnlStatus.SuspendLayout();
             this.PnlSalutation.SuspendLayout();
             this.GrpBasicData.SuspendLayout();
             this.GrpIO.SuspendLayout();
             this.GrpMutations.SuspendLayout();
-            this.GrpContactHistory.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.NumTraineeYears)).BeginInit();
             this.PnlTraineeData.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.NumActualTraineeYear)).BeginInit();
@@ -128,6 +127,7 @@
             this.TbCustomer.SuspendLayout();
             this.TabControl.SuspendLayout();
             this.GrpContactDetails.SuspendLayout();
+            this.GrpContactHistory.SuspendLayout();
             this.SuspendLayout();
             // 
             // numericUpDown1
@@ -600,18 +600,6 @@
             this.CmdDelete.UseVisualStyleBackColor = true;
             this.CmdDelete.Click += new System.EventHandler(this.CmdDelete_Click);
             // 
-            // GrpContactHistory
-            // 
-            this.GrpContactHistory.Controls.Add(this.LslContactList);
-            this.GrpContactHistory.Location = new System.Drawing.Point(15, 15);
-            this.GrpContactHistory.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.GrpContactHistory.Name = "GrpContactHistory";
-            this.GrpContactHistory.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.GrpContactHistory.Size = new System.Drawing.Size(342, 1048);
-            this.GrpContactHistory.TabIndex = 10;
-            this.GrpContactHistory.TabStop = false;
-            this.GrpContactHistory.Text = "Kontakt-Liste";
-            // 
             // LslContactList
             // 
             this.LslContactList.FormattingEnabled = true;
@@ -1056,6 +1044,18 @@
             this.GrpContactDetails.TabStop = false;
             this.GrpContactDetails.Text = "Kontakt Daten";
             // 
+            // GrpContactHistory
+            // 
+            this.GrpContactHistory.Controls.Add(this.LslContactList);
+            this.GrpContactHistory.Location = new System.Drawing.Point(15, 15);
+            this.GrpContactHistory.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.GrpContactHistory.Name = "GrpContactHistory";
+            this.GrpContactHistory.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.GrpContactHistory.Size = new System.Drawing.Size(342, 1048);
+            this.GrpContactHistory.TabIndex = 10;
+            this.GrpContactHistory.TabStop = false;
+            this.GrpContactHistory.Text = "Kontakt-Liste";
+            // 
             // MainView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -1077,7 +1077,6 @@
             this.GrpBasicData.PerformLayout();
             this.GrpIO.ResumeLayout(false);
             this.GrpMutations.ResumeLayout(false);
-            this.GrpContactHistory.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.NumTraineeYears)).EndInit();
             this.PnlTraineeData.ResumeLayout(false);
             this.PnlTraineeData.PerformLayout();
@@ -1092,6 +1091,7 @@
             this.TbCustomer.PerformLayout();
             this.TabControl.ResumeLayout(false);
             this.GrpContactDetails.ResumeLayout(false);
+            this.GrpContactHistory.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -1142,7 +1142,6 @@
         private System.Windows.Forms.Button CmdLoad;
         private System.Windows.Forms.GroupBox GrpMutations;
         private System.Windows.Forms.Button CmdDelete;
-        private System.Windows.Forms.GroupBox GrpContactHistory;
         private System.Windows.Forms.ListBox LslContactList;
         private System.Windows.Forms.NumericUpDown NumTraineeYears;
         private System.Windows.Forms.Panel PnlTraineeData;
@@ -1182,5 +1181,6 @@
         private System.Windows.Forms.TabPage TbCustomer;
         private System.Windows.Forms.TabControl TabControl;
         private System.Windows.Forms.GroupBox GrpContactDetails;
+        private System.Windows.Forms.GroupBox GrpContactHistory;
     }
 }
