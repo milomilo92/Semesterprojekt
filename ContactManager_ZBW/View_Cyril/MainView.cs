@@ -282,7 +282,7 @@ namespace ContactManager_ZBW.View_Cyril
             RdSalutationsFemale.Checked = person.Salutation == "Frau" ? true : false;
             TxtFirstName.Text = person.FirstName;
             TxtLastName.Text = person.LastName;
-            DtpDateOfBirth.Value = person.DateOfBirth;
+            DtpDateOfBirth.Value = person.DateOfBirth.Date;
             // tbd in View! = person.Gender;
             // tbd in View! = person.Title;
             TxtSocialSecurityNumber.Text = person.SocialSecurityNumber;
