@@ -8,7 +8,8 @@ namespace ContactManager_ZBW.Model_Renato
 
     // Class Customer
     // description: This is the class Customer
-    internal class Customer : Person
+    [Serializable]
+    public class Customer : Person
     {
         public string CompanyName { get; set; }
         public char CustomerType { get; set; }

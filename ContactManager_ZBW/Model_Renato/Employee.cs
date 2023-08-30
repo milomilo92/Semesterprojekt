@@ -3,12 +3,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Serialization;
 
 namespace ContactManager_ZBW.Model_Renato
 {
     // Class Employee
     // description: This is the class Employee
-    internal class Employee : Person
+    [XmlInclude(typeof(Trainee))]
+    [Serializable]
+    public class Employee : Person
     {
         public Guid EmployeeNumber { get; set; }
         public string Department { get; set; }

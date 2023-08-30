@@ -21,7 +21,7 @@ namespace ContactManager_ZBW.View_Cyril
             InitializeComponent();
             Controller = new Controller();
         }
-
+   
         public void Form1_Load(object sender, EventArgs e)
         {
             // Fill in all the Persons of the PersonsList into the ListBox
@@ -125,7 +125,8 @@ namespace ContactManager_ZBW.View_Cyril
         // description: the persons in the list will be saved to file
         private void CmdSave_Click(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            Controller.SaveData();
+            //throw new NotImplementedException();
             // wie heisst die Funktion von Ramon?
         }
 

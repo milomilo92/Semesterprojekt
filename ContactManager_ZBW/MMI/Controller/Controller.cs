@@ -8,17 +8,20 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Collections;
 using System.IO;
-using System.Runtime.Serialization.Formatters.Binary;
-using System.Runtime.Serialization;
-
+using System.Xml.Serialization;
 
 
 
 namespace ContactManager_ZBW.Milos.Controller
 {
+    
     public class Controller
+
+        
     {
         // List with all people related entries
+
+        
         private List<Person> people = new List<Person>();
 
         // User credentials in clear text for demonstration
@@ -118,27 +121,28 @@ namespace ContactManager_ZBW.Milos.Controller
 
         public void LoadData() 
         {
-          string filePath = "C:\\SemesterProjekt\\peopleList.dat";
-            
-           using (FileStream fs = new FileStream(filePath, FileMode.Open))
-           {
-               IFormatter formatter = new BinaryFormatter();
-                people = (List<Person>)formatter.Deserialize(fs);
-           }
-           
+          string filePath = "peopleList.txt";
+
+            XmlSerializer serializer = new XmlSerializer(typeof(List<Person>));
+            using (TextReader reader = new StreamReader(filePath))
+            {
+                people = (List<Person>)serializer.Deserialize(reader);
+            }
+
 
             // Ramon 
         }
 
         public void SaveData()
         {
-            string filePath = "C:\\SemesterProjekt\\peopleList.dat";
-
-            using (FileStream fs = new FileStream(filePath, FileMode.Create)) // FileMode.Create, um eine neue Datei zu erstellen oder eine vorhandene Datei zu überschreiben
+            string filePath = "peopleList.txt";
+            XmlSerializer serializer = new XmlSerializer(typeof(List<Person>));
+            using (TextWriter writer = new StreamWriter(filePath))
             {
-                IFormatter formatter = new BinaryFormatter();
-                formatter.Serialize(fs, people); // Die Liste in die Datei serialisieren
+                serializer.Serialize(writer, people);
             }
+                
+                       
         }
 
 
