@@ -271,7 +271,7 @@ namespace ContactManager_ZBW.View_Cyril
                     break;
             }
             // additionally fill out trainee data:
-            throw new NotImplementedException();
+            // throw new NotImplementedException();
         }
 
         // Function ShowAllFields

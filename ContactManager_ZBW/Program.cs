@@ -16,7 +16,7 @@ namespace ContactManager_ZBW
         [STAThread]
         static void Main()
         {
-            Application.EnableVisualStyles();
+            /*Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
             Login loginForm = new Login();
@@ -24,8 +24,8 @@ namespace ContactManager_ZBW
             if (loginForm.ShowDialog() == DialogResult.OK)
             {
                 Application.Run(new MainView());
-            }
-
+            } */
+            Application.Run(new MainView()); // <-- diese Zeile beim Reaktivieren des Logins wieder entfernen.
         }
     }
 }
