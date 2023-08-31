@@ -80,6 +80,7 @@ namespace ContactManager_ZBW.View_Cyril
         // description: a search in the person list will be performed based on the entered fields
         private void CmdSearch_Click(object sender, EventArgs e)
         {
+            /*
             if (CheckNecessaryFields()) // only when necessary Fields are entered
             {
                 Person temporaryPerson = CreateCustomerOrEmployee();
@@ -93,7 +94,11 @@ namespace ContactManager_ZBW.View_Cyril
                 {
                     MessageBox.Show("Keine entsprechende Person gefunden.");
                 }
-            }
+            }*/
+
+            Search searchForm = new Search();
+            searchForm.ShowDialog();
+
         }
 
         // Function CmdDelete_Click

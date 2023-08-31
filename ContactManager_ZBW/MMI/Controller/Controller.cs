@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Collections;
+using System.Windows.Forms;
 using System.IO;
 using System.Xml.Serialization;
 
@@ -114,6 +115,25 @@ namespace ContactManager_ZBW.Milos.Controller
                 }
             }
             return isAuthenticated;
+        }
+
+        public int KeyNavigation(KeyEventArgs e)
+        {
+            // If user hits enter key, return 1".
+            if (e.KeyCode == Keys.Enter)
+            {
+                return 1;
+            }
+            // If user hits esc key, return 2.
+            else if (e.KeyCode == Keys.Escape)
+            {
+                return 2;
+            }
+            // In every other case, return 0, which doesn't create any event.
+            else
+            {
+                return 0;
+            }
         }
 
         // Dummy Funktion für Dateinen

@@ -47,13 +47,15 @@ namespace ContactManager_ZBW.View_Cyril
 
         private void Login_KeyDown(object sender, KeyEventArgs e)
         {
+            int enteredKey = Controller.KeyNavigation(e);
+
             // If user hits enter key, it will act like pressing the "login-button".
-            if (e.KeyCode == Keys.Enter)
+            if (enteredKey == 1)
             {
                 CmdLogin_Click(sender, e);
             }
             // If user hits esc key, it will act like closing the window.
-            else if (e.KeyCode == Keys.Escape)
+            else if (enteredKey == 2)
             {
                 this.Close();
             }
