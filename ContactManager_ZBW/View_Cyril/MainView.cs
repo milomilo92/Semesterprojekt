@@ -131,8 +131,6 @@ namespace ContactManager_ZBW.View_Cyril
         private void CmdSave_Click(object sender, EventArgs e)
         {
             Controller.SaveData();
-            //throw new NotImplementedException();
-            // wie heisst die Funktion von Ramon?
         }
 
         // Function CmdLoad_Click
@@ -277,8 +275,6 @@ namespace ContactManager_ZBW.View_Cyril
                 default:
                     break;
             }
-            // additionally fill out trainee data:
-            // throw new NotImplementedException();
         }
 
         // Function ShowAllFields
