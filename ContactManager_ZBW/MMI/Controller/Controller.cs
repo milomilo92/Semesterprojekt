@@ -1,29 +1,25 @@
 ﻿using ContactManager_ZBW.Model_Renato;
 using ContactManager_ZBW.Ramon;
-using ContactManager;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Collections;
-using System.Windows.Forms;
 using System.IO;
+using System.Linq;
+using System.Windows.Forms;
 using System.Xml.Serialization;
 
 
 
 namespace ContactManager_ZBW.Milos.Controller
 {
-    
+
     public class Controller
 
-        
+
     {
         // List with all people related entries
 
-        
+
         private List<Person> people = new List<Person>();
+        // private List<Person> foundPeople = new List<Person>();
 
         // User credentials in clear text for demonstration
         private string[,] userCredentials = {
@@ -36,7 +32,7 @@ namespace ContactManager_ZBW.Milos.Controller
         {
             int personId = Class1.SearchPersonId(temporaryPerson, people);
 
-            if (personId >= 0) 
+            if (personId >= 0)
             {
                 return -1; // if person already exists
             }
@@ -61,6 +57,29 @@ namespace ContactManager_ZBW.Milos.Controller
             return personId;
         }
 
+        public List<Person> SearchFunction(string searchTerm)
+        {
+            /*foundPeople.Clear();
+
+            foreach (Person person in people)
+            {
+                if (person.FirstName.Contains(searchTerm) ||
+                    person.LastName.Contains(searchTerm) ||
+                    person.SocialSecurityNumber.Contains(searchTerm) ||
+                    person.Email.Contains(searchTerm) ||
+                    person.Street.Contains(searchTerm) ||
+                    person.Place.Contains(searchTerm) ||
+                    person.PhoneNumberBusiness.Contains(searchTerm) ||
+                    person.PhoneNumberMobile.Contains(searchTerm) ||
+                    person.PhoneNumberPrivat.Contains(searchTerm))
+                {
+                    foundPeople.Add(person);                    
+                }
+            }*/
+
+            return people;
+        }
+
         public void DeletePerson(int index)
         {
             if (index != -1)
@@ -71,7 +90,7 @@ namespace ContactManager_ZBW.Milos.Controller
 
         public Person GetPerson(int index)
         {
-            
+
             return people[index];
         }
         public string[] GetAllPersonData()
@@ -139,9 +158,9 @@ namespace ContactManager_ZBW.Milos.Controller
         // Dummy Funktion für Dateinen
         // bitte namen der Funktion so beibehalten
 
-        public void LoadData() 
+        public void LoadData()
         {
-          string filePath = "peopleList.txt";
+            string filePath = "peopleList.txt";
 
             XmlSerializer serializer = new XmlSerializer(typeof(List<Person>));
             using (TextReader reader = new StreamReader(filePath))
@@ -161,8 +180,8 @@ namespace ContactManager_ZBW.Milos.Controller
             {
                 serializer.Serialize(writer, people);
             }
-                
-                       
+
+
         }
 
 

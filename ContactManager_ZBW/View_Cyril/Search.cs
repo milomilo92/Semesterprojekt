@@ -1,4 +1,5 @@
 ﻿using ContactManager_ZBW.Milos.Controller;
+using ContactManager_ZBW.Model_Renato;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -42,13 +43,34 @@ namespace ContactManager_ZBW.View_Cyril
         }
 
         private void CmdSearch_Click(object sender, EventArgs e)
-        {
+        {                        
+            string searchTerm = TxtSearchTerm.Text;
 
+            if (string.IsNullOrEmpty(searchTerm))
+            {
+                MessageBox.Show("Bitte alle Suchkriterien ausfüllen.");
+            }
+            /*else
+            {
+                List<Person> foundPeople = Controller.SearchFunction(searchTerm);
+
+                if (foundPeople.Count != 0)
+                {
+                    foreach (Person person in foundPeople)
+                    {
+                        LslSearchResult.Items.Add(person.FirstName + person.LastName);
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Keine Einträge gefunden.");
+                }
+            }*/
         }
 
         private void CmdOk_Click(object sender, EventArgs e)
         {
-
+            this.Close();
         }
     }
 }

@@ -59,7 +59,8 @@
             // 
             // CmbSearchField
             // 
-            this.CmbSearchField.FormattingEnabled = true;
+            this.CmbSearchField.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.CmbSearchField.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.CmbSearchField.Items.AddRange(new object[] {
             "Vorname",
             "Nachname",
@@ -76,6 +77,7 @@
             "Abteilung",
             "Rolle"});
             this.CmbSearchField.Location = new System.Drawing.Point(286, 35);
+            this.CmbSearchField.MaxDropDownItems = 10;
             this.CmbSearchField.Name = "CmbSearchField";
             this.CmbSearchField.Size = new System.Drawing.Size(117, 21);
             this.CmbSearchField.TabIndex = 2;
@@ -170,12 +172,12 @@
 
         private System.Windows.Forms.ListBox LslSearchResult;
         private System.Windows.Forms.TextBox TxtSearchTerm;
-        private System.Windows.Forms.ComboBox CmbSearchField;
         private System.Windows.Forms.Button CmdSearch;
         private System.Windows.Forms.Label LblSearchTerm;
         private System.Windows.Forms.Label LblSearchIn;
         private System.Windows.Forms.Label LblResult;
         private System.Windows.Forms.Button CmdOk;
         private System.Windows.Forms.Button CmdCancel;
+        private System.Windows.Forms.ComboBox CmbSearchField;
     }
 }
