@@ -82,7 +82,7 @@ namespace ContactManager_ZBW.View_Cyril
         {
             /*
             if (CheckNecessaryFields()) // only when necessary Fields are entered
-            {
+            {*/
                 Person temporaryPerson = CreateCustomerOrEmployee();
                 FillAllFields(temporaryPerson);
                 int index = Controller.SearchPerson(temporaryPerson);
@@ -94,11 +94,12 @@ namespace ContactManager_ZBW.View_Cyril
                 {
                     MessageBox.Show("Keine entsprechende Person gefunden.");
                 }
+                /*
             }*/
 
-            Search searchForm = new Search();
+            /*Search searchForm = new Search();
             searchForm.ShowDialog();
-
+            */
         }
 
         // Function CmdDelete_Click

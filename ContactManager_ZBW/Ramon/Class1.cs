@@ -1,19 +1,14 @@
-﻿using System;
+﻿using ContactManager_ZBW.Model_Renato;
+using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.IO;
-using System.Runtime.CompilerServices;
 using System.Windows.Forms;
-using ContactManager_ZBW.Model_Renato;
-using System.Collections;
 
 namespace ContactManager_ZBW.Ramon
 {
     public class Class1
     {
-         
+
         public string GetStringsFromFile(string filepath)
         {
             string stringLine;
@@ -25,7 +20,7 @@ namespace ContactManager_ZBW.Ramon
                 //Read the first line of text
                 stringLine = sr.ReadLine();
                 //Continue to read until you reach end of file
-                while (stringLine != null);
+                while (stringLine != null) ;
                 {
                     //write the line to console window
                     Console.WriteLine(stringLine);
@@ -40,14 +35,14 @@ namespace ContactManager_ZBW.Ramon
             }
             catch (Exception e)
             {
-                MessageBox.Show ("Exception: " + e.Message);
+                MessageBox.Show("Exception: " + e.Message);
                 return null;
 
             }
             finally
             {
                 MessageBox.Show("Executing finally block.");
-               
+
             }
 
         }
@@ -78,7 +73,22 @@ namespace ContactManager_ZBW.Ramon
             }
 
         }
-        
+
+
+        public static List<int> SearchAllMatchingPersons(Person person, List<Person> personList)
+        {
+            List<int> resultList = new List<int>();
+            int i = 0;
+            foreach (Person checkedPerson in personList)
+            {
+                if (personList[i].Equals(person))
+                {
+                    resultList.Add(i);
+                }
+                i++;
+            }
+            return resultList;
+        }
 
 
         public static int SearchPersonId(Person person, List<Person> personList)
@@ -91,7 +101,7 @@ namespace ContactManager_ZBW.Ramon
                     return i;
 
                 }
-                
+
             }
             return -1;
 

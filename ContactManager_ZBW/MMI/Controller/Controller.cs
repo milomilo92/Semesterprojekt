@@ -1,5 +1,6 @@
 ﻿using ContactManager_ZBW.Model_Renato;
 using ContactManager_ZBW.Ramon;
+using ContactManager_ZBW.View_Cyril;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -53,7 +54,31 @@ namespace ContactManager_ZBW.Milos.Controller
 
         public int SearchPerson(Person temporaryPerson)
         {
-            int personId = Class1.SearchPersonId(temporaryPerson, people);
+            /* Entfernt für Versuch Auswahlliste
+             * int personId = Class1.SearchPersonId(temporaryPerson, people);
+            */
+            int personId = -1;
+
+            List<int> resultList = Class1.SearchAllMatchingPersons(temporaryPerson, people);
+            
+            if (resultList.Count > 0)
+            {
+                PickPerson pickPerson = new PickPerson();
+                foreach (int index in resultList)
+                {
+                    pickPerson.LstShowMatchingPersons.Items.Add(people[index].LastName + " " + people[index].FirstName);
+                }
+                if (pickPerson.ShowDialog() == DialogResult.OK)
+                {
+                    if (pickPerson.LstShowMatchingPersons.SelectedIndex > 0)
+                    {
+                        int selectedIndex = pickPerson.LstShowMatchingPersons.SelectedIndex;
+                        personId = resultList[selectedIndex];
+                    }
+                    pickPerson.Close();
+                }
+
+            }
             return personId;
         }
 
