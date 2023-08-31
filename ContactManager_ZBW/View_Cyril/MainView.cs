@@ -405,6 +405,11 @@ namespace ContactManager_ZBW.View_Cyril
         {
 
         }
+
+        private void CmdClearAll_Click(object sender, EventArgs e)
+        {
+            ClearView();
+        }
     }
 }
 
