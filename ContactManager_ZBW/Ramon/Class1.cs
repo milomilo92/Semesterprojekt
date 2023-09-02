@@ -81,7 +81,7 @@ namespace ContactManager_ZBW.Ramon
             int i = 0;
             foreach (Person checkedPerson in personList)
             {
-                if (personList[i].Equals(person))
+                if (person.Equals(checkedPerson))
                 {
                     resultList.Add(i);
                 }

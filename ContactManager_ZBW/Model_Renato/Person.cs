@@ -42,23 +42,23 @@ namespace ContactManager_ZBW.Model_Renato
         public bool Equals(Person other)
         {
             if (other != null &&
-                other.Salutation == Salutation &&
-                other.FirstName == FirstName &&
-                other.LastName == LastName &&
+                Salutation != "" && other.Salutation == Salutation &&
+                FirstName != "" && other.FirstName == FirstName &&
+                LastName !="" && other.LastName == LastName &&
                 other.DateOfBirth == DateOfBirth &&
                 other.Gender == Gender &&
-                other.Title == Title &&
-                other.SocialSecurityNumber == SocialSecurityNumber &&
-                other.PhoneNumberPrivat == PhoneNumberPrivat &&
-                other.PhoneNumberMobile == PhoneNumberMobile &&
-                other.PhoneNumberBusiness == PhoneNumberBusiness &&
-                other.Email == Email &&
+                Title !="" && other.Title == Title &&
+                SocialSecurityNumber !="" && other.SocialSecurityNumber == SocialSecurityNumber &&
+                PhoneNumberPrivat !="" && other.PhoneNumberPrivat == PhoneNumberPrivat &&
+                PhoneNumberMobile !="" && other.PhoneNumberMobile == PhoneNumberMobile &&
+                PhoneNumberBusiness !="" && other.PhoneNumberBusiness == PhoneNumberBusiness &&
+                Email !="" && other.Email == Email &&
                 other.Status == Status &&
-                other.Nationality == Nationality &&
-                other.Street == Street &&
-                other.StreetNumber == StreetNumber &&
+                Nationality !="" && other.Nationality == Nationality &&
+                Street != "" && other.Street == Street &&
+                StreetNumber !="" && other.StreetNumber == StreetNumber &&
                 other.ZipCode == ZipCode &&
-                other.Place == Place)
+                Place !="" && other.Place == Place)
             {
                 return true;
             }
