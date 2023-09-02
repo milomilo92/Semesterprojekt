@@ -1084,7 +1084,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1547, 1096);
+            this.AutoSize = true;
+            this.ClientSize = new System.Drawing.Size(1547, 1170);
             this.Controls.Add(this.PBLogo);
             this.Controls.Add(this.GrpIO);
             this.Controls.Add(this.GrpMutations);
@@ -1093,6 +1094,7 @@
             this.Controls.Add(this.GrpContactDetails);
             this.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.Name = "MainView";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MainView";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
