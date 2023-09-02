@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainView));
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.PnlStatus = new System.Windows.Forms.Panel();
             this.RdPassive = new System.Windows.Forms.RadioButton();
@@ -139,7 +140,7 @@
             this.numericUpDown1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.numericUpDown1.Name = "numericUpDown1";
             this.numericUpDown1.Size = new System.Drawing.Size(180, 26);
-            this.numericUpDown1.TabIndex = 4;
+            this.numericUpDown1.TabIndex = 5;
             // 
             // PnlStatus
             // 
@@ -193,7 +194,7 @@
             this.LblTitle.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LblTitle.Name = "LblTitle";
             this.LblTitle.Size = new System.Drawing.Size(42, 20);
-            this.LblTitle.TabIndex = 16;
+            this.LblTitle.TabIndex = 18;
             this.LblTitle.Text = "Titel:";
             // 
             // LblPhoneNumberPrivate
@@ -203,7 +204,7 @@
             this.LblPhoneNumberPrivate.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LblPhoneNumberPrivate.Name = "LblPhoneNumberPrivate";
             this.LblPhoneNumberPrivate.Size = new System.Drawing.Size(81, 20);
-            this.LblPhoneNumberPrivate.TabIndex = 23;
+            this.LblPhoneNumberPrivate.TabIndex = 25;
             this.LblPhoneNumberPrivate.Text = "Tel. Privat:";
             // 
             // LblPhoneNumberMobile
@@ -213,7 +214,7 @@
             this.LblPhoneNumberMobile.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LblPhoneNumberMobile.Name = "LblPhoneNumberMobile";
             this.LblPhoneNumberMobile.Size = new System.Drawing.Size(59, 20);
-            this.LblPhoneNumberMobile.TabIndex = 25;
+            this.LblPhoneNumberMobile.TabIndex = 27;
             this.LblPhoneNumberMobile.Text = "Mobile:";
             // 
             // LblLastName
@@ -224,7 +225,7 @@
             this.LblLastName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LblLastName.Name = "LblLastName";
             this.LblLastName.Size = new System.Drawing.Size(103, 20);
-            this.LblLastName.TabIndex = 15;
+            this.LblLastName.TabIndex = 17;
             this.LblLastName.Text = "Nachname:";
             // 
             // LblZipCode
@@ -234,7 +235,7 @@
             this.LblZipCode.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LblZipCode.Name = "LblZipCode";
             this.LblZipCode.Size = new System.Drawing.Size(42, 20);
-            this.LblZipCode.TabIndex = 21;
+            this.LblZipCode.TabIndex = 23;
             this.LblZipCode.Text = "PLZ:";
             // 
             // LblPlace
@@ -244,7 +245,7 @@
             this.LblPlace.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LblPlace.Name = "LblPlace";
             this.LblPlace.Size = new System.Drawing.Size(35, 20);
-            this.LblPlace.TabIndex = 22;
+            this.LblPlace.TabIndex = 24;
             this.LblPlace.Text = "Ort:";
             // 
             // LblStreetNumber
@@ -254,7 +255,7 @@
             this.LblStreetNumber.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LblStreetNumber.Name = "LblStreetNumber";
             this.LblStreetNumber.Size = new System.Drawing.Size(33, 20);
-            this.LblStreetNumber.TabIndex = 20;
+            this.LblStreetNumber.TabIndex = 22;
             this.LblStreetNumber.Text = "Nr.:";
             // 
             // RdSalutationsFemale
@@ -264,7 +265,7 @@
             this.RdSalutationsFemale.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.RdSalutationsFemale.Name = "RdSalutationsFemale";
             this.RdSalutationsFemale.Size = new System.Drawing.Size(67, 24);
-            this.RdSalutationsFemale.TabIndex = 2;
+            this.RdSalutationsFemale.TabIndex = 0;
             this.RdSalutationsFemale.TabStop = true;
             this.RdSalutationsFemale.Text = "Frau";
             this.RdSalutationsFemale.UseVisualStyleBackColor = true;
@@ -288,7 +289,7 @@
             this.DtpDateOfBirth.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.DtpDateOfBirth.Name = "DtpDateOfBirth";
             this.DtpDateOfBirth.Size = new System.Drawing.Size(181, 26);
-            this.DtpDateOfBirth.TabIndex = 5;
+            this.DtpDateOfBirth.TabIndex = 6;
             // 
             // PnlSalutation
             // 
@@ -299,7 +300,7 @@
             this.PnlSalutation.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.PnlSalutation.Name = "PnlSalutation";
             this.PnlSalutation.Size = new System.Drawing.Size(183, 74);
-            this.PnlSalutation.TabIndex = 27;
+            this.PnlSalutation.TabIndex = 14;
             // 
             // LblSalutation
             // 
@@ -308,7 +309,7 @@
             this.LblSalutation.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LblSalutation.Name = "LblSalutation";
             this.LblSalutation.Size = new System.Drawing.Size(65, 20);
-            this.LblSalutation.TabIndex = 0;
+            this.LblSalutation.TabIndex = 2;
             this.LblSalutation.Text = "Anrede:";
             // 
             // CmdUpdate
@@ -380,7 +381,7 @@
             this.GrpBasicData.Name = "GrpBasicData";
             this.GrpBasicData.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.GrpBasicData.Size = new System.Drawing.Size(825, 518);
-            this.GrpBasicData.TabIndex = 1;
+            this.GrpBasicData.TabIndex = 0;
             this.GrpBasicData.TabStop = false;
             this.GrpBasicData.Text = "Grunddaten";
             // 
@@ -391,7 +392,7 @@
             this.LblSocialSecurityNumber.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LblSocialSecurityNumber.Name = "LblSocialSecurityNumber";
             this.LblSocialSecurityNumber.Size = new System.Drawing.Size(112, 20);
-            this.LblSocialSecurityNumber.TabIndex = 13;
+            this.LblSocialSecurityNumber.TabIndex = 15;
             this.LblSocialSecurityNumber.Text = "AHV-Nummer:";
             // 
             // LblStreet
@@ -401,7 +402,7 @@
             this.LblStreet.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LblStreet.Name = "LblStreet";
             this.LblStreet.Size = new System.Drawing.Size(68, 20);
-            this.LblStreet.TabIndex = 19;
+            this.LblStreet.TabIndex = 21;
             this.LblStreet.Text = "Strasse:";
             // 
             // LblEmail
@@ -412,7 +413,7 @@
             this.LblEmail.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LblEmail.Name = "LblEmail";
             this.LblEmail.Size = new System.Drawing.Size(69, 20);
-            this.LblEmail.TabIndex = 17;
+            this.LblEmail.TabIndex = 19;
             this.LblEmail.Text = "E-Mail:";
             // 
             // LblPhoneNumberBusiness
@@ -422,7 +423,7 @@
             this.LblPhoneNumberBusiness.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LblPhoneNumberBusiness.Name = "LblPhoneNumberBusiness";
             this.LblPhoneNumberBusiness.Size = new System.Drawing.Size(108, 20);
-            this.LblPhoneNumberBusiness.TabIndex = 24;
+            this.LblPhoneNumberBusiness.TabIndex = 26;
             this.LblPhoneNumberBusiness.Text = "Tel. Geschäft:";
             // 
             // LblDateOfBirth
@@ -432,7 +433,7 @@
             this.LblDateOfBirth.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LblDateOfBirth.Name = "LblDateOfBirth";
             this.LblDateOfBirth.Size = new System.Drawing.Size(116, 20);
-            this.LblDateOfBirth.TabIndex = 18;
+            this.LblDateOfBirth.TabIndex = 20;
             this.LblDateOfBirth.Text = "Geburtsdatum:";
             // 
             // LblFirstName
@@ -443,7 +444,7 @@
             this.LblFirstName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LblFirstName.Name = "LblFirstName";
             this.LblFirstName.Size = new System.Drawing.Size(89, 20);
-            this.LblFirstName.TabIndex = 14;
+            this.LblFirstName.TabIndex = 16;
             this.LblFirstName.Text = "Vorname:";
             // 
             // textBox1
@@ -452,7 +453,7 @@
             this.textBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(181, 26);
-            this.textBox1.TabIndex = 26;
+            this.textBox1.TabIndex = 3;
             // 
             // TxtPhoneNumberPrivate
             // 
@@ -460,7 +461,7 @@
             this.TxtPhoneNumberPrivate.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TxtPhoneNumberPrivate.Name = "TxtPhoneNumberPrivate";
             this.TxtPhoneNumberPrivate.Size = new System.Drawing.Size(181, 26);
-            this.TxtPhoneNumberPrivate.TabIndex = 10;
+            this.TxtPhoneNumberPrivate.TabIndex = 11;
             // 
             // TxtPhoneNumberMobile
             // 
@@ -468,7 +469,7 @@
             this.TxtPhoneNumberMobile.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TxtPhoneNumberMobile.Name = "TxtPhoneNumberMobile";
             this.TxtPhoneNumberMobile.Size = new System.Drawing.Size(217, 26);
-            this.TxtPhoneNumberMobile.TabIndex = 12;
+            this.TxtPhoneNumberMobile.TabIndex = 13;
             // 
             // TxtLastName
             // 
@@ -476,7 +477,7 @@
             this.TxtLastName.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TxtLastName.Name = "TxtLastName";
             this.TxtLastName.Size = new System.Drawing.Size(217, 26);
-            this.TxtLastName.TabIndex = 1;
+            this.TxtLastName.TabIndex = 2;
             // 
             // TxtZipCode
             // 
@@ -484,7 +485,7 @@
             this.TxtZipCode.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TxtZipCode.Name = "TxtZipCode";
             this.TxtZipCode.Size = new System.Drawing.Size(104, 26);
-            this.TxtZipCode.TabIndex = 8;
+            this.TxtZipCode.TabIndex = 9;
             // 
             // TxtPlace
             // 
@@ -492,7 +493,7 @@
             this.TxtPlace.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TxtPlace.Name = "TxtPlace";
             this.TxtPlace.Size = new System.Drawing.Size(360, 26);
-            this.TxtPlace.TabIndex = 9;
+            this.TxtPlace.TabIndex = 10;
             // 
             // TxtStreetNumber
             // 
@@ -500,7 +501,7 @@
             this.TxtStreetNumber.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TxtStreetNumber.Name = "TxtStreetNumber";
             this.TxtStreetNumber.Size = new System.Drawing.Size(86, 26);
-            this.TxtStreetNumber.TabIndex = 7;
+            this.TxtStreetNumber.TabIndex = 8;
             // 
             // TxtEmail
             // 
@@ -508,7 +509,7 @@
             this.TxtEmail.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TxtEmail.Name = "TxtEmail";
             this.TxtEmail.Size = new System.Drawing.Size(240, 26);
-            this.TxtEmail.TabIndex = 2;
+            this.TxtEmail.TabIndex = 4;
             // 
             // TxtPhoneNumberBusiness
             // 
@@ -516,7 +517,7 @@
             this.TxtPhoneNumberBusiness.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TxtPhoneNumberBusiness.Name = "TxtPhoneNumberBusiness";
             this.TxtPhoneNumberBusiness.Size = new System.Drawing.Size(240, 26);
-            this.TxtPhoneNumberBusiness.TabIndex = 11;
+            this.TxtPhoneNumberBusiness.TabIndex = 12;
             // 
             // TxtSocialSecurityNumber
             // 
@@ -524,7 +525,7 @@
             this.TxtSocialSecurityNumber.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TxtSocialSecurityNumber.Name = "TxtSocialSecurityNumber";
             this.TxtSocialSecurityNumber.Size = new System.Drawing.Size(217, 26);
-            this.TxtSocialSecurityNumber.TabIndex = 3;
+            this.TxtSocialSecurityNumber.TabIndex = 0;
             // 
             // TxtStreet
             // 
@@ -532,7 +533,7 @@
             this.TxtStreet.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TxtStreet.Name = "TxtStreet";
             this.TxtStreet.Size = new System.Drawing.Size(376, 26);
-            this.TxtStreet.TabIndex = 6;
+            this.TxtStreet.TabIndex = 7;
             // 
             // TxtFirstName
             // 
@@ -540,7 +541,7 @@
             this.TxtFirstName.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TxtFirstName.Name = "TxtFirstName";
             this.TxtFirstName.Size = new System.Drawing.Size(240, 26);
-            this.TxtFirstName.TabIndex = 0;
+            this.TxtFirstName.TabIndex = 1;
             // 
             // CmdSave
             // 
@@ -716,7 +717,7 @@
             this.TxtLogHistory.Name = "TxtLogHistory";
             this.TxtLogHistory.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.TxtLogHistory.Size = new System.Drawing.Size(720, 129);
-            this.TxtLogHistory.TabIndex = 3;
+            this.TxtLogHistory.TabIndex = 1;
             // 
             // LblLogNew
             // 
@@ -725,7 +726,7 @@
             this.LblLogNew.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LblLogNew.Name = "LblLogNew";
             this.LblLogNew.Size = new System.Drawing.Size(136, 20);
-            this.LblLogNew.TabIndex = 2;
+            this.LblLogNew.TabIndex = 0;
             this.LblLogNew.Text = "Neuer Logeintrag:";
             // 
             // TxtLogNew
@@ -734,7 +735,7 @@
             this.TxtLogNew.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TxtLogNew.Name = "TxtLogNew";
             this.TxtLogNew.Size = new System.Drawing.Size(720, 26);
-            this.TxtLogNew.TabIndex = 1;
+            this.TxtLogNew.TabIndex = 2;
             // 
             // CmdLogAdd
             // 
@@ -742,7 +743,7 @@
             this.CmdLogAdd.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.CmdLogAdd.Name = "CmdLogAdd";
             this.CmdLogAdd.Size = new System.Drawing.Size(212, 35);
-            this.CmdLogAdd.TabIndex = 0;
+            this.CmdLogAdd.TabIndex = 3;
             this.CmdLogAdd.Text = "Logeintrag hinzufügen";
             this.CmdLogAdd.UseVisualStyleBackColor = true;
             this.CmdLogAdd.Click += new System.EventHandler(this.CmdLogAdd_Click);
@@ -957,7 +958,7 @@
             this.TxtCustomerType.MaxLength = 1;
             this.TxtCustomerType.Name = "TxtCustomerType";
             this.TxtCustomerType.Size = new System.Drawing.Size(55, 26);
-            this.TxtCustomerType.TabIndex = 0;
+            this.TxtCustomerType.TabIndex = 1;
             // 
             // LblCustomerType
             // 
@@ -966,7 +967,7 @@
             this.LblCustomerType.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LblCustomerType.Name = "LblCustomerType";
             this.LblCustomerType.Size = new System.Drawing.Size(130, 20);
-            this.LblCustomerType.TabIndex = 1;
+            this.LblCustomerType.TabIndex = 4;
             this.LblCustomerType.Text = "Kundentyp (A-E):";
             // 
             // TxtCompanyContact
@@ -975,7 +976,7 @@
             this.TxtCompanyContact.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TxtCompanyContact.Name = "TxtCompanyContact";
             this.TxtCompanyContact.Size = new System.Drawing.Size(248, 26);
-            this.TxtCompanyContact.TabIndex = 0;
+            this.TxtCompanyContact.TabIndex = 2;
             // 
             // LblCompanyContact
             // 
@@ -984,7 +985,7 @@
             this.LblCompanyContact.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LblCompanyContact.Name = "LblCompanyContact";
             this.LblCompanyContact.Size = new System.Drawing.Size(115, 20);
-            this.LblCompanyContact.TabIndex = 1;
+            this.LblCompanyContact.TabIndex = 5;
             this.LblCompanyContact.Text = "Firmenkontakt:";
             // 
             // TxtCompanyName
@@ -1002,7 +1003,7 @@
             this.LblCompanyName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LblCompanyName.Name = "LblCompanyName";
             this.LblCompanyName.Size = new System.Drawing.Size(102, 20);
-            this.LblCompanyName.TabIndex = 1;
+            this.LblCompanyName.TabIndex = 3;
             this.LblCompanyName.Text = "Firmenname:";
             // 
             // TbCustomer
@@ -1032,7 +1033,7 @@
             this.TabControl.Name = "TabControl";
             this.TabControl.SelectedIndex = 0;
             this.TabControl.Size = new System.Drawing.Size(825, 449);
-            this.TabControl.TabIndex = 0;
+            this.TabControl.TabIndex = 1;
             // 
             // GrpContactDetails
             // 
@@ -1043,7 +1044,7 @@
             this.GrpContactDetails.Name = "GrpContactDetails";
             this.GrpContactDetails.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.GrpContactDetails.Size = new System.Drawing.Size(849, 1048);
-            this.GrpContactDetails.TabIndex = 9;
+            this.GrpContactDetails.TabIndex = 0;
             this.GrpContactDetails.TabStop = false;
             this.GrpContactDetails.Text = "Kontakt Daten";
             // 
@@ -1092,6 +1093,7 @@
             this.Controls.Add(this.GrpContactHistory);
             this.Controls.Add(this.CmdClearAll);
             this.Controls.Add(this.GrpContactDetails);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.Name = "MainView";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
