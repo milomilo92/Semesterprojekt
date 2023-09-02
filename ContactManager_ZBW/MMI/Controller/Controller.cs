@@ -187,12 +187,14 @@ namespace ContactManager_ZBW.Milos.Controller
         {
             string filePath = "peopleList.txt";
 
-            XmlSerializer serializer = new XmlSerializer(typeof(List<Person>));
-            using (TextReader reader = new StreamReader(filePath))
+            if (File.Exists(filePath))  //Wegen Fehlermeldung hinzugefügt 02.09.23/Cyril
             {
-                people = (List<Person>)serializer.Deserialize(reader);
+                XmlSerializer serializer = new XmlSerializer(typeof(List<Person>));
+                using (TextReader reader = new StreamReader(filePath))
+                {
+                    people = (List<Person>)serializer.Deserialize(reader);
+                }
             }
-
 
             // Ramon 
         }

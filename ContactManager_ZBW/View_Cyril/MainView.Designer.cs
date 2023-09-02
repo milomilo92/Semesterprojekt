@@ -113,6 +113,7 @@
             this.GrpContactDetails = new System.Windows.Forms.GroupBox();
             this.GrpContactHistory = new System.Windows.Forms.GroupBox();
             this.CmdClearAll = new System.Windows.Forms.Button();
+            this.PBLogo = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.PnlStatus.SuspendLayout();
             this.PnlSalutation.SuspendLayout();
@@ -129,6 +130,7 @@
             this.TabControl.SuspendLayout();
             this.GrpContactDetails.SuspendLayout();
             this.GrpContactHistory.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PBLogo)).BeginInit();
             this.SuspendLayout();
             // 
             // numericUpDown1
@@ -605,11 +607,11 @@
             // 
             this.LslContactList.FormattingEnabled = true;
             this.LslContactList.ItemHeight = 20;
-            this.LslContactList.Location = new System.Drawing.Point(9, 98);
+            this.LslContactList.Location = new System.Drawing.Point(8, 46);
             this.LslContactList.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.LslContactList.Name = "LslContactList";
             this.LslContactList.ScrollAlwaysVisible = true;
-            this.LslContactList.Size = new System.Drawing.Size(325, 804);
+            this.LslContactList.Size = new System.Drawing.Size(325, 784);
             this.LslContactList.TabIndex = 1;
             this.LslContactList.SelectedIndexChanged += new System.EventHandler(this.LslContactList_SelectedIndexChanged);
             // 
@@ -1048,11 +1050,11 @@
             // GrpContactHistory
             // 
             this.GrpContactHistory.Controls.Add(this.LslContactList);
-            this.GrpContactHistory.Location = new System.Drawing.Point(15, 15);
+            this.GrpContactHistory.Location = new System.Drawing.Point(13, 219);
             this.GrpContactHistory.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.GrpContactHistory.Name = "GrpContactHistory";
             this.GrpContactHistory.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.GrpContactHistory.Size = new System.Drawing.Size(342, 1048);
+            this.GrpContactHistory.Size = new System.Drawing.Size(342, 841);
             this.GrpContactHistory.TabIndex = 10;
             this.GrpContactHistory.TabStop = false;
             this.GrpContactHistory.Text = "Kontakt-Liste";
@@ -1068,11 +1070,22 @@
             this.CmdClearAll.UseVisualStyleBackColor = true;
             this.CmdClearAll.Click += new System.EventHandler(this.CmdClearAll_Click);
             // 
+            // PBLogo
+            // 
+            this.PBLogo.Image = global::ContactManager_ZBW.Properties.Resources.ContactManagerLogo;
+            this.PBLogo.Location = new System.Drawing.Point(21, 31);
+            this.PBLogo.Name = "PBLogo";
+            this.PBLogo.Size = new System.Drawing.Size(169, 167);
+            this.PBLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.PBLogo.TabIndex = 2;
+            this.PBLogo.TabStop = false;
+            // 
             // MainView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1522, 1062);
+            this.ClientSize = new System.Drawing.Size(1547, 1096);
+            this.Controls.Add(this.PBLogo);
             this.Controls.Add(this.GrpIO);
             this.Controls.Add(this.GrpMutations);
             this.Controls.Add(this.GrpContactHistory);
@@ -1106,6 +1119,7 @@
             this.TabControl.ResumeLayout(false);
             this.GrpContactDetails.ResumeLayout(false);
             this.GrpContactHistory.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.PBLogo)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1197,5 +1211,6 @@
         private System.Windows.Forms.GroupBox GrpContactDetails;
         private System.Windows.Forms.GroupBox GrpContactHistory;
         private System.Windows.Forms.Button CmdClearAll;
+        private System.Windows.Forms.PictureBox PBLogo;
     }
 }
