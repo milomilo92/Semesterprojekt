@@ -50,6 +50,7 @@
             this.BtnSelect.TabIndex = 1;
             this.BtnSelect.Text = "Selektierte Person übernehmen";
             this.BtnSelect.UseVisualStyleBackColor = true;
+            this.BtnSelect.Click += new System.EventHandler(this.BtnSelect_Click);
             // 
             // LblList
             // 

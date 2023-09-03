@@ -42,23 +42,23 @@ namespace ContactManager_ZBW.Model_Renato
         public bool Equals(Person other)
         {
             if (other != null &&
-                Salutation != "" && other.Salutation == Salutation &&
-                FirstName != "" && other.FirstName == FirstName &&
-                LastName !="" && other.LastName == LastName &&
-                other.DateOfBirth == DateOfBirth &&
-                other.Gender == Gender &&
-                Title !="" && other.Title == Title &&
-                SocialSecurityNumber !="" && other.SocialSecurityNumber == SocialSecurityNumber &&
-                PhoneNumberPrivat !="" && other.PhoneNumberPrivat == PhoneNumberPrivat &&
-                PhoneNumberMobile !="" && other.PhoneNumberMobile == PhoneNumberMobile &&
-                PhoneNumberBusiness !="" && other.PhoneNumberBusiness == PhoneNumberBusiness &&
-                Email !="" && other.Email == Email &&
-                other.Status == Status &&
-                Nationality !="" && other.Nationality == Nationality &&
-                Street != "" && other.Street == Street &&
-                StreetNumber !="" && other.StreetNumber == StreetNumber &&
-                other.ZipCode == ZipCode &&
-                Place !="" && other.Place == Place)
+                (Salutation == "" || other.Salutation == Salutation) &&
+                (FirstName == "" || other.FirstName == FirstName) &&
+                (LastName =="" || other.LastName == LastName) &&
+                (other.DateOfBirth == DateOfBirth) &&
+                (other.Gender == Gender) &&
+                (Title =="" || other.Title == Title) &&
+                (SocialSecurityNumber =="" || other.SocialSecurityNumber == SocialSecurityNumber) &&
+                (PhoneNumberPrivat =="" || other.PhoneNumberPrivat == PhoneNumberPrivat) &&
+                (PhoneNumberMobile =="" || other.PhoneNumberMobile == PhoneNumberMobile) &&
+                (PhoneNumberBusiness =="" || other.PhoneNumberBusiness == PhoneNumberBusiness) &&
+                (Email =="" || other.Email == Email) &&
+                (other.Status == Status) &&
+                (Nationality =="" || other.Nationality == Nationality) &&
+                (Street == "" || other.Street == Street) &&
+                (StreetNumber =="" || other.StreetNumber == StreetNumber) &&
+                (other.ZipCode == ZipCode) &&
+                (Place =="" || other.Place == Place))
             {
                 return true;
             }

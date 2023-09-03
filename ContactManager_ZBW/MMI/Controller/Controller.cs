@@ -58,11 +58,13 @@ namespace ContactManager_ZBW.Milos.Controller
              * int personId = Class1.SearchPersonId(temporaryPerson, people);
             */
             int personId = -1;
+            
 
             List<int> resultList = Class1.SearchAllMatchingPersons(temporaryPerson, people);
             
             if (resultList.Count > 0)
             {
+               
                 PickPerson pickPerson = new PickPerson();
                 foreach (int index in resultList)
                 {
@@ -70,9 +72,10 @@ namespace ContactManager_ZBW.Milos.Controller
                 }
                 if (pickPerson.ShowDialog() == DialogResult.OK)
                 {
-                    if (pickPerson.LstShowMatchingPersons.SelectedIndex > 0)
+                    if (pickPerson.LstShowMatchingPersons.SelectedIndex > -1)
                     {
-                        int selectedIndex = pickPerson.LstShowMatchingPersons.SelectedIndex;
+                        //int selectedIndex = pickPerson.LstShowMatchingPersons.SelectedIndex;
+                        int selectedIndex = pickPerson.SelectedIndex;
                         personId = resultList[selectedIndex];
                     }
                     pickPerson.Close();

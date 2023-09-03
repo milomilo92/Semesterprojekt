@@ -49,6 +49,7 @@ namespace ContactManager_ZBW.View_Cyril
                 {
                     MessageBox.Show("Person bereits vorhanden.");
                 }
+                ClearView();
             }
         }
 
@@ -83,6 +84,7 @@ namespace ContactManager_ZBW.View_Cyril
             /*
             if (CheckNecessaryFields()) // only when necessary Fields are entered
             {*/
+                LslContactList.SelectedIndex = -1;  // reset before search
                 Person temporaryPerson = CreateCustomerOrEmployee();
                 FillAllFields(temporaryPerson);
                 int index = Controller.SearchPerson(temporaryPerson);

@@ -60,6 +60,7 @@ namespace ContactManager_ZBW.View_Cyril
                 this.Close();
             }
         }
+
     }
 
 }
