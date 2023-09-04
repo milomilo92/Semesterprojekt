@@ -12,6 +12,7 @@ namespace ContactManager_ZBW.Model_Renato
 {
     // Class Person
     // description: This is the class person
+    // 
     [XmlInclude(typeof(Customer))]
     [XmlInclude(typeof(Employee))]
     [Serializable]

@@ -21,17 +21,18 @@ namespace ContactManager_ZBW.Model_Renato
         public string Role { get; set; }
         public int CadreLevel { get; set; }
 
-        private static int counter;
+        public static int Counter { get; set; }
         
         public int EmployeeNumber { get; set; }
 
         
-
         public Employee()
         {
-            counter++;
-            EmployeeNumber = counter;
+            Counter++;
+            EmployeeNumber = Counter;
         }
+
+        
     }
 
 }
