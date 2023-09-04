@@ -53,13 +53,14 @@ namespace ContactManager_ZBW.Milos.Controller
 
         public int SearchPerson(Person temporaryPerson)
         {
-            int personId = -1;
+            int personId = -1; // reset personId
 
+            // Get a list with indexes of matching results
             List<int> resultList = Class1.SearchAllMatchingPersons(temporaryPerson, people);
 
             if (resultList.Count > 0)
             {
-
+                // If SearchAllMatchingPersons delivers a list with entries
                 PickPerson pickPerson = new PickPerson();
                 foreach (int index in resultList)
                 {
@@ -82,9 +83,10 @@ namespace ContactManager_ZBW.Milos.Controller
 
         public void DeletePerson(int index)
         {
+            // The selected indices from the view is the index in the list people.
             if (index != -1)
             {
-                people.RemoveAt(index);
+                people.RemoveAt(index); // the selected person gets deleted
             }
         }
 
