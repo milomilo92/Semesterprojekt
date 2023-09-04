@@ -373,7 +373,9 @@ namespace ContactManager_ZBW.View_Cyril
         // description: resets all the fields in the view and deselects the ListBox
         private void ClearView()
         {
+            int temporaryCounter = Employee.Counter;
             Person emptyPerson = CreateCustomerOrEmployee();
+            Employee.Counter = temporaryCounter;    // this person shall not be counted!
             ShowAllFields(emptyPerson);
             //LslContactList.ClearSelected();  // nothing shall be selected in the ListBox
         }
