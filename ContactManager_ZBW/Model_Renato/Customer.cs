@@ -18,7 +18,7 @@ namespace ContactManager_ZBW.Model_Renato
         public string getAllLogEntries { get; set; }
         public string LogEntries { get; set; }
 
-        private List<string> SLogEntries { get; set; }
+        public List<string> SLogEntries { get; set; }
 
 
         public Customer()
