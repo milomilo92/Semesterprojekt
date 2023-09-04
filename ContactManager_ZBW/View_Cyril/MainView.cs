@@ -380,6 +380,7 @@ namespace ContactManager_ZBW.View_Cyril
 
                     Controller.UpdatePerson(index, customer);                 // Update new data to controllers customer-list
                     TxtLogNew.Clear();                      // and clear entry field
+                    LslContactList.SelectedIndex = 0;
                     LslContactList.SelectedIndex = index;   // finally update view and show entry in list
                 }
                 else
