@@ -324,10 +324,13 @@ namespace ContactManager_ZBW.View_Cyril
             {
                 TxtDepartment.Text = ((Employee)person).Department;
                 TxtRole.Text = ((Employee)person).Role;
-                DtpStartDate.Value = ((Employee)person).StartDate;
-                DtpEndDate.Value = ((Employee)person).EndDate;
+                DtpStartDate.Value = (DtpStartDate.Value < DateTime.MinValue) ? DateTime.MinValue : DtpStartDate.Value;
+                //DtpStartDate.Value = ((Employee)person).StartDate;
+                DtpEndDate.Value = (DtpEndDate.Value < DateTime.MinValue) ? DateTime.MinValue : DtpEndDate.Value;
+                //DtpEndDate.Value = ((Employee)person).EndDate;
                 TxtEmployment.Text = Convert.ToString(((Employee)person).Employment);
                 TxtCadreLevel.Text = Convert.ToString(((Employee)person).CadreLevel);
+                TxtEmployeeNumber.Text = Convert.ToString(((Employee)person).EmployeeNumber);
 
                 //additionally show all trainee fields in the view:
                 if (person is Trainee)

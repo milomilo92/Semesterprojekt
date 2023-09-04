@@ -13,12 +13,25 @@ namespace ContactManager_ZBW.Model_Renato
     [Serializable]
     public class Employee : Person
     {
-        public Guid EmployeeNumber { get; set; }
+        //public Guid EmployeeNumber { get; set; }
         public string Department { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime EndDate { get; set; }
         public int Employment { get; set; }
         public string Role { get; set; }
         public int CadreLevel { get; set; }
+
+        private static int counter;
+        
+        public int EmployeeNumber { get; set; }
+
+        
+
+        public Employee()
+        {
+            counter++;
+            EmployeeNumber = counter;
+        }
     }
+
 }
