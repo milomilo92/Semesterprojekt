@@ -50,7 +50,9 @@ namespace ContactManager_ZBW.Milos.Controller
                 people[index] = temporaryPerson; // the selected person gets updated with the new data
             }
         }
-
+        // Function SearchPerson
+        // description: searches all matching persons and shows them in a selection window. The selected
+        // person will be returned. Return value -1 means: no person found.
         public int SearchPerson(Person temporaryPerson)
         {
             int personId = -1; // reset personId

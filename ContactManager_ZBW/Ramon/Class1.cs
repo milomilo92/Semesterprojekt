@@ -74,7 +74,9 @@ namespace ContactManager_ZBW.Ramon
 
         }
 
-
+        // Function SearchAllMatchingPersons
+        // description: Checks all the persons in 'personList', if they are matching the 'person'
+        // Returns a list of the indexes of the matching persons.
         public static List<int> SearchAllMatchingPersons(Person person, List<Person> personList)
         {
             List<int> resultList = new List<int>();
