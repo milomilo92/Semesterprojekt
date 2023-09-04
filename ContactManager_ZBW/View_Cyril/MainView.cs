@@ -216,7 +216,7 @@ namespace ContactManager_ZBW.View_Cyril
             person.PhoneNumberBusiness = TxtPhoneNumberBusiness.Text;
             person.Email = TxtEmail.Text;
             person.Status = RdActive.Checked;
-            //person.Nationality =  to be defined in View!
+            person.Nationality = TxtNationality.Text;
             person.Street = TxtStreet.Text;
             person.StreetNumber = TxtStreetNumber.Text;
             person.Place = TxtPlace.Text;
@@ -298,7 +298,7 @@ namespace ContactManager_ZBW.View_Cyril
             TxtPhoneNumberBusiness.Text = person.PhoneNumberBusiness;
             TxtEmail.Text = person.Email;
             RdActive.Checked = person.Status;
-            // tbd in View! = person.Nationality;
+            TxtNationality.Text = person.Nationality;
             TxtStreet.Text = person.Street;
             TxtStreetNumber.Text = person.StreetNumber;
             TxtZipCode.Text = Convert.ToString(person.ZipCode);
@@ -412,6 +412,11 @@ namespace ContactManager_ZBW.View_Cyril
         private void CmdClearAll_Click(object sender, EventArgs e)
         {
             ClearView();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainView));
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.PnlStatus = new System.Windows.Forms.Panel();
             this.RdPassive = new System.Windows.Forms.RadioButton();
             this.RdActive = new System.Windows.Forms.RadioButton();
@@ -115,7 +114,8 @@
             this.GrpContactHistory = new System.Windows.Forms.GroupBox();
             this.CmdClearAll = new System.Windows.Forms.Button();
             this.PBLogo = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            this.TxtNationality = new System.Windows.Forms.TextBox();
+            this.LblNationality = new System.Windows.Forms.Label();
             this.PnlStatus.SuspendLayout();
             this.PnlSalutation.SuspendLayout();
             this.GrpBasicData.SuspendLayout();
@@ -133,14 +133,6 @@
             this.GrpContactHistory.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PBLogo)).BeginInit();
             this.SuspendLayout();
-            // 
-            // numericUpDown1
-            // 
-            this.numericUpDown1.Location = new System.Drawing.Point(316, 215);
-            this.numericUpDown1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(180, 26);
-            this.numericUpDown1.TabIndex = 5;
             // 
             // PnlStatus
             // 
@@ -347,7 +339,7 @@
             // 
             // GrpBasicData
             // 
-            this.GrpBasicData.Controls.Add(this.numericUpDown1);
+            this.GrpBasicData.Controls.Add(this.TxtNationality);
             this.GrpBasicData.Controls.Add(this.DtpDateOfBirth);
             this.GrpBasicData.Controls.Add(this.PnlSalutation);
             this.GrpBasicData.Controls.Add(this.PnlStatus);
@@ -362,6 +354,7 @@
             this.GrpBasicData.Controls.Add(this.LblStreet);
             this.GrpBasicData.Controls.Add(this.LblEmail);
             this.GrpBasicData.Controls.Add(this.LblPhoneNumberBusiness);
+            this.GrpBasicData.Controls.Add(this.LblNationality);
             this.GrpBasicData.Controls.Add(this.LblDateOfBirth);
             this.GrpBasicData.Controls.Add(this.LblFirstName);
             this.GrpBasicData.Controls.Add(this.textBox1);
@@ -1081,6 +1074,24 @@
             this.PBLogo.TabIndex = 2;
             this.PBLogo.TabStop = false;
             // 
+            // TxtNationality
+            // 
+            this.TxtNationality.Location = new System.Drawing.Point(316, 217);
+            this.TxtNationality.Name = "TxtNationality";
+            this.TxtNationality.Size = new System.Drawing.Size(217, 26);
+            this.TxtNationality.TabIndex = 29;
+            // 
+            // LblNationality
+            // 
+            this.LblNationality.AutoSize = true;
+            this.LblNationality.Location = new System.Drawing.Point(312, 186);
+            this.LblNationality.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.LblNationality.Name = "LblNationality";
+            this.LblNationality.Size = new System.Drawing.Size(93, 20);
+            this.LblNationality.TabIndex = 20;
+            this.LblNationality.Text = "Nationalität:";
+            this.LblNationality.Click += new System.EventHandler(this.label1_Click);
+            // 
             // MainView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -1099,7 +1110,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MainView";
             this.Load += new System.EventHandler(this.Form1_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.PnlStatus.ResumeLayout(false);
             this.PnlStatus.PerformLayout();
             this.PnlSalutation.ResumeLayout(false);
@@ -1129,8 +1139,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
         private System.Windows.Forms.Panel PnlStatus;
         private System.Windows.Forms.RadioButton RdPassive;
         private System.Windows.Forms.RadioButton RdActive;
@@ -1216,5 +1224,7 @@
         private System.Windows.Forms.GroupBox GrpContactHistory;
         private System.Windows.Forms.Button CmdClearAll;
         private System.Windows.Forms.PictureBox PBLogo;
+        private System.Windows.Forms.TextBox TxtNationality;
+        private System.Windows.Forms.Label LblNationality;
     }
 }
