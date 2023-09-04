@@ -92,8 +92,8 @@ namespace ContactManager_ZBW.Milos.Controller
 
         public Person GetPerson(int index)
         {
-
-            return people[index];
+            // The selected indices from the view is the index in the list people. 
+            return people[index]; // Return person
         }
         public string[] GetAllPersonData()
         {
