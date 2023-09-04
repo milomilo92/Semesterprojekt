@@ -252,14 +252,29 @@ namespace ContactManager_ZBW.View_Cyril
                     ((Employee)person).Role = TxtRole.Text;
                     ((Employee)person).StartDate = DtpStartDate.Value;
                     ((Employee)person).EndDate = DtpEndDate.Value;
-                    try
+                    if (TxtEmployment.Text != "")
                     {
-                        ((Employee)person).Employment = Convert.ToInt16(TxtEmployment.Text);
-                        ((Employee)person).CadreLevel = Convert.ToInt16(TxtCadreLevel.Text);
+                        try
+                        {
+                            ((Employee)person).Employment = Convert.ToInt16(TxtEmployment.Text);
+
+                        }
+                        catch (FormatException)
+                        {
+                            MessageBox.Show("Beschäftigungsgrad darf nur Nummer sein.");
+                        }
                     }
-                    catch (FormatException)
+                    if (TxtCadreLevel.Text != "")
                     {
-                        MessageBox.Show("Beschäftigungsgrad und Kaderstufe dürfen nur Nummern sein.");
+                        try
+                        {
+ 
+                            ((Employee)person).CadreLevel = Convert.ToInt16(TxtCadreLevel.Text);
+                        }
+                        catch (FormatException)
+                        {
+                            MessageBox.Show("Kaderstufe darf nur Nummer sein.");
+                        }
                     }
                     // also get trainee data if neccessary:
                     if (RdTraineeYes.Checked)

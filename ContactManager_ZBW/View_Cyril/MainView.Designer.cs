@@ -581,7 +581,7 @@
             // 
             // CmdLoad
             // 
-            this.CmdLoad.Location = new System.Drawing.Point(22, 102);
+            this.CmdLoad.Location = new System.Drawing.Point(16, 102);
             this.CmdLoad.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.CmdLoad.Name = "CmdLoad";
             this.CmdLoad.Size = new System.Drawing.Size(212, 42);
