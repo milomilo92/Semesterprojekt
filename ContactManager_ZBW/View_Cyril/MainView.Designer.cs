@@ -55,7 +55,7 @@
             this.LblPhoneNumberBusiness = new System.Windows.Forms.Label();
             this.LblDateOfBirth = new System.Windows.Forms.Label();
             this.LblFirstName = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.TxtTitle = new System.Windows.Forms.TextBox();
             this.TxtPhoneNumberPrivate = new System.Windows.Forms.TextBox();
             this.TxtPhoneNumberMobile = new System.Windows.Forms.TextBox();
             this.TxtLastName = new System.Windows.Forms.TextBox();
@@ -357,7 +357,7 @@
             this.GrpBasicData.Controls.Add(this.LblNationality);
             this.GrpBasicData.Controls.Add(this.LblDateOfBirth);
             this.GrpBasicData.Controls.Add(this.LblFirstName);
-            this.GrpBasicData.Controls.Add(this.textBox1);
+            this.GrpBasicData.Controls.Add(this.TxtTitle);
             this.GrpBasicData.Controls.Add(this.TxtPhoneNumberPrivate);
             this.GrpBasicData.Controls.Add(this.TxtPhoneNumberMobile);
             this.GrpBasicData.Controls.Add(this.TxtLastName);
@@ -440,13 +440,13 @@
             this.LblFirstName.TabIndex = 16;
             this.LblFirstName.Text = "Vorname:";
             // 
-            // textBox1
+            // TxtTitle
             // 
-            this.textBox1.Location = new System.Drawing.Point(586, 142);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(181, 26);
-            this.textBox1.TabIndex = 3;
+            this.TxtTitle.Location = new System.Drawing.Point(586, 142);
+            this.TxtTitle.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.TxtTitle.Name = "TxtTitle";
+            this.TxtTitle.Size = new System.Drawing.Size(181, 26);
+            this.TxtTitle.TabIndex = 3;
             // 
             // TxtPhoneNumberPrivate
             // 
@@ -1165,7 +1165,7 @@
         private System.Windows.Forms.Label LblPhoneNumberBusiness;
         private System.Windows.Forms.Label LblDateOfBirth;
         private System.Windows.Forms.Label LblFirstName;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox TxtTitle;
         private System.Windows.Forms.TextBox TxtPhoneNumberPrivate;
         private System.Windows.Forms.TextBox TxtPhoneNumberMobile;
         private System.Windows.Forms.TextBox TxtLastName;

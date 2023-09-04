@@ -209,7 +209,7 @@ namespace ContactManager_ZBW.View_Cyril
             person.LastName = TxtLastName.Text;
             person.DateOfBirth = DtpDateOfBirth.Value;
             //person.Gender =  to be defined in View!
-            //person.Title =  to be defined in View!
+            person.Title = TxtTitle.Text;
             person.SocialSecurityNumber = TxtSocialSecurityNumber.Text;
             person.PhoneNumberPrivat = TxtPhoneNumberPrivate.Text;
             person.PhoneNumberMobile = TxtPhoneNumberMobile.Text;
@@ -291,7 +291,7 @@ namespace ContactManager_ZBW.View_Cyril
             person.DateOfBirth = (DtpDateOfBirth.Value < DateTime.MinValue)? DateTime.MinValue:DtpDateOfBirth.Value;
             DtpDateOfBirth.Value = person.DateOfBirth.Date;
             // tbd in View! = person.Gender;
-            // tbd in View! = person.Title;
+            TxtTitle.Text = person.Title;
             TxtSocialSecurityNumber.Text = person.SocialSecurityNumber;
             TxtPhoneNumberPrivate.Text = person.PhoneNumberPrivat;
             TxtPhoneNumberMobile.Text = person.PhoneNumberMobile;
