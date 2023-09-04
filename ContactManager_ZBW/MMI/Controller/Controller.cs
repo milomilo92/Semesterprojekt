@@ -165,30 +165,52 @@ namespace ContactManager_ZBW.Milos.Controller
         public void LoadData()
         {
             string filePath = "peopleList.txt";
+            DataToSerialize loadedData;
 
             if (File.Exists(filePath))  //Wegen Fehlermeldung hinzugefügt 02.09.23/Cyril
             {
-                XmlSerializer serializer = new XmlSerializer(typeof(List<Person>));
+                XmlSerializer serializer = new XmlSerializer(typeof(DataToSerialize));
                 using (TextReader reader = new StreamReader(filePath))
                 {
-                    people = (List<Person>)serializer.Deserialize(reader);
+                    loadedData = (DataToSerialize)serializer.Deserialize(reader);
                 }
-            }
 
-            // Ramon 
+                people = loadedData.People;
+                Employee.Counter = loadedData.AdditionalValue;
+
+            }
+                        
         }
 
         public void SaveData()
         {
             string filePath = "peopleList.txt";
-            XmlSerializer serializer = new XmlSerializer(typeof(List<Person>));
+
+            int additionalValue = Employee.Counter;
+
+            DataToSerialize data = new DataToSerialize
+            {
+                People = people,
+                AdditionalValue = additionalValue
+            };
+
+            XmlSerializer serializer = new XmlSerializer(typeof(DataToSerialize));
+
             using (TextWriter writer = new StreamWriter(filePath))
             {
-                serializer.Serialize(writer, people);
+                serializer.Serialize(writer, data);
             }
+        }
+        public class DataToSerialize
+        {
+            public List<Person> People { get; set; }
+            public int AdditionalValue { get; set; }
         }
 
     }
 
 
 }
+
+
+
