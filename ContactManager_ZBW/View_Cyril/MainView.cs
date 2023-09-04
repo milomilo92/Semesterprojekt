@@ -301,6 +301,7 @@ namespace ContactManager_ZBW.View_Cyril
         {
             // show all base fields of the person:
             RdSalutationsFemale.Checked = person.Salutation == "Frau" ? true : false;
+            RdSalutationMale.Checked = person.Salutation == "Herr" ? true : false;
             TxtFirstName.Text = person.FirstName;
             TxtLastName.Text = person.LastName;
             person.DateOfBirth = (DtpDateOfBirth.Value < DateTime.MinValue)? DateTime.MinValue:DtpDateOfBirth.Value;
