@@ -17,10 +17,7 @@ namespace ContactManager_ZBW.Milos.Controller
 
     {
         // List with all people related entries
-
-
         private List<Person> people = new List<Person>();
-        // private List<Person> foundPeople = new List<Person>();
 
         // User credentials in clear text for demonstration
         private string[,] userCredentials = {
@@ -31,40 +28,38 @@ namespace ContactManager_ZBW.Milos.Controller
 
         public int CreateNewPerson(Person temporaryPerson)
         {
+            // Check if Person allready exists
             int personId = Class1.SearchPersonId(temporaryPerson, people);
 
             if (personId >= 0)
             {
-                return -1; // if person already exists
+                return -1; // if person already exists, return -1
             }
             else
             {
-                people.Add(temporaryPerson);
-                return people.Count() - 1;
+                people.Add(temporaryPerson); // if person doesn't exist, add it to the list people
+                return people.Count() - 1; // new person was added at the end. So return the index which is count -1
             }
         }
 
         public void UpdatePerson(int index, Person temporaryPerson)
         {
+            // The selected indices from the view is the index in the list people.
             if (index != -1)
             {
-                people[index] = temporaryPerson;
+                people[index] = temporaryPerson; // the selected person gets updated with the new data
             }
         }
 
         public int SearchPerson(Person temporaryPerson)
         {
-            /* Entfernt für Versuch Auswahlliste
-             * int personId = Class1.SearchPersonId(temporaryPerson, people);
-            */
             int personId = -1;
-            
 
             List<int> resultList = Class1.SearchAllMatchingPersons(temporaryPerson, people);
-            
+
             if (resultList.Count > 0)
             {
-               
+
                 PickPerson pickPerson = new PickPerson();
                 foreach (int index in resultList)
                 {
@@ -83,29 +78,6 @@ namespace ContactManager_ZBW.Milos.Controller
 
             }
             return personId;
-        }
-
-        public List<Person> SearchFunction(string searchTerm)
-        {
-            /*foundPeople.Clear();
-
-            foreach (Person person in people)
-            {
-                if (person.FirstName.Contains(searchTerm) ||
-                    person.LastName.Contains(searchTerm) ||
-                    person.SocialSecurityNumber.Contains(searchTerm) ||
-                    person.Email.Contains(searchTerm) ||
-                    person.Street.Contains(searchTerm) ||
-                    person.Place.Contains(searchTerm) ||
-                    person.PhoneNumberBusiness.Contains(searchTerm) ||
-                    person.PhoneNumberMobile.Contains(searchTerm) ||
-                    person.PhoneNumberPrivat.Contains(searchTerm))
-                {
-                    foundPeople.Add(person);                    
-                }
-            }*/
-
-            return people;
         }
 
         public void DeletePerson(int index)
@@ -210,10 +182,7 @@ namespace ContactManager_ZBW.Milos.Controller
             {
                 serializer.Serialize(writer, people);
             }
-
-
         }
-
 
     }
 
