@@ -38,49 +38,49 @@
             // LblUsername
             // 
             this.LblUsername.AutoSize = true;
-            this.LblUsername.Location = new System.Drawing.Point(20, 49);
+            this.LblUsername.Location = new System.Drawing.Point(18, 39);
             this.LblUsername.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LblUsername.Name = "LblUsername";
-            this.LblUsername.Size = new System.Drawing.Size(118, 20);
+            this.LblUsername.Size = new System.Drawing.Size(96, 16);
             this.LblUsername.TabIndex = 0;
             this.LblUsername.Text = "Benutzername:";
             // 
             // LblPassword
             // 
             this.LblPassword.AutoSize = true;
-            this.LblPassword.Location = new System.Drawing.Point(54, 102);
+            this.LblPassword.Location = new System.Drawing.Point(48, 82);
             this.LblPassword.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LblPassword.Name = "LblPassword";
-            this.LblPassword.Size = new System.Drawing.Size(80, 20);
+            this.LblPassword.Size = new System.Drawing.Size(64, 16);
             this.LblPassword.TabIndex = 0;
             this.LblPassword.Text = "Kennwort:";
             // 
             // TxtUsername
             // 
             this.TxtUsername.CharacterCasing = System.Windows.Forms.CharacterCasing.Lower;
-            this.TxtUsername.Location = new System.Drawing.Point(147, 49);
-            this.TxtUsername.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.TxtUsername.Location = new System.Drawing.Point(131, 39);
+            this.TxtUsername.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.TxtUsername.Name = "TxtUsername";
-            this.TxtUsername.Size = new System.Drawing.Size(216, 26);
+            this.TxtUsername.Size = new System.Drawing.Size(192, 22);
             this.TxtUsername.TabIndex = 1;
             this.TxtUsername.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Login_KeyDown);
             // 
             // TxtPassword
             // 
-            this.TxtPassword.Location = new System.Drawing.Point(146, 91);
-            this.TxtPassword.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.TxtPassword.Location = new System.Drawing.Point(130, 73);
+            this.TxtPassword.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.TxtPassword.Name = "TxtPassword";
             this.TxtPassword.PasswordChar = '*';
-            this.TxtPassword.Size = new System.Drawing.Size(216, 26);
+            this.TxtPassword.Size = new System.Drawing.Size(192, 22);
             this.TxtPassword.TabIndex = 2;
             this.TxtPassword.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Login_KeyDown);
             // 
             // CmdLogin
             // 
-            this.CmdLogin.Location = new System.Drawing.Point(392, 49);
-            this.CmdLogin.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.CmdLogin.Location = new System.Drawing.Point(348, 39);
+            this.CmdLogin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.CmdLogin.Name = "CmdLogin";
-            this.CmdLogin.Size = new System.Drawing.Size(112, 72);
+            this.CmdLogin.Size = new System.Drawing.Size(100, 58);
             this.CmdLogin.TabIndex = 3;
             this.CmdLogin.Text = "Login";
             this.CmdLogin.UseVisualStyleBackColor = true;
@@ -88,19 +88,19 @@
             // 
             // Login
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(522, 171);
+            this.ClientSize = new System.Drawing.Size(464, 137);
             this.ControlBox = false;
             this.Controls.Add(this.CmdLogin);
             this.Controls.Add(this.TxtPassword);
             this.Controls.Add(this.TxtUsername);
             this.Controls.Add(this.LblPassword);
             this.Controls.Add(this.LblUsername);
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Login";
+            this.Text = "Login Contact Manager";
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Login_KeyDown);
             this.ResumeLayout(false);
             this.PerformLayout();
