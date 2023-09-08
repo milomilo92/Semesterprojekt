@@ -1,11 +1,19 @@
 ﻿using ContactManager_ZBW.Model_Renato;
 using ContactManager_ZBW.Ramon;
 using ContactManager_ZBW.View_Cyril;
+using CsvHelper;
+using CsvHelper.Configuration;
+using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Windows.Forms;
 using System.Xml.Serialization;
+
+
+
+
 
 
 
@@ -162,45 +170,115 @@ namespace ContactManager_ZBW.Milos.Controller
         // Dummy Funktion für Dateinen
         // bitte namen der Funktion so beibehalten
 
-        public void LoadData()
+        public void ImportCSV()
         {
-            string filePath = "peopleList.txt";
-            DataToSerialize loadedData;
 
-            if (File.Exists(filePath))  //Wegen Fehlermeldung hinzugefügt 02.09.23/Cyril
+
+
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+
+            openFileDialog.Filter = "CSV Dateien (*.csv)|*.csv|Alle Dateien (*.*)|*.*";
+            openFileDialog.FilterIndex = 1;
+            openFileDialog.RestoreDirectory = true;
+
+
+            try
+
             {
-                XmlSerializer serializer = new XmlSerializer(typeof(DataToSerialize));
-                using (TextReader reader = new StreamReader(filePath))
+
+                if (openFileDialog.ShowDialog() == DialogResult.OK)
                 {
-                    loadedData = (DataToSerialize)serializer.Deserialize(reader);
+                    string filePath = openFileDialog.FileName;
+
+                    // Nun können Sie den ausgewählten Dateipfad verwenden
+
+
+                    List<Person> csvData = new List<Person>();
+
+                    // List<string[]> csvData = new List<string[]>();
+
+                    var csvConfig = new CsvConfiguration(CultureInfo.InvariantCulture)
+                    {
+                        Delimiter = ";", // Setzen Sie das Trennzeichen entsprechend Ihrer CSV-Datei
+                        HasHeaderRecord = true, // Falls Ihre CSV-Datei eine Kopfzeile hat
+                    };
+
+
+
+                    using (var read = new StreamReader(filePath))
+                    using (var csv = new CsvReader(read, csvConfig))
+                    {
+
+                        people.Clear();
+                        while (csv.Read())
+                        {
+                            var record = csv.GetRecord<Person>();
+                            csvData.Add(record);
+                            people.Add(record);
+
+
+                        }
+
+
+                    }
+
                 }
 
-                people = loadedData.People;
-                Employee.Counter = loadedData.AdditionalValue;
-
+                MessageBox.Show("Importieren erfolgreich abgeschlossen");
             }
-                        
+
+            catch (Exception e)
+            {
+                LoadData();
+                MessageBox.Show("Es gibt ein Fehler beim Importieren der CSV-Datei. Möglicherweise hat das CSV das fasche Format. Falls es bereits gespeicherte daten gibt, wurden diese Wiederhergestellt");
+                
+            }
+            
+
+
         }
 
-        public void SaveData()
-        {
-            string filePath = "peopleList.txt";
 
-            int additionalValue = Employee.Counter;
 
-            DataToSerialize data = new DataToSerialize
+        public void LoadData()
             {
-                People = people,
-                AdditionalValue = additionalValue
-            };
+                string filePath = "peopleList.xml";
+                DataToSerialize loadedData;
 
-            XmlSerializer serializer = new XmlSerializer(typeof(DataToSerialize));
+                if (File.Exists(filePath))  //Wegen Fehlermeldung hinzugefügt 02.09.23/Cyril
+                {
+                    XmlSerializer serializer = new XmlSerializer(typeof(DataToSerialize));
+                    using (TextReader reader = new StreamReader(filePath))
+                    {
+                        loadedData = (DataToSerialize)serializer.Deserialize(reader);
+                    }
 
-            using (TextWriter writer = new StreamWriter(filePath))
-            {
-                serializer.Serialize(writer, data);
+                    people = loadedData.People;
+                    Employee.Counter = loadedData.AdditionalValue;
+
+                }
+
             }
-        }
+
+            public void SaveData()
+            {
+                string filePath = "peopleList.xml";
+
+                int additionalValue = Employee.Counter;
+
+                DataToSerialize data = new DataToSerialize
+                {
+                    People = people,
+                    AdditionalValue = additionalValue
+                };
+
+                XmlSerializer serializer = new XmlSerializer(typeof(DataToSerialize));
+
+                using (TextWriter writer = new StreamWriter(filePath))
+                {
+                    serializer.Serialize(writer, data);
+                }
+            }
         public class DataToSerialize
         {
             public List<Person> People { get; set; }

@@ -140,8 +140,16 @@ namespace ContactManager_ZBW.View_Cyril
         // description: the list will be filled with data from file
         private void CmdLoad_Click(object sender, EventArgs e)
         {
-            Controller.LoadData();
-            LoadList();
+            DialogResult result = MessageBox.Show("Möchten Sie den Vorhandenen Datenstamm löschen und einen Neuen Importieren?", "Bestätigung", MessageBoxButtons.OKCancel);
+
+            if (result == DialogResult.OK)
+            {
+                Controller.ImportCSV();
+                LoadList();
+            }
+            //Controller.LoadData();
+
+            
         }
 
 
