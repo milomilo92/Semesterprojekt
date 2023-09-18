@@ -138,6 +138,7 @@
   <ItemGroup>
     <Content Include="contributor.txt" />
     <Content Include="Logo\ContactManagerLogo.bmp" />
+    <Content Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
