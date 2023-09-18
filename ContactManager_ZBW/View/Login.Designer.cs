@@ -59,7 +59,7 @@
             // 
             this.TxtUsername.CharacterCasing = System.Windows.Forms.CharacterCasing.Lower;
             this.TxtUsername.Location = new System.Drawing.Point(131, 39);
-            this.TxtUsername.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TxtUsername.Margin = new System.Windows.Forms.Padding(4);
             this.TxtUsername.Name = "TxtUsername";
             this.TxtUsername.Size = new System.Drawing.Size(192, 22);
             this.TxtUsername.TabIndex = 1;
@@ -68,7 +68,7 @@
             // TxtPassword
             // 
             this.TxtPassword.Location = new System.Drawing.Point(130, 73);
-            this.TxtPassword.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TxtPassword.Margin = new System.Windows.Forms.Padding(4);
             this.TxtPassword.Name = "TxtPassword";
             this.TxtPassword.PasswordChar = '*';
             this.TxtPassword.Size = new System.Drawing.Size(192, 22);
@@ -78,12 +78,13 @@
             // CmdLogin
             // 
             this.CmdLogin.Location = new System.Drawing.Point(348, 39);
-            this.CmdLogin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.CmdLogin.Margin = new System.Windows.Forms.Padding(4);
             this.CmdLogin.Name = "CmdLogin";
             this.CmdLogin.Size = new System.Drawing.Size(100, 58);
             this.CmdLogin.TabIndex = 3;
             this.CmdLogin.Text = "Login";
             this.CmdLogin.UseVisualStyleBackColor = true;
+            this.CmdLogin.Click += new System.EventHandler(this.CmdLogin_Click);
             this.CmdLogin.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Login_KeyDown);
             // 
             // Login
@@ -97,7 +98,7 @@
             this.Controls.Add(this.TxtUsername);
             this.Controls.Add(this.LblPassword);
             this.Controls.Add(this.LblUsername);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login Contact Manager";
