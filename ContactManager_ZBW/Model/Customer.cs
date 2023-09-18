@@ -27,13 +27,14 @@ namespace ContactManager_ZBW.Model
 
         }
 
-
+        // Adds the LogEntry to Customer 
         public void AddLogEntry(String LogText)
         {
             DateTime actualDateTime = DateTime.Now;
             SLogEntries.Add(LogText + ": " + actualDateTime.ToString());
         }
 
+        // Shows all LogEntrys for a Customer
         public string[] GetAllLogEntries()
         {
             return SLogEntries.ToArray();

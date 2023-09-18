@@ -75,7 +75,6 @@ namespace ContactManager_ZBW.Controller.Controller
                 {
                     if (pickPerson.LstShowMatchingPersons.SelectedIndex > -1)
                     {
-                        //int selectedIndex = pickPerson.LstShowMatchingPersons.SelectedIndex;
                         int selectedIndex = pickPerson.SelectedIndex;
                         personId = resultList[selectedIndex];
                     }
@@ -162,20 +161,16 @@ namespace ContactManager_ZBW.Controller.Controller
             }
         }
 
-        // Dummy Funktion für Dateinen
-        // bitte namen der Funktion so beibehalten
 
+        // Function ImportCSV
+        // Description: Function for Import a .csv File which has the structur of Person.
         public void ImportCSV()
         {
-
-
-
             OpenFileDialog openFileDialog = new OpenFileDialog();
 
             openFileDialog.Filter = "CSV Dateien (*.csv)|*.csv|Alle Dateien (*.*)|*.*";
             openFileDialog.FilterIndex = 1;
             openFileDialog.RestoreDirectory = true;
-
 
             try
 
@@ -184,21 +179,14 @@ namespace ContactManager_ZBW.Controller.Controller
                 if (openFileDialog.ShowDialog() == DialogResult.OK)
                 {
                     string filePath = openFileDialog.FileName;
-
-                    // Nun können Sie den ausgewählten Dateipfad verwenden
-
-
+                    
                     List<Person> csvData = new List<Person>();
-
-                    // List<string[]> csvData = new List<string[]>();
 
                     var csvConfig = new CsvConfiguration(CultureInfo.InvariantCulture)
                     {
-                        Delimiter = ";", // Setzen Sie das Trennzeichen entsprechend Ihrer CSV-Datei
-                        HasHeaderRecord = true, // Falls Ihre CSV-Datei eine Kopfzeile hat
+                        Delimiter = ";", 
+                        HasHeaderRecord = true, 
                     };
-
-
 
                     using (var read = new StreamReader(filePath))
                     using (var csv = new CsvReader(read, csvConfig))
@@ -211,9 +199,7 @@ namespace ContactManager_ZBW.Controller.Controller
                             csvData.Add(record);
                             people.Add(record);
 
-
                         }
-
 
                     }
 
@@ -226,54 +212,52 @@ namespace ContactManager_ZBW.Controller.Controller
             {
                 LoadData();
                 MessageBox.Show("Es gibt ein Fehler beim Importieren der CSV-Datei. Möglicherweise hat das CSV das fasche Format. Falls es bereits gespeicherte daten gibt, wurden diese Wiederhergestellt");
-                
-            }
-            
 
+            }
 
         }
-
-
-
+        // Function LoadData
+        // Description: Load the .xml File from the local Filesystem to List People
         public void LoadData()
+        {
+            string filePath = "peopleList.xml";
+            DataToSerialize loadedData;
+
+            if (File.Exists(filePath))
             {
-                string filePath = "peopleList.xml";
-                DataToSerialize loadedData;
-
-                if (File.Exists(filePath))  //Wegen Fehlermeldung hinzugefügt 02.09.23/Cyril
-                {
-                    XmlSerializer serializer = new XmlSerializer(typeof(DataToSerialize));
-                    using (TextReader reader = new StreamReader(filePath))
-                    {
-                        loadedData = (DataToSerialize)serializer.Deserialize(reader);
-                    }
-
-                    people = loadedData.People;
-                    Employee.Counter = loadedData.AdditionalValue;
-
-                }
-
-            }
-
-            public void SaveData()
-            {
-                string filePath = "peopleList.xml";
-
-                int additionalValue = Employee.Counter;
-
-                DataToSerialize data = new DataToSerialize
-                {
-                    People = people,
-                    AdditionalValue = additionalValue
-                };
-
                 XmlSerializer serializer = new XmlSerializer(typeof(DataToSerialize));
-
-                using (TextWriter writer = new StreamWriter(filePath))
+                using (TextReader reader = new StreamReader(filePath))
                 {
-                    serializer.Serialize(writer, data);
+                    loadedData = (DataToSerialize)serializer.Deserialize(reader);
                 }
+
+                people = loadedData.People;
+                Employee.Counter = loadedData.AdditionalValue;
+
             }
+        }
+        // Function SaveData
+        // Description: Save the List People to local Filesystem
+        public void SaveData()
+        {
+            string filePath = "peopleList.xml";
+
+            int additionalValue = Employee.Counter;
+
+            DataToSerialize data = new DataToSerialize
+            {
+                People = people,
+                AdditionalValue = additionalValue
+            };
+
+            XmlSerializer serializer = new XmlSerializer(typeof(DataToSerialize));
+
+            using (TextWriter writer = new StreamWriter(filePath))
+            {
+                serializer.Serialize(writer, data);
+            }
+        }
+        // Object of the Datas which needs to be serialized.
         public class DataToSerialize
         {
             public List<Person> People { get; set; }
@@ -281,8 +265,6 @@ namespace ContactManager_ZBW.Controller.Controller
         }
 
     }
-
-
 }
 
 

@@ -24,7 +24,8 @@ namespace ContactManager_ZBW.SupportController
             return resultList;
         }
 
-
+        // Function SearchPersonID
+        // description: Returns the ID of the searched Person
         public static int SearchPersonId(Person person, List<Person> personList)
 
         {
@@ -40,7 +41,8 @@ namespace ContactManager_ZBW.SupportController
             return -1;
 
         }
-
+        // Function SearchPersonObject
+        // description: Returns the searched Object
         public Person SearchPersonObject(Person person, List<Person> personList)
 
         {
