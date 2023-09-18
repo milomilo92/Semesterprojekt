@@ -54,11 +54,10 @@ namespace ContactManager_ZBW.Model
                 (PhoneNumberMobile =="" || other.PhoneNumberMobile == PhoneNumberMobile) &&
                 (PhoneNumberBusiness =="" || other.PhoneNumberBusiness == PhoneNumberBusiness) &&
                 (Email =="" || other.Email == Email) &&
-                (other.Status == Status) &&
                 (Nationality =="" || other.Nationality == Nationality) &&
                 (Street == "" || other.Street == Street) &&
                 (StreetNumber =="" || other.StreetNumber == StreetNumber) &&
-                (other.ZipCode == ZipCode) &&
+                (other.ZipCode ==  ZipCode || ZipCode == 0) &&
                 (Place =="" || other.Place == Place))
             {
                 return true;

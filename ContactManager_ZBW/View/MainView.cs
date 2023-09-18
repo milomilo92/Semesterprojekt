@@ -27,6 +27,11 @@ namespace ContactManager_ZBW.View
             // Fill in all the Persons of the PersonsList into the ListBox
             Controller.LoadData();
             LoadList();
+            if (LslContactList.Items.Count >= 1)
+            {
+                LslContactList.SelectedIndex = 0;
+            }
+
 
         }
 
@@ -94,7 +99,7 @@ namespace ContactManager_ZBW.View
                 }
                 else
                 {
-                    MessageBox.Show("Keine entsprechende Person gefunden.");
+                    MessageBox.Show("Keine entsprechende Person gefunden, oder keine gefundene Person ausgewählt.");
                 }
                 /*
             }*/
