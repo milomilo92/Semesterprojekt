@@ -38,7 +38,7 @@
             // LblUsername
             // 
             this.LblUsername.AutoSize = true;
-            this.LblUsername.Location = new System.Drawing.Point(18, 39);
+            this.LblUsername.Location = new System.Drawing.Point(11, 14);
             this.LblUsername.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LblUsername.Name = "LblUsername";
             this.LblUsername.Size = new System.Drawing.Size(96, 16);
@@ -48,7 +48,7 @@
             // LblPassword
             // 
             this.LblPassword.AutoSize = true;
-            this.LblPassword.Location = new System.Drawing.Point(48, 82);
+            this.LblPassword.Location = new System.Drawing.Point(41, 57);
             this.LblPassword.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LblPassword.Name = "LblPassword";
             this.LblPassword.Size = new System.Drawing.Size(64, 16);
@@ -58,7 +58,7 @@
             // TxtUsername
             // 
             this.TxtUsername.CharacterCasing = System.Windows.Forms.CharacterCasing.Lower;
-            this.TxtUsername.Location = new System.Drawing.Point(131, 39);
+            this.TxtUsername.Location = new System.Drawing.Point(124, 14);
             this.TxtUsername.Margin = new System.Windows.Forms.Padding(4);
             this.TxtUsername.Name = "TxtUsername";
             this.TxtUsername.Size = new System.Drawing.Size(192, 22);
@@ -67,7 +67,7 @@
             // 
             // TxtPassword
             // 
-            this.TxtPassword.Location = new System.Drawing.Point(130, 73);
+            this.TxtPassword.Location = new System.Drawing.Point(123, 48);
             this.TxtPassword.Margin = new System.Windows.Forms.Padding(4);
             this.TxtPassword.Name = "TxtPassword";
             this.TxtPassword.PasswordChar = '*';
@@ -77,7 +77,7 @@
             // 
             // CmdLogin
             // 
-            this.CmdLogin.Location = new System.Drawing.Point(348, 39);
+            this.CmdLogin.Location = new System.Drawing.Point(341, 14);
             this.CmdLogin.Margin = new System.Windows.Forms.Padding(4);
             this.CmdLogin.Name = "CmdLogin";
             this.CmdLogin.Size = new System.Drawing.Size(100, 58);
@@ -98,6 +98,7 @@
             this.Controls.Add(this.TxtUsername);
             this.Controls.Add(this.LblPassword);
             this.Controls.Add(this.LblUsername);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

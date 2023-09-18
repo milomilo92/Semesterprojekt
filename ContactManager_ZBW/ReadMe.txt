@@ -20,3 +20,11 @@ Aktivieren und deaktivieren von Mitarbeitenden, Lehrlingen und Kunden:
 Löschen Mitarbeitenden, Lehrlingen und Kunden:
 	Zu löschende Person in Kontakt-Liste auswählen, anschliessend via Button "Kontakt löschen"
 
+Autmatische Vergabe von Mitarbeitern-Nummern:
+	Automatisch im Reiter Mitarbeiter
+
+Protokollierten von Notizen in Kundenkontakten inkl. Historie
+	Im Reiter Kunde
+
+Suchmöglichkeiten über alle gespeicherten Informationen:
+	
