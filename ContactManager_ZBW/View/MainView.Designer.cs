@@ -677,7 +677,7 @@
             // LblTraineeYears
             // 
             this.LblTraineeYears.AutoSize = true;
-            this.LblTraineeYears.Location = new System.Drawing.Point(5, 31);
+            this.LblTraineeYears.Location = new System.Drawing.Point(7, 33);
             this.LblTraineeYears.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.LblTraineeYears.Name = "LblTraineeYears";
             this.LblTraineeYears.Size = new System.Drawing.Size(109, 25);
