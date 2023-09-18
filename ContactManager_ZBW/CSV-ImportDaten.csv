@@ -1,0 +1,5 @@
+Salutation;FirstName;LastName;DateOfBirth;Gender;Title;SocialSecurityNumber;PhoneNumberPrivat;PhoneNumberMobile;PhoneNumberBusiness;Email;Status;Nationality;Street;StreetNumber;ZipCode;Place;CompanyName;CustomerType;CompanyContact;SLogEntries;_xsi:type
+Herr;Cyril;Vinzens;2023-09-18T00:00:00+02:00;false;;;0719123456;0719123456;0719123456;cyril.vinzens@hotmail.com;true;CH;Strasse;33;1234;Winkeln;;0;;;Customer
+Herr;Milos;Milosavjevlic;2023-09-18T00:00:00+02:00;false;;;071321654;071321654;071321654;Milos.Milosavjevlic@hotmail.com;false;CH;Dorfstrasse;22;1234;Speicher;;0;;;Customer
+Herr;Ramon;Kälin;2023-09-18T00:00:00+02:00;false;;123456789;07191234567;07191234567;07191234567;ramon.kälin@hotmail.com;false;CH;Strasse;12;1234;Altsätten;;0;;;Customer
+Herr;Renato;Hungerbühler;2023-09-18T00:00:00+02:00;false;;123456789;0719124578;0719124578;0719124578;renato.hungerbuehler@hotmail.com;false;CH;Dorfstrasse;11;1234;Wil;;0;;;Customer
