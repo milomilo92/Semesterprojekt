@@ -121,6 +121,7 @@
     <EmbeddedResource Include="View\PickPerson.resx">
       <DependentUpon>PickPerson.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="CSV-ImportDaten.csv" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
