@@ -1,13 +1,5 @@
-﻿using ContactManager_ZBW.Controller.Controller;
-using ContactManager_ZBW.Model;
+﻿using ContactManager_ZBW.Model;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace ContactManager_ZBW.View
@@ -21,7 +13,7 @@ namespace ContactManager_ZBW.View
             InitializeComponent();
             Controller = new Controller.Controller.Controller();
         }
-   
+
         public void Form1_Load(object sender, EventArgs e)
         {
             // Fill in all the Persons of the PersonsList into the ListBox
@@ -86,27 +78,20 @@ namespace ContactManager_ZBW.View
         // description: a search in the person list will be performed based on the entered fields
         private void CmdSearch_Click(object sender, EventArgs e)
         {
-            /*
-            if (CheckNecessaryFields()) // only when necessary Fields are entered
-            {*/
-                LslContactList.SelectedIndex = -1;  // reset before search
-                Person temporaryPerson = CreateCustomerOrEmployee();
-                FillAllFields(temporaryPerson);
-                int index = Controller.SearchPerson(temporaryPerson);
-                if (index != -1)
-                {
-                    LslContactList.SelectedIndex = index;   // select and show found person
-                }
-                else
-                {
-                    MessageBox.Show("Keine entsprechende Person gefunden, oder keine gefundene Person ausgewählt.");
-                }
-                /*
-            }*/
 
-            /*Search searchForm = new Search();
-            searchForm.ShowDialog();
-            */
+            LslContactList.SelectedIndex = -1;  // reset before search
+            Person temporaryPerson = CreateCustomerOrEmployee();
+            FillAllFields(temporaryPerson);
+            int index = Controller.SearchPerson(temporaryPerson);
+            if (index != -1)
+            {
+                LslContactList.SelectedIndex = index;   // select and show found person
+            }
+            else
+            {
+                MessageBox.Show("Keine entsprechende Person gefunden, oder keine gefundene Person ausgewählt.");
+            }
+
         }
 
         // Function CmdDelete_Click
@@ -152,9 +137,9 @@ namespace ContactManager_ZBW.View
                 Controller.ImportCSV();
                 LoadList();
             }
-            //Controller.LoadData();
 
-            
+
+
         }
 
 
@@ -221,7 +206,6 @@ namespace ContactManager_ZBW.View
             person.FirstName = TxtFirstName.Text;
             person.LastName = TxtLastName.Text;
             person.DateOfBirth = DtpDateOfBirth.Value;
-            //person.Gender =  to be defined in View!
             person.Title = TxtTitle.Text;
             person.SocialSecurityNumber = TxtSocialSecurityNumber.Text;
             person.PhoneNumberPrivat = TxtPhoneNumberPrivate.Text;
@@ -281,7 +265,7 @@ namespace ContactManager_ZBW.View
                     {
                         try
                         {
- 
+
                             ((Employee)person).CadreLevel = Convert.ToInt16(TxtCadreLevel.Text);
                         }
                         catch (FormatException)
@@ -317,7 +301,7 @@ namespace ContactManager_ZBW.View
             RdSalutationMale.Checked = person.Salutation == "Herr" ? true : false;
             TxtFirstName.Text = person.FirstName;
             TxtLastName.Text = person.LastName;
-            person.DateOfBirth = (DtpDateOfBirth.Value < DateTime.MinValue)? DateTime.MinValue:DtpDateOfBirth.Value;
+            person.DateOfBirth = (DtpDateOfBirth.Value < DateTime.MinValue) ? DateTime.MinValue : DtpDateOfBirth.Value;
             DtpDateOfBirth.Value = person.DateOfBirth.Date;
             // tbd in View! = person.Gender;
             TxtTitle.Text = person.Title;
@@ -354,9 +338,7 @@ namespace ContactManager_ZBW.View
                 TxtDepartment.Text = ((Employee)person).Department;
                 TxtRole.Text = ((Employee)person).Role;
                 DtpStartDate.Value = (DtpStartDate.Value < DateTime.MinValue) ? DateTime.MinValue : DtpStartDate.Value;
-                //DtpStartDate.Value = ((Employee)person).StartDate;
                 DtpEndDate.Value = (DtpEndDate.Value < DateTime.MinValue) ? DateTime.MinValue : DtpEndDate.Value;
-                //DtpEndDate.Value = ((Employee)person).EndDate;
                 TxtEmployment.Text = Convert.ToString(((Employee)person).Employment);
                 TxtCadreLevel.Text = Convert.ToString(((Employee)person).CadreLevel);
                 TxtEmployeeNumber.Text = Convert.ToString(((Employee)person).EmployeeNumber);
@@ -391,7 +373,6 @@ namespace ContactManager_ZBW.View
             Person emptyPerson = CreateCustomerOrEmployee();
             Employee.Counter = temporaryCounter;    // this person shall not be counted!
             ShowAllFields(emptyPerson);
-            //LslContactList.ClearSelected();  // nothing shall be selected in the ListBox
         }
 
         // Function CmdLogAdd_Click
@@ -428,20 +409,7 @@ namespace ContactManager_ZBW.View
             }
         }
 
-        private void TxtLogHistory_TextChanged(object sender, EventArgs e)
-        {
 
-        }
-
-        private void TxtLogNew_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void TxtTraineeYears_TextChanged(object sender, EventArgs e)
-        {
-
-        }
 
         private void CmdClearAll_Click(object sender, EventArgs e)
         {
