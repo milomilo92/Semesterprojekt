@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace ContactManager_ZBW.Model_Renato
+namespace ContactManager_ZBW.Model
 {
     // Class Trainee
     // description: This is the class Trainee

@@ -1,5 +1,5 @@
-﻿using ContactManager_ZBW.Milos.Controller;
-using ContactManager_ZBW.Model_Renato;
+﻿using ContactManager_ZBW.Controller.Controller;
+using ContactManager_ZBW.Model;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -10,16 +10,16 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ContactManager_ZBW.View_Cyril
+namespace ContactManager_ZBW.View
 {
     public partial class MainView : Form
     {
-        private Controller Controller { get; set; }
+        private Controller.Controller.Controller Controller { get; set; }
 
         public MainView()
         {
             InitializeComponent();
-            Controller = new Controller();
+            Controller = new Controller.Controller.Controller();
         }
    
         public void Form1_Load(object sender, EventArgs e)

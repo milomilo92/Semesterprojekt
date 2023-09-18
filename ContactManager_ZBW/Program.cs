@@ -1,5 +1,5 @@
-﻿using ContactManager_ZBW.Ramon;
-using ContactManager_ZBW.View_Cyril;
+﻿using ContactManager_ZBW.SupportController;
+using ContactManager_ZBW.View;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,7 +16,7 @@ namespace ContactManager_ZBW
         [STAThread]
         static void Main()
         {
-            /*Application.EnableVisualStyles();
+            Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
             Login loginForm = new Login();
@@ -24,8 +24,7 @@ namespace ContactManager_ZBW
             if (loginForm.ShowDialog() == DialogResult.OK)
             {
                 Application.Run(new MainView());
-            } */
-            Application.Run(new MainView()); // <-- diese Zeile beim Reaktivieren des Logins wieder entfernen.
+            }
         }
     }
 }

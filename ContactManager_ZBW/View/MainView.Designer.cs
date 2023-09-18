@@ -1,4 +1,4 @@
-﻿namespace ContactManager_ZBW.View_Cyril
+﻿namespace ContactManager_ZBW.View
 {
     partial class MainView
     {

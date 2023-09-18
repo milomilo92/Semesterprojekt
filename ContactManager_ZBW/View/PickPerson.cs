@@ -1,12 +1,12 @@
-﻿using ContactManager_ZBW.Milos.Controller;
+﻿using ContactManager_ZBW.Controller.Controller;
 using System;
 using System.Windows.Forms;
 
-namespace ContactManager_ZBW.View_Cyril
+namespace ContactManager_ZBW.View
 {
     public partial class PickPerson : Form
     {
-        private Controller controller = new Controller();
+        private Controller.Controller.Controller controller = new Controller.Controller.Controller();
 
         public int SelectedIndex
         {

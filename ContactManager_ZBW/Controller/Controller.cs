@@ -1,6 +1,6 @@
-﻿using ContactManager_ZBW.Model_Renato;
-using ContactManager_ZBW.Ramon;
-using ContactManager_ZBW.View_Cyril;
+﻿using ContactManager_ZBW.Model;
+using ContactManager_ZBW.SupportController;
+using ContactManager_ZBW.View;
 using CsvHelper;
 using CsvHelper.Configuration;
 using System;
@@ -12,12 +12,7 @@ using System.Windows.Forms;
 using System.Xml.Serialization;
 
 
-
-
-
-
-
-namespace ContactManager_ZBW.Milos.Controller
+namespace ContactManager_ZBW.Controller.Controller
 {
 
     public class Controller

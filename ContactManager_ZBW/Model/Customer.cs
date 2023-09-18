@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace ContactManager_ZBW.Model_Renato
+namespace ContactManager_ZBW.Model
 {
 
 

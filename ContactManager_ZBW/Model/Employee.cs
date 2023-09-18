@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Serialization;
 
-namespace ContactManager_ZBW.Model_Renato
+namespace ContactManager_ZBW.Model
 {
     // Class Employee
     // description: This is the class Employee

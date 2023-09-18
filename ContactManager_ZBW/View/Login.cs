@@ -1,4 +1,4 @@
-﻿using ContactManager_ZBW.Milos.Controller;
+﻿using ContactManager_ZBW.Controller.Controller;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -9,11 +9,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ContactManager_ZBW.View_Cyril
+namespace ContactManager_ZBW.View
 {
     public partial class Login : Form
     {
-        private Controller Controller = new Controller();
+        private Controller.Controller.Controller Controller = new Controller.Controller.Controller();
 
         public Login()
         {

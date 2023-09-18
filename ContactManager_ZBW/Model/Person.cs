@@ -8,7 +8,7 @@ using System.Runtime.Serialization;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.Xml.Serialization;
 
-namespace ContactManager_ZBW.Model_Renato
+namespace ContactManager_ZBW.Model
 {
     // Class Person
     // description: This is the class person
